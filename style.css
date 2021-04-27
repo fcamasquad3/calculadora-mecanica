@@ -2,9 +2,6 @@ body {
   font-family: 'Roboto Mono',monospace;
   min-height: 854px;
   background-color: #ec4848;
-  background-size: cover;
-  background-position: center top;
-  background-repeat: no-repeat;
 }
 
 .container {
@@ -13,18 +10,16 @@ body {
   height: 100vh;
 }
 
-.page-title {
-  color: #ffffff;
-  margin: 0 0 5px;
+header {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  text-align: center;
 }
 
-.page-subtitle {
-  color: #ffffff;
-  margin-top: 5px;
-}
-
-.page-logo {
-  width: 200px;
+strong a {
+  text-decoration: none;
+  color: white;
+  margin: 1rem 2rem;
 }
 
 .calculadora {
