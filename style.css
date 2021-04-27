@@ -1,15 +1,14 @@
 body {
   font-family: 'Roboto Mono',monospace;
   min-height: 854px;
-  background-image: url('https://wallpapercave.com/wp/wp3521717.jpg');
-  background-color: #000000;
+  background-color: #ec4848;
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
 }
 
 .container {
-  text-align: center;
+  display: flex;
   padding: 20px;
   height: 100vh;
 }
@@ -31,9 +30,12 @@ body {
 .calculadora {
   width: 264px;
   height:360px;
-  background-image: url('https://www.alura.com.br/assets/img/imersoes/dev-2021/dia-2-calculadora-calc.png');
   margin: 0 auto;
+  padding: 1rem;
+  float: right;
   position: relative;
+  background-color: rgb(179, 60, 6);
+  border-radius: 1rem;
 }
 
 h2 {
@@ -46,9 +48,20 @@ h2 {
   text-align:center;
 }
 
-.alura-logo {
-  width: 40px;
-  position: absolute;
-  top: 10px;
-  right:10px;
+td input{
+  width: 3rem;
+  height: 3rem;
+  background: orange;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.number {
+  background-color: rgb(31, 31, 31);
+}
+
+#tela {
+  width: 15.5rem;
+  height: 2rem;
+  margin-bottom: .75rem;
 }
