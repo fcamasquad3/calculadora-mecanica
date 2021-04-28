@@ -76,6 +76,6 @@ function fatorial() {
     for(let count = 1 ; count <= parseInt(numero); count++)
     resultado *= count;
 
-    return resultado;
+    return resultado; 
   }
 }
