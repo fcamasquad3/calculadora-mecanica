@@ -14,11 +14,12 @@ body {
     width: 4rem;
   }
 
-  
+   
   .container {
+    padding: 20px;   
+
     display: flex;
-    padding: 20px;
-    height: 100vh;
+    align-items: center;    
   }
   
   header {
@@ -38,34 +39,29 @@ body {
   .calculadora {
     width: 24.5rem;
     height:37.5rem;
-    margin: 0 auto;   
-    float: right;
-    position: relative;
+
+    margin: 5rem; 
+
     background-color:#C4C4C4;
   }
   
-  h2 {
-    position: absolute;
-    font-size:16px;
+  h1 {
+    font-size:5rem;
     font-weight:bold;
-    top: 142px;
-    left: calc(50% - 72.5px);
-    width: 145px;
-    text-align:center;
+    margin-block: 0rem;
+    text-transform: uppercase;
+      
   }
 
-  #btnConversor{
-    color: #ffffff;
-    background-color: #111111;
-    
-    width: 24.5rem;
-    height: 3rem;
-   
+  #titulo{
+    text-align: right;
+    margin: 5rem;  
 
-    
-    font-size: 1.5rem;   
-    border-color:#111111;
+    display: flex;
+    align-items: center;
+    max-width: 573px;    
   }
+ 
 
   table{
     border-collapse: collapse;
@@ -92,7 +88,7 @@ body {
   
   #tela {
     width: 24.5rem;
-    height: 10rem; 
+    height: 13rem; 
 
     border:none;
     padding: 0rem;
