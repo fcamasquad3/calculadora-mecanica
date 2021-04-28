@@ -24,7 +24,9 @@ body {
   header {
     margin-top: 1.75rem;
     margin-bottom: 1.75rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   
   strong a {
