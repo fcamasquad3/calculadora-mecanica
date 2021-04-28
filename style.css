@@ -10,6 +10,10 @@ body {
   height: 100vh;
 }
 
+.logo {
+  width: 16rem;
+}
+
 header {
   margin-top: 1.75rem;
   margin-bottom: 1.75rem;
