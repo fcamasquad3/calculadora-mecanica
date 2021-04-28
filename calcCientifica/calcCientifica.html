@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="shortcut icon" href="../public/logo.svg" type="image/svg" />
-      <title>Calculadora Científica</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../public/logo.svg" type="image/svg" />
+        <link rel="stylesheet" href="style.css">
+        <title>Calculadora Científica</title>
+    </head>
+    
+    <body>
         <header>
             <img src="../public/logo.svg" class="logo" alt="logo">
             <strong>
@@ -24,9 +25,9 @@
                 <a href="">Calculadora freelancer</a>
             </strong>
         </header>
-        <body>
+        
             <div class="container">
-                <div>
+                <div id="titulo">
                     <h1>Calculadora Científica</h1>
                 </div>
                 <div class="calculadora">
@@ -35,6 +36,7 @@
                            <input id="tela" value="0">
 
                        </tr>
+                       
                        <tr>
                            <td>
                                <input type="button" value="C" onclick="document.getElementById('tela').value='0'">
@@ -57,7 +59,7 @@
                             <input type="button" value="x²">
                            </td>
                            <td>
-                               <input type="button" value="n!">
+                               <input type="button" value="n!" onclick="adicionarNaTela(document.getElementById('tela'),'!')">
                            </td>
                            <td>
                                <input type="button" value="+" onclick="adicionarNaTela(document.getElementById('tela'),'+')">
@@ -107,7 +109,7 @@
                        </tr>
                        <tr>
                            <td>
-                               <input type="button" value="+/-">
+                               <input type="button" value="+/-"onclick="mudarSinal()">
                            </td>
                            <td>
                                <input class="number" type="button" value="0" onclick="adicionarNaTela(document.getElementById('tela'),0)">
