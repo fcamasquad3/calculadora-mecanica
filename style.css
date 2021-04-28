@@ -2,3 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
+body {
+  background-color: #F25602;
+}
+
+ h1.page-title {
+  font-family: 'Advent Pro', sans-serif;
+ }
