@@ -5,8 +5,29 @@
 
 body {
   background-color: #F25602;
+  font-size: 62.5%;
+}
+
+div.home {
+  
+}
+
+img {
+  position: absolute;
+  width: 520px;
+  left: 139px;
+  top: 0;
 }
 
  h1.page-title {
-  font-family: 'Advent Pro', sans-serif;
+   position: relative;
+   top: 100px;
+   right: 155px;
+   font-family: 'Advent Pro', sans-serif;
+   font-size: 6.5rem;
+   text-align: right;
+ }
+
+ .container {
+   
  }
