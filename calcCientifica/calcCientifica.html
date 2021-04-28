@@ -1,15 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Calculadora Científica</title>
-      <link rel="stylesheet" href="style.css">
-   </head>
-   <body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="../public/logo.svg" type="image/svg" />
+        <link rel="stylesheet" href="style.css">
+        <title>Calculadora Científica</title>
+    </head>
+    
+    <body>
         <header>
-            <img src="" alt="logo">
+            <img src="../public/logo.svg" class="logo" alt="logo">
             <strong>
                 <a href="">Home</a>
             </strong>
@@ -23,7 +25,7 @@
                 <a href="">Calculadora freelancer</a>
             </strong>
         </header>
-        <body>
+        
             <div class="container">
                 <div>
                     <h1>Calculadora Científica</h1>
@@ -42,15 +44,15 @@
                                <input type="button" value="x=" onclick="deletar()">
                            </td>
                            <td>
-                               <input type="button" value="(" onclick="adicionarNaTela(document.getElementById('tela'),'(')">
+                               <input type="button" value="(">
                            </td>
                            <td>
-                                <input type="button" value=")" onclick="adicionarNaTela(document.getElementById('tela'),')')">
+                                <input type="button" value=")">
                            </td>
                        </tr>
                        <tr>
                            <td>
-                                <input type="button" value="%" onclick="adicionarNaTela(document.getElementById('tela'),'%')">
+                                <input type="button" value="%">
                            </td>
                            <td>
                             <input type="button" value="x²">
@@ -115,7 +117,7 @@
                                <input type="button" value="." onclick="adicionarNaTela(document.getElementById('tela'),'.')">
                            </td>
                            <td>
-                               <input class="igual" type="button" value="=" onclick="mostrarResultado()" accesskey="=">
+                               <input type="button" value="=" onclick="mostrarResultado()">
                            </td>
                        </tr>
                     </table>
