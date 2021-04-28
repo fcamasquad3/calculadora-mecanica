@@ -59,3 +59,23 @@ function porcento() {
     return calculo
   }
 }
+
+function fatorial() {
+  if (valorTela.value.includes("!")) {
+    let numero
+    let resultado = 1;
+
+    for (let char of valorTela.value) {
+      if (isNaN(parseInt(char)) === false) {
+        numero += char 
+      } else {
+        break
+      }
+    }
+
+    for(let count = 1 ; count <= parseInt(numero); count++)
+    resultado *= count;
+
+    return resultado;
+  }
+}
