@@ -8,10 +8,6 @@ body {
   font-size: 62.5%;
 }
 
-div.home {
-  
-}
-
 img {
   position: absolute;
   width: 520px;
@@ -28,6 +24,20 @@ img {
    text-align: right;
  }
 
- .container {
-   
+ footer {
+   position: relative;
+   bottom: 0;
+   height: 100px;
+   background-color: #000;
+ }
+
+ footer p {
+   color: #fff;
+   font-family: 'Cabin', sans-serif;;
+   font-size: 0.9rem;
+ }
+
+ footer.iconify {
+   position: absolute;
+   left: 50%;
  }
