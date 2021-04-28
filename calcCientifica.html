@@ -1,45 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora Científica</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <div class="container">
-        <h1 class="page-title">
-            Calculadora Científica    
-<html>
-<header>
-    <link rel="stylesheet" href="style.css">
-</header>
-<head>
-    <title>
-        Calculadora Científica
-    </title>
-</head>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Calculadora Científica</title>
+      <link rel="stylesheet" href="style.css">
+   </head>
+   <body>
+        <header>
+            <img src="" alt="logo">
+            <strong>
+                <a href="">Home</a>
+            </strong>
+            <strong>
+                <a href="">Calculadora científica</a>
+            </strong>
+            <strong>
+                <a href="">Conversor</a>
+            </strong>
+            <strong>
+                <a href="">Calculadora freelancer</a>
+            </strong>
+        </header>
+        <body>
+            <div class="container">
+                <div>
+                    <h1>Calculadora Científica</h1>
+                </div>
+                <div class="calculadora">
+                    <table>
+                       <tr>
+                           <input id="tela" value="0">
 
-<body>
-    <div class="container">
-        <h1 class="page-title">
-            Calculadora
-        </h1>
-        <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-calculadora.svg" class="page-logo"
-            alt="">
-        <div class="calculadora">
-        </div>
-    </div>
-    <a href="https://alura.com.br/" target="_blank">
-        <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-    </a>
-    <h2></h2>
-    <script src="app.js"></script>
-</body>
-
+                       </tr>
+                       <tr>
+                           <td>
+                               <input type="button" value="C" onclick="document.getElementById('tela').value='0'">
+                           </td>
+                           <td>
+                               <input type="button" value="x=" onclick="deletar()">
+                           </td>
+                           <td>
+                               <input type="button" value="(">
+                           </td>
+                           <td>
+                                <input type="button" value=")">
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                                <input type="button" value="%">
+                           </td>
+                           <td>
+                            <input type="button" value="x²">
+                           </td>
+                           <td>
+                               <input type="button" value="n!">
+                           </td>
+                           <td>
+                               <input type="button" value="+" onclick="adicionarNaTela(document.getElementById('tela'),'+')">
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>                              
+                               <input class="number" type="button" value="7" onclick="adicionarNaTela(document.getElementById('tela'),'7')">
+                           </td>
+                           <td>
+                               <input class="number" type="button" value="8" onclick="adicionarNaTela(document.getElementById('tela'),'8')">
+                           </td>
+                           <td>
+                               <input class="number" type="button" value="9" onclick="adicionarNaTela(document.getElementById('tela'),'9')">
+                           </td>
+                           <td>
+                               <input type="button" value="-" onclick="adicionarNaTela(document.getElementById('tela'),'-')">
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <input class="number" type="button" value="4" onclick="adicionarNaTela(document.getElementById('tela'),'4')">
+                           </td>
+                           <td>
+                               <input class="number" type="button" value="5" onclick="adicionarNaTela(document.getElementById('tela'),'5')">
+                           </td>
+                           <td>
+                               <input class="number" type="button" value="6" onclick="adicionarNaTela(document.getElementById('tela'),'6')">
+                           </td>
+                           <td>
+                               <input type="button" value="x" onclick="adicionarNaTela(document.getElementById('tela'),'*')">
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <input class="number" type="button" value="1" onclick="adicionarNaTela(document.getElementById('tela'),'1')">
+                           </td>
+                           <td>
+                               <input class="number" type="button" value="2" onclick="adicionarNaTela(document.getElementById('tela'),'2')">
+                           </td>
+                           <td>
+                               <input class="number" type="button" value="3" onclick="adicionarNaTela(document.getElementById('tela'),'3')">
+                           </td>
+                           <td>
+                               <input type="button" value="/" onclick="adicionarNaTela(document.getElementById('tela'),'/')">
+                           </td>
+                       </tr>
+                       <tr>
+                           <td>
+                               <input type="button" value="+/-">
+                           </td>
+                           <td>
+                               <input class="number" type="button" value="0" onclick="adicionarNaTela(document.getElementById('tela'),0)">
+                           </td>
+                           <td>
+                               <input type="button" value="." onclick="adicionarNaTela(document.getElementById('tela'),'.')">
+                           </td>
+                           <td>
+                               <input type="button" value="=" onclick="mostrarResultado()">
+                           </td>
+                       </tr>
+                    </table>
+                </div>
+            </div>
+            <script src="app.js"></script>
+        </body>
 </html>
-
-
-
-

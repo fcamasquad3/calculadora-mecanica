@@ -1,26 +1,21 @@
-var primeiroValor = parseInt(prompt("Digite o Primeiro Valor: "))
-var segundoValor = parseInt(prompt("Digite o Segundo Valor: "))
+let valorTela = document.getElementById("tela")
 
-
-
-var operacao = prompt("Digite 1 para fazer uma Divisão, 2 para Multiplicação, 3 para Soma e 4 para Subtração: ")
-
-if (operacao == 1)  {
-  var resultado = primeiroValor / segundoValor;
-  document.write ("<h2>" + primeiroValor+ " / " + segundoValor + " = " + resultado + "</h2>")
+//adiciona na tela da calculadora o caractere (número/operação) selecionado
+function adicionarNaTela (tela,caractere) {
+  if (tela.value == null || tela.value == 0) {
+    tela.value = caractere
+  } else {
+    tela.value += caractere
+  }
 }
-  else if (operacao == 2) {
-    var resultado = primeiroValor * segundoValor;
-    document.write ("<h2>" + primeiroValor+ " x " + segundoValor + " = " + resultado + "</h2>")
-  }
-  else if (operacao == 3) {
-    var resultado = primeiroValor + segundoValor;
-    document.write ("<h2>" + primeiroValor+ " + " + segundoValor + " = " + resultado + "</h2>")
-  }
-else if (operacao == 4){
-  var resultado = primeiroValor - segundoValor;
-  document.write ("<h2>" + primeiroValor+ " - " + segundoValor + " = " + resultado + "</h2>")
-} 
-else {
-  document.write("<h2> Opção Inválida</h2>")
+
+//pega a string formada na tela e computa o resultado
+function mostrarResultado() {
+  valorTela.value = eval(valorTela.value)
+}
+
+//deletar o último caractere inserido
+function deletar() {
+  let ultimo = valorTela.value.length - 1
+  valorTela.value = valorTela.value.slice(0, ultimo)
 }
