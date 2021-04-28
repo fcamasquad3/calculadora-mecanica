@@ -1,7 +1,7 @@
 body {
     font-family: 'Roboto Mono',monospace;
     min-height: 854px;
-    background-color: #FD5B03;
+    background-color: #F25602;
   }
 
   /* colors {
@@ -14,6 +14,7 @@ body {
     width: 4rem;
   }
 
+  
   .container {
     display: flex;
     padding: 20px;
@@ -33,14 +34,12 @@ body {
   }
   
   .calculadora {
-    width: 264px;
-    height:360px;
-    margin: 0 auto;
-    padding: 1rem;
+    width: 24.5rem;
+    height:37.5rem;
+    margin: 0 auto;   
     float: right;
     position: relative;
-    background-color: rgb(179, 60, 6);
-    border-radius: 1rem;
+    background-color:#C4C4C4;
   }
   
   h2 {
@@ -52,21 +51,52 @@ body {
     width: 145px;
     text-align:center;
   }
+
+  #btnConversor{
+    color: #ffffff;
+    background-color: #111111;
+    
+    width: 24.5rem;
+    height: 3rem;
+   
+
+    
+    font-size: 1.5rem;   
+    border-color:#111111;
+  }
+
+  table{
+    border-collapse: collapse;
+  }
   
   td input{
-    width: 3rem;
-    height: 3rem;
-    background: orange;
+    width: 6rem;
+    height: 4rem;
+
+    background-color: #FD5B03;
     color: white;
-    font-size: 1.5rem;
+
+    
+    border-color: #FD5B03;
+    border: none;
+    font-size: 2.5rem; 
+    
   }
   
   .number {
-    background-color: rgb(31, 31, 31);
+    background-color: #111111;
+    border-color: #111111;
   }
   
   #tela {
-    width: 15.5rem;
-    height: 2rem;
-    margin-bottom: .75rem;
+    width: 24.5rem;
+    height: 10rem; 
+
+    border:none;
+    padding: 0rem;
+    border-color: #111111;   
+
+    background-color: #111111;
+    color:#ffffff;
+    opacity: 80%;
   }
