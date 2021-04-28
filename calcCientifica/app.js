@@ -20,6 +20,10 @@ function deletar() {
   valorTela.value = valorTela.value.slice(0, ultimo)
 }
 
+function mudarSinal() {
+  tela.value = -tela.value
+}
+
 function porcento() {
   let total = ""
   let contaPorcento = ""
