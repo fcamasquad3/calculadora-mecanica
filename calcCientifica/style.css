@@ -1,25 +1,33 @@
+body {
+    font-family: 'Roboto Mono',monospace;
+    min-height: 854px;
+    background-color: #F25602;
+  }
+
   /* colors {
     laranja: #FD5B03;
     dark-orange: #F25602 ;
     green: #36B336;
   }  */
 
-  body {
-    font-family: 'Roboto Mono',monospace;
-    min-height: 854px;
-    background-color: #FD5B03;
+  .logo {
+    width: 4rem;
   }
-  
+
+   
   .container {
+    padding: 20px;   
+
     display: flex;
-    padding: 20px;
-    height: 100vh;
+    align-items: center;    
   }
   
   header {
     margin-top: 1.75rem;
     margin-bottom: 1.75rem;
-    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
   }
   
   strong a {
@@ -28,61 +36,65 @@
     margin: 1rem 2rem;
   }
   
-  .logo {
-    width: 4rem;
+  .calculadora {
+    width: 24.5rem;
+    height:37.5rem;
+
+    margin: 5rem; 
+
+    background-color:#C4C4C4;
+  }
+  
+  h1 {
+    font-size:5rem;
+    font-weight:bold;
+    margin-block: 0rem;
+    text-transform: uppercase;
+      
   }
 
-  .container {
+  #titulo{
+    text-align: right;
+    margin: 5rem;  
+
     display: flex;
-    padding: 20px;
-    height: 100vh;
+    align-items: center;
+    max-width: 573px;    
   }
-  
-  .calculadora {
-    width: 13rem;
-    height:360px;
-    margin: 0 auto;
-    padding: 1rem;
-    float: right;
-    position: relative;
-    background-color: #F25602;
-    border: 2px solid black;
-    border-radius: 1rem;
-  }
-  
-  h2 {
-    position: absolute;
-    font-size:16px;
-    font-weight:bold;
-    top: 142px;
-    left: calc(50% - 72.5px);
-    width: 145px;
-    text-align:center;
+ 
+
+  table{
+    border-collapse: collapse;
   }
   
   td input{
-    width: 3rem;
-    height: 3rem;
-    background: orange;
+    width: 6rem;
+    height: 4rem;
+
+    background-color: #FD5B03;
     color: white;
-    font-size: 1.5rem;
-    border: 0;
-    border-radius: .75rem;
-    box-shadow: 1px 1px 0 0 white;
+
+    
+    border-color: #FD5B03;
+    border: none;
+    font-size: 2.5rem; 
+    
   }
   
   .number {
-    background-color: rgb(31, 31, 31);
+    background-color: #111111;
+    border-color: #111111;
   }
   
-  .igual {
-    background-color: rgb(36, 98, 231);
-  }
-
   #tela {
-    width: 12.5rem;
-    height: 2rem;
-    margin-bottom: .75rem;
-    background-color: #3d3939;
-    color: white;
+    width: 24.5rem;
+    height: 13rem; 
+
+    border:none;
+    padding: 0rem;
+    border-color: #111111;   
+
+    background-color: #111111;
+    color:#ffffff;
+    opacity: 80%;
   }
