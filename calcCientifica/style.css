@@ -1,19 +1,15 @@
-body {
-    font-family: 'Roboto Mono',monospace;
-    min-height: 854px;
-    background-color: #FD5B03;
-  }
-
   /* colors {
     laranja: #FD5B03;
     dark-orange: #F25602 ;
     green: #36B336;
   }  */
 
-  .logo {
-    width: 4rem;
+  body {
+    font-family: 'Roboto Mono',monospace;
+    min-height: 854px;
+    background-color: #FD5B03;
   }
-
+  
   .container {
     display: flex;
     padding: 20px;
@@ -30,6 +26,16 @@ body {
     text-decoration: none;
     color: white;
     margin: 1rem 2rem;
+  }
+  
+  .logo {
+    width: 4rem;
+  }
+
+  .container {
+    display: flex;
+    padding: 20px;
+    height: 100vh;
   }
   
   .calculadora {
@@ -59,12 +65,19 @@ body {
     background: orange;
     color: white;
     font-size: 1.5rem;
+    border: 0;
+    border-radius: .75rem;
+    box-shadow: 1px 1px 0 0 white;
   }
   
   .number {
     background-color: rgb(31, 31, 31);
   }
   
+  .igual {
+    background-color: rgb(36, 98, 231);
+  }
+
   #tela {
     width: 15.5rem;
     height: 2rem;
