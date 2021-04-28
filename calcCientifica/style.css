@@ -39,13 +39,14 @@
   }
   
   .calculadora {
-    width: 264px;
+    width: 13rem;
     height:360px;
     margin: 0 auto;
     padding: 1rem;
     float: right;
     position: relative;
-    background-color: rgb(179, 60, 6);
+    background-color: #F25602;
+    border: 2px solid black;
     border-radius: 1rem;
   }
   
@@ -79,7 +80,9 @@
   }
 
   #tela {
-    width: 15.5rem;
+    width: 12.5rem;
     height: 2rem;
     margin-bottom: .75rem;
+    background-color: #3d3939;
+    color: white;
   }
