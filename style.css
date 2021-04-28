@@ -25,19 +25,30 @@ img {
  }
 
  footer {
-   position: relative;
-   bottom: 0;
-   height: 100px;
-   background-color: #000;
- }
+  position: absolute;
+  bottom: 0;
+  height: 12%;
+  width: 100%;
+  background-color: #000;
+}
 
- footer p {
-   color: #fff;
-   font-family: 'Cabin', sans-serif;;
-   font-size: 0.9rem;
- }
+.p-footer {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: 'Cabin', sans-serif;;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
 
- footer.iconify {
-   position: absolute;
-   left: 50%;
- }
+.icone {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+
