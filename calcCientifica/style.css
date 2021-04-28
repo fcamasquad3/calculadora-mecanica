@@ -12,6 +12,7 @@ body {
 
   .logo {
     width: 4rem;
+    margin: 0.5rem 2rem;
   }
 
    
@@ -30,19 +31,21 @@ body {
     align-items: center;
   }
   
-  strong a {
+  a {
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    margin: 1rem 2rem;
+
+    font-weight: 600;    
+    margin: 0.5rem 2rem;
   }
   
   .calculadora {
-    width: 24.5rem;
-    height:37.5rem;
-
-    margin: 5rem; 
-
-    background-color:#C4C4C4;
+    width: 24.7rem;
+    height:37.75rem;
+    
+    margin: 5rem;     
+    background-color:#c4c4c4;
+    box-shadow: 8px 5px 5px #9b3600
   }
   
   h1 {
@@ -64,7 +67,7 @@ body {
  
 
   table{
-    border-collapse: collapse;
+    border-collapse: collapse; 
   }
   
   td input{
@@ -75,10 +78,9 @@ body {
     color: white;
 
     
-    border-color: #FD5B03;
-    border: none;
-    font-size: 2.5rem; 
-    
+    border:none;    
+    font-size: 2.5rem;   
+    font-weight: 600;
   }
   
   .number {
@@ -87,14 +89,15 @@ body {
   }
   
   #tela {
-    width: 24.5rem;
+    width: 24.7rem;
     height: 13rem; 
 
-    border:none;
+    box-sizing: border-box;
     padding: 0rem;
     border-color: #111111;   
 
     background-color: #111111;
     color:#ffffff;
+    font-size: 2.5rem;
     opacity: 80%;
   }
