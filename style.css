@@ -10,18 +10,19 @@ body {
 
 img {
   position: absolute;
-  width: 520px;
-  left: 139px;
+  width: 420px;
+  left: 12%;
   top: 0;
 }
 
  h1.page-title {
    position: relative;
    top: 100px;
-   right: 155px;
+   right: 15%;
    font-family: 'Advent Pro', sans-serif;
-   font-size: 6.5rem;
+   font-size: 6rem;
    text-align: right;
+   letter-spacing: 0.3rem;
  }
 
  footer {
