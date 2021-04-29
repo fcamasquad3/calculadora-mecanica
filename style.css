@@ -11,6 +11,14 @@ body {
 }
 
 /* configuração da div principal da home */
+
+div.home {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 90%;
+}
+
 img {
   position: absolute;
   width: 400px;
@@ -33,7 +41,7 @@ img {
   position: absolute;
   display: inline-flex;
   justify-content: center;
-  width: 70%;
+  max-width: 80%;
   top: 70%;
   left: 50%;
   transform: translateX(-50%);
@@ -89,5 +97,44 @@ button:hover {
   transform: translateY(-50%);
 }
 
+/* Media queries */
+
+@media (max-width: 1275px) {
+  html {
+    font-size: 80%;
+  }
+
+  img {
+    top: 5%;
+    width: 300px;
+  }
+
+  button {
+    margin: 0 10px;
+    font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 960px) {
+  html {
+    font-size: 65%;
+  }
+
+  img {
+    top: 10%;
+    width: 250px;
+  }
+
+  h1.page-title {
+    position: relative;
+    top: 140px;
+    right: 15%;
+  }
+
+  button {
+    width: 160px;
+    margin: 0 30px;
+  }
+}
 
 
