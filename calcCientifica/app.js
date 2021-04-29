@@ -121,3 +121,18 @@ function mod() {
   let calculo = valorTela.value.replace("mod","%")
   return calculo
 }
+
+function seno() {
+  let resultado = Math.sin(parseInt(valorTela.value))
+  valorTela.value = resultado.toString()
+}
+
+function cosseno() {
+  let resultado = Math.cos(parseInt(valorTela.value))
+  valorTela.value = resultado.toString()
+}
+
+function tangente() {
+  let resultado = Math.tan(parseInt(valorTela.value))
+  valorTela.value = resultado.toString()
+}
