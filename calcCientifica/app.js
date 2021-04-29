@@ -136,3 +136,18 @@ function tangente() {
   let resultado = Math.tan(parseInt(valorTela.value))
   valorTela.value = resultado.toString()
 }
+
+function secante() {
+  let resultado = 1 / Math.cos(parseInt(valorTela.value))
+  valorTela.value = resultado
+}
+
+function cossecante() {
+  let resultado = 1 / Math.sin(parseInt(valorTela.value))
+  valorTela.value = resultado
+}
+
+function cotangente() {
+  let resultado = 1 / Math.tan(parseInt(valorTela.value))
+  valorTela.value = resultado
+}
