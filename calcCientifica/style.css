@@ -12,6 +12,7 @@ body {
 
   .logo {
     width: 4rem;
+    margin: 0.5rem 2rem;
   }
 
    
@@ -23,26 +24,27 @@ body {
   }
   
   header {
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
+    margin: 1.75rem ;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
   
-  strong a {
+  a {
+    color: #ffffff;
     text-decoration: none;
-    color: white;
-    margin: 1rem 2rem;
+
+    font-weight: 600;    
+    margin: 0.5rem 2rem;
   }
   
   .calculadora {
-    width: 24.5rem;
-    height:37.5rem;
-
-    margin: 5rem; 
-
-    background-color:#C4C4C4;
+    width: 24rem; /*para o caso de separação das teclas 24.7rem e 37.75rem*/
+    height:37rem;
+    
+    margin: 5rem;     
+    background-color:#c4c4c4;
+    box-shadow: 8px 5px 5px #9b3600
   }
   
   h1 {
@@ -64,21 +66,32 @@ body {
  
 
   table{
-    border-collapse: collapse;
+    
+    border:0px;
+    border-collapse:collapse;
+    border-spacing:0px;
   }
   
+  td{
+    padding:0px; 
+    border-width:0px; 
+    margin:0px; 
+     
+  }
+
   td input{
     width: 6rem;
     height: 4rem;
 
     background-color: #FD5B03;
-    color: white;
-
+    color: #ffffff;       
+   
+    /* border-color: #9b3600;
+    border-style: solid;  para uma borda e separação*/
     
-    border-color: #FD5B03;
     border: none;
-    font-size: 2.5rem; 
-    
+    font-size: 2.5rem;   
+    font-weight: 600;
   }
   
   .number {
@@ -87,14 +100,15 @@ body {
   }
   
   #tela {
-    width: 24.5rem;
+    width: 24rem; /*para o caso de separação das teclas 24.7rem*/
     height: 13rem; 
 
-    border:none;
+    box-sizing: border-box;
     padding: 0rem;
     border-color: #111111;   
 
     background-color: #111111;
     color:#ffffff;
+    font-size: 2.5rem;
     opacity: 80%;
   }

@@ -36,6 +36,7 @@ function porcento() {
   let total = ""
   let contaPorcento = ""
   let valorPorcento = ""
+  let oper = ""
   
   if (valorTela.value.includes("%")) {
     for (let i = valorTela.value.length - 2; i >= 0; i--) {
@@ -51,12 +52,14 @@ function porcento() {
         total += valorTela.value[i]
       } else {
         end = i
+        oper = valorTela.value[i]
         break
       }
     }
     contaPorcento = contaPorcento.split("").reverse().join("")
     valorPorcento = parseInt(total) * (parseInt(contaPorcento) / 100)
-    calculo = valorTela.value.slice(0, end) + "+" + valorPorcento
+
+    calculo = valorTela.value.slice(0, end) + oper +valorPorcento
 
     return calculo
   }
@@ -82,4 +85,14 @@ function fatorial() {
     
     return resultado.toString()
   }
+}
+
+function raiz() {
+  let resultado = Math.sqrt(parseInt(valorTela.value))
+  valorTela.value = resultado.toString
+}
+
+function exponencial() {
+  let resultado = Math.sqrt(parseInt(valorTela.value))
+  valorTela.value = resultado.toString
 }

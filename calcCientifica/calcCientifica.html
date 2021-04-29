@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,61 +11,75 @@
     
     <body>
         <header>
-            <img src="../public/logo.svg" class="logo" alt="logo">
-            <strong>
-                <a href="">Home</a>
-            </strong>
-            <strong>
-                <a href="">Calculadora científica</a>
-            </strong>
-            <strong>
-                <a href="">Conversor</a>
-            </strong>
-            <strong>
-                <a href="">Calculadora freelancer</a>
-            </strong>
+            <img src="../public/logo.svg" class="logo" alt="logo">            
+                <a href="">HOME</a>
+            
+                <a href="">CALCULADORA CIENTÍFICA</a>
+            
+                <a href="">CONVERSOR</a>
+           
+                <a href="">CALCULADORA FREELANCER</a>            
         </header>
         
             <div class="container">
                 <div id="titulo">
-                    <h1>Calculadora Científica</h1>
+                    <h1>CALCULADORA CIENTÍFICA</h1>
                 </div>
                 <div class="calculadora">
                     <table>
                        <tr>
                            <input id="tela" value="0">
-
                        </tr>
                        
                        <tr>
+                           <td>
+                               <input type="button" value="sin">
+                           </td>
+                           <td>
+                               <input type="button" value="x²" onclick="exponencial()">
+                           </td>
+                           <td>
+                               <input type="button" value="1/x">
+                           </td>
+                           <td>
+                               <input type="button" value="mod">
+                           </td>
                            <td>
                                <input type="button" value="C" onclick="document.getElementById('tela').value='0'">
                            </td>
                            <td>
                                <input type="button" value="x=" onclick="deletar()">
                            </td>
-                           <td>
-                               <input type="button" value="(">
-                           </td>
-                           <td>
-                                <input type="button" value=")">
-                           </td>
+
                        </tr>
                        <tr>
                            <td>
-                                <input type="button" value="%">
+                               <input type="button" value="cos">
                            </td>
                            <td>
-                            <input type="button" value="x²">
+                               <input type="button" value="raiz">
+                           </td>
+                           <td>
+                               <input type="button" value="(" onclick="adicionarNaTela(document.getElementById('tela'),'(')">
+                           </td>
+                           <td>
+                                <input type="button" value=")" onclick="adicionarNaTela(document.getElementById('tela'),')')">
                            </td>
                            <td>
                                <input type="button" value="n!" onclick="adicionarNaTela(document.getElementById('tela'),'!')">
-                           </td>
+                           </td>                           
+
                            <td>
                                <input type="button" value="+" onclick="adicionarNaTela(document.getElementById('tela'),'+')">
                            </td>
                        </tr>
                        <tr>
+                           <td>
+                               <input type="button" value="tan">
+                           </td>
+                           <td>
+                               <input type="button" value="x^y">
+                           </td>
                            <td>                              
                                <input class="number" type="button" value="7" onclick="adicionarNaTela(document.getElementById('tela'),'7')">
                            </td>
@@ -81,6 +95,12 @@
                        </tr>
                        <tr>
                            <td>
+                               <input type="button" value="sec">
+                           </td>
+                           <td>
+                                <input type="button" value="%" onclick="adicionarNaTela(document.getElementById('tela'),'%')">
+                           </td>
+                           <td>
                                <input class="number" type="button" value="4" onclick="adicionarNaTela(document.getElementById('tela'),'4')">
                            </td>
                            <td>
@@ -94,6 +114,12 @@
                            </td>
                        </tr>
                        <tr>
+                           <td>
+                               <input type="button" value="csc">
+                           </td>
+                           <td>
+                               <input type="button" value="log">
+                           </td>
                            <td>
                                <input class="number" type="button" value="1" onclick="adicionarNaTela(document.getElementById('tela'),'1')">
                            </td>
@@ -109,6 +135,12 @@
                        </tr>
                        <tr>
                            <td>
+                               <input type="button" value="cot">
+                           </td>
+                           <td>
+                               <input type="button" value="pi">
+                           </td>
+                           <td>
                                <input type="button" value="+/-"onclick="mudarSinal()">
                            </td>
                            <td>
@@ -123,7 +155,7 @@
                        </tr>
                     </table>
                 </div>
-            </div>
+            </div>           
             <script src="app.js"></script>
         </body>
 </html>
