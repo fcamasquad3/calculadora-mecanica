@@ -12,26 +12,30 @@
     green: #36B336;
   }  */
 
-body {
-    font-family: 'Cabin',monospace;
-    min-height: 854px;
+body {    
+    min-height: 100vh;
     background-color: #F25602;
+   
   } 
 
 header {
+  
   display: flex;
-  align-content: center; 
+  align-items: center; 
   justify-content: space-around;  
+ 
 }
 
 .menu{ 
-  padding: 15px;  
+  font-family: 'Advent Pro', sans-serif;
+  letter-spacing: 5px; 
+  font-weight: 400;
 }
 
 
 .menu ul li {
   display: inline;   
-  margin: 3rem 2rem;  
+  margin: 3rem 1rem;  
   align-items: center;
 }
 
@@ -39,11 +43,12 @@ header {
   padding: 20px 20px;   
   color: #ffffff;
   font-size: 20px;
-  font-weight: 600;      
+  font-size: 1.7rem;       
 } 
 
-.logo {
-    width: 6rem;    
+img {
+    width: 6rem;   
+    margin-left: 3rem; 
 } 
 
 /* corpo da página */
@@ -52,15 +57,19 @@ header {
     padding: 20px;   
 
     display: flex;
-    align-items: center;    
+    align-items: center;   
+    justify-content: space-between; 
   } 
 
-h1 {
-    font-size:5rem;
-    font-weight:bold;
-    margin-block: 0rem;
-    margin: 5rem ;
+h1 { 
+    font-size: 6.5rem;
+    font-weight: bold;
+    font-family: 'Advent Pro', sans-serif;
+    letter-spacing: 8%; 
     text-transform: uppercase;
+
+    margin-block: 0rem;
+    margin: 5rem ;    
 }
 
 #page-title{
@@ -74,44 +83,76 @@ h1 {
 
 
 /* corpo do conversor */
-.conversor{
-  height: 30rem;
+.corpo-conversor{
+  height: 32rem;
   width: 20rem;
 
-  margin: 5rem ;
+  font-family: 'Cabin',monospace;
+
+  margin: 5rem 3rem;
   background-color: #C4C4C4;
 
-  box-shadow: 8px 5px 5px #9b3600
-
+  box-shadow: 8px 5px 5px #9b3600;
 }
 
 #tela{
-  height: 15rem;
+  height: 13rem;
   width: 20rem;
 
+  color:#ffffff;
+  font-size: 2.5rem;
   opacity: 80%;  
   background-color: #111111;
-  align-items: flex-end;
 }
 
+/*-------- botão opçóes de conversores --------- */
 #op-conversores {
   color:#ffffff;
   background-color: #111111;
-  opacity: 100%;
-
+  
   width: 20rem;
   height: 3rem;
-  font-size: 15px;
-  text-align: center;
+
+  font-size: 20px;  
   font-family: 'Cabin',monospace;
+
+  align-items: center;
+  text-align-last: center;
 }
 
 option{
   border-radius: 5px;
-  margin: 2rem;
+  margin: 25px;
+  text-align-last: center;
+
+  padding: 2rem;  
 }
 
+/*-------- botoes do conversor --------- */
+table{
+  border:0px;
+  border-collapse:collapse;
+  border-spacing:0px;  
+}
 
+td input{
+  width: 5rem;
+  height: 4rem;
+  font-family: 'Cabin',monospace;
   
+  color: #ffffff;     
+ 
+  font-size: 2.5rem;   
+  font-weight: 600;  
+}
 
-  
+.number{
+  background-color: #111111;
+  border-color: #8F3402;
+}
+
+.btn-extra{
+  background-color: #FD5B03;
+  border-color: #8F3402;   
+}
+

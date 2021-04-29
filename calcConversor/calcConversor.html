@@ -18,16 +18,16 @@
 
      <body>       
          <header>
-            <div class="logo"> 
+           
                 <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">
-            </div>
+          
 
             <nav class="menu">
             <ul>               
-                <li> <a href="#"> HOME </a> </li>
-                <li> <a href="#"> CALCULADORA CIENTÍFICA </a> </li>
-                <li> <a href="#"> CONVERSOR </a> </li>
-                <li> <a href="#"> CALCULADORA FREELANCER </a> </li>
+                <li> <a href="/index.html"> Home </a> </li>
+                <li> <a href="/calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
+                <li> <a href="/calcConversor/calcConversor.html"> Conversor </a> </li>
+                <li> <a href="/calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
             </ul>
             </nav>
     </header>
@@ -36,25 +36,82 @@
             <div id="page-title">
                 <h1>Conversor</h1>
             </div>
-           
-         
-               
-            <div class="conversor">
-               <div id="tela">
+                                 
+            <div class="corpo-conversor">                             
+               <div id="tela">                
+                </div>  
+                <div class="btnMedidas">
                     <select id="op-conversores"> 
-                        <option value=""disabled selected>Conversores</option>
                         <option value="Medidas">Medidas</option>
                         <option value="Temperatura">Temperatura</option>
                         <option value="Dados">Dados</option>
                     </select>
-                </div>                
+                </div>
+                <table>
+                    <tr>                  
+                        <td>
+                            <input class="number" type="button" value="7">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="8">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="9">
+                        </td>
+                        <td>
+                            <input class="btn-extra"  type="button" value="X">
+                        </td>
+                    </tr>
+                    <tr>                  
+                        <td>
+                            <input class="number" type="button" value="4">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="5">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="6">
+                        </td>                       
+                    </tr>
+                    <tr>                  
+                        <td>
+                            <input class="number" type="button" value="1">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="2">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="3">
+                        </td>                        
+                    </tr>
+                    <tr>                  
+                        <td>
+                            <input class="btn-extra"  type="button" value="C">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="0">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value=".">
+                        </td>                     
+                    </tr>
+                </table>
             </div>
+            <!-- <footer>
+                <div class="p-footer">
+                    <p>Hackathon Imersão Dev - FCamara</p>
+                </div>
+                
+                <div class="icone">
+                    <a href="https://github.com/fcamasquad3/calculadora-mecanica"><span class="iconify" data-icon="akar-icons:github-fill" style="font-size: 40px; color: #F25602;"></span></a>
+                </div>
         
-        
+            </footer> -->
         <script src="app.js"></script>
     </body>
 
 </html>
+
 
 
 
