@@ -3,11 +3,13 @@
   padding: 0;
 }
 
+/* Configurações gerais da página */ 
 body {
   background-color: #F25602;
   font-size: 62.5%;
 }
 
+/* configuração da div principal da home */
 img {
   position: absolute;
   width: 420px;
@@ -25,6 +27,34 @@ img {
    letter-spacing: 0.3rem;
  }
 
+ /* Botões */
+.container {
+  position: absolute;
+  width: 70%;
+  top: 65%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+button {
+  position: relative;
+  background-color: #fff;
+  width: 220px;
+  padding: 15px;
+  margin: 45px;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.8rem;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 10px;
+}
+
+button a {
+  color: #000;
+  text-decoration: none;
+}
+
+/* Footer */
  footer {
   position: absolute;
   bottom: 0;
@@ -39,7 +69,7 @@ img {
   left: 7%;
   transform: translateY(-50%);
   color: #fff;
-  font-family: 'Cabin', sans-serif;;
+  font-family: 'Cabin', sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
 }
