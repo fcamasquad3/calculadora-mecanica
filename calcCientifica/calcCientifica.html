@@ -39,10 +39,10 @@
                                <input type="button" value="x=" onclick="deletar()">
                            </td>
                            <td>
-                               <input type="button" value="(">
+                               <input type="button" value="(" onclick="adicionarNaTela(document.getElementById('tela'),'(')">
                            </td>
                            <td>
-                                <input type="button" value=")">
+                                <input type="button" value=")" onclick="adicionarNaTela(document.getElementById('tela'),')')">
                            </td>
                        </tr>
                        <tr>
@@ -50,7 +50,7 @@
                                 <input type="button" value="%" onclick="adicionarNaTela(document.getElementById('tela'),'%')">
                            </td>
                            <td>
-                            <input type="button" value="x²">
+                            <input type="button" value="x²" onclick="exponencial()">
                            </td>
                            <td>
                                <input type="button" value="n!" onclick="adicionarNaTela(document.getElementById('tela'),'!')">
