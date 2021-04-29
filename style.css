@@ -5,6 +5,7 @@
 
 /* Configurações gerais da página */ 
 body {
+  height: 100vh;
   background-color: #F25602;
   font-size: 62.5%;
 }
@@ -12,8 +13,8 @@ body {
 /* configuração da div principal da home */
 img {
   position: absolute;
-  width: 420px;
-  left: 12%;
+  width: 400px;
+  left: 14%;
   top: 0;
 }
 
@@ -30,18 +31,19 @@ img {
  /* Botões */
 .container {
   position: absolute;
+  display: inline-flex;
+  justify-content: center;
   width: 70%;
-  top: 65%;
+  top: 70%;
   left: 50%;
   transform: translateX(-50%);
 }
 
 button {
-  position: relative;
   background-color: #fff;
   width: 220px;
   padding: 15px;
-  margin: 45px;
+  margin: 0 60px;
   font-family: 'Cabin', sans-serif;
   font-size: 0.8rem;
   border: none;
@@ -62,7 +64,7 @@ button:hover {
 
 /* Footer */
  footer {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   height: 12%;
   width: 100%;
