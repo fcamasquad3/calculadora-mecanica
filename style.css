@@ -15,6 +15,24 @@ img {
   top: 0;
 }
 
+.container {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 272px;
+}
+
+.container button {
+  border-radius: 6px;
+  height: 3.5rem;
+  width: 14rem;
+}
+
+.container a {
+  text-decoration: none;
+}
+
  h1.page-title {
    position: relative;
    top: 100px;
