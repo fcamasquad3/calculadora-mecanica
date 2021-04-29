@@ -89,4 +89,10 @@ function fatorial() {
 
 function raiz() {
   let resultado = Math.sqrt(parseInt(valorTela.value))
+  valorTela.value = resultado.toString
+}
+
+function exponencial() {
+  let resultado = Math.sqrt(parseInt(valorTela.value))
+  valorTela.value = resultado.toString
 }
