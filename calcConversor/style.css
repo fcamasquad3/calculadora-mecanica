@@ -73,6 +73,45 @@ h1 {
 }
 
 
+/* corpo do conversor */
+.conversor{
+  height: 30rem;
+  width: 20rem;
+
+  margin: 5rem ;
+  background-color: #C4C4C4;
+
+  box-shadow: 8px 5px 5px #9b3600
+
+}
+
+#tela{
+  height: 15rem;
+  width: 20rem;
+
+  opacity: 80%;  
+  background-color: #111111;
+  align-items: flex-end;
+}
+
+#op-conversores {
+  color:#ffffff;
+  background-color: #111111;
+  opacity: 100%;
+
+  width: 20rem;
+  height: 3rem;
+  font-size: 15px;
+  text-align: center;
+  font-family: 'Cabin',monospace;
+}
+
+option{
+  border-radius: 5px;
+  margin: 2rem;
+}
+
+
   
 
   
