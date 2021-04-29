@@ -36,16 +36,16 @@
                        
                        <tr>
                            <td>
-                               <input type="button" value="sin">
+                               <input type="button" value="sin" onclick="seno()">
                            </td>
                            <td>
                                <input type="button" value="x²" onclick="quadrado()">
                            </td>
                            <td>
-                               <input type="button" value="1/x">
+                               <input type="button" value="1/x" onclick="inverso()">
                            </td>
                            <td>
-                               <input type="button" value="mod">
+                               <input type="button" value="mod" onclick="adicionarNaTela(document.getElementById('tela'),'mod')">
                            </td>
                            <td>
                                <input type="button" value="C" onclick="document.getElementById('tela').value='0'">
@@ -57,10 +57,10 @@
                        </tr>
                        <tr>
                            <td>
-                               <input type="button" value="cos">
+                               <input type="button" value="cos" onclick="cosseno()">
                            </td>
                            <td>
-                               <input type="button" value="&#8730;">
+                               <input type="button" value="&#8730;" onclick="raiz()">
                            </td>
                            <td>
                                <input type="button" value="(" onclick="adicionarNaTela(document.getElementById('tela'),'(')">
@@ -78,10 +78,10 @@
                        </tr>
                        <tr>
                            <td>
-                               <input type="button" value="tan">
+                               <input type="button" value="tan" onclick="tangente()">
                            </td>
                            <td>
-                               <input type="button" value="x^y">
+                               <input type="button" value="x^y" onclick="adicionarNaTela(document.getElementById('tela'),'^')">
                            </td>
                            <td>                              
                                <input class="number" type="button" value="7" onclick="adicionarNaTela(document.getElementById('tela'),'7')">
@@ -121,7 +121,7 @@
                                <input type="button" value="csc">
                            </td>
                            <td>
-                               <input type="button" value="log">
+                               <input type="button" value="log" onclick="log10()">
                            </td>
                            <td>
                                <input class="number" type="button" value="1" onclick="adicionarNaTela(document.getElementById('tela'),'1')">
@@ -141,10 +141,10 @@
                                <input type="button" value="cot">
                            </td>
                            <td>
-                               <input type="button" value="&#960">
+                               <input type="button" value="&#960" onclick="adicionarNaTela(document.getElementById('tela'),3.1415926535897932384626433832795) ">
                            </td>
                            <td>
-                               <input type="button" value="+/-"onclick="mudarSinal()">
+                               <input type="button" value="+/-" onclick="mudarSinal()">
                            </td>
                            <td>
                                <input class="number" type="button" value="0" onclick="adicionarNaTela(document.getElementById('tela'),0)">
