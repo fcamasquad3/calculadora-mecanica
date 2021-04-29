@@ -7,6 +7,9 @@
         <link rel="shortcut icon" href="../public/logo.svg" type="image/svg" />
         <link rel="stylesheet" href="style.css">
         <title>Calculadora Científica</title>
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600&family=Cabin:wght@700&display=swap">
     </head>
     
     <body>
@@ -36,7 +39,7 @@
                                <input type="button" value="sin">
                            </td>
                            <td>
-                               <input type="button" value="x²" onclick="exponencial()">
+                               <input type="button" value="x²" onclick="quadrado()">
                            </td>
                            <td>
                                <input type="button" value="1/x">
@@ -57,7 +60,7 @@
                                <input type="button" value="cos">
                            </td>
                            <td>
-                               <input type="button" value="raiz">
+                               <input type="button" value="&#8730;">
                            </td>
                            <td>
                                <input type="button" value="(" onclick="adicionarNaTela(document.getElementById('tela'),'(')">
@@ -138,7 +141,7 @@
                                <input type="button" value="cot">
                            </td>
                            <td>
-                               <input type="button" value="pi">
+                               <input type="button" value="&#960">
                            </td>
                            <td>
                                <input type="button" value="+/-"onclick="mudarSinal()">
