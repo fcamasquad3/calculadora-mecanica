@@ -18,6 +18,8 @@ function mostrarResultado() {
     valorTela.value = eval(fatorial())
   } else if (valorTela.value.includes("mod")) {
     valorTela.value = eval(mod())
+  } else if (valorTela.value.includes("^")) {
+    valorTela.value = eval(exponencial())
   } else {
     valorTela.value = eval(valorTela.value)
   }
@@ -100,8 +102,8 @@ function quadrado() {
 }
 
 function exponencial() {
-  let resultado = parseInt(valorTela.value) ** parseInt(valorTela.value)
-  resultado = resultado.toString()
+  let calculo = valorTela.value.replace("^","**")
+  return calculo
 }
 
 function log10() {
