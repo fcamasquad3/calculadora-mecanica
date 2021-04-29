@@ -1,72 +1,78 @@
-body {
-    font-family: 'Roboto Mono',monospace;
-    min-height: 854px;
-    background-color: #FD5B03;
-  }
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
-  /* colors {
+/* colors {
     laranja: #FD5B03;
     dark-orange: #F25602 ;
     green: #36B336;
   }  */
 
-  .logo {
-    width: 4rem;
-  }
+body {
+    font-family: 'Cabin',monospace;
+    min-height: 854px;
+    background-color: #F25602;
+  } 
 
-  .container {
+header {
+  display: flex;
+  align-content: center; 
+  justify-content: space-around;  
+}
+
+.menu{ 
+  padding: 15px;  
+}
+
+
+.menu ul li {
+  display: inline;   
+  margin: 3rem 2rem;  
+  align-items: center;
+}
+
+.menu ul li a{   
+  padding: 20px 20px;   
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;      
+} 
+
+.logo {
+    width: 6rem;    
+} 
+
+/* corpo da página */
+  
+.container {
+    padding: 20px;   
+
     display: flex;
-    padding: 20px;
-    height: 100vh;
-  }
-  
-  header {
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
-    text-align: center;
-  }
-  
-  strong a {
-    text-decoration: none;
-    color: white;
-    margin: 1rem 2rem;
-  }
-  
-  .calculadora {
-    width: 264px;
-    height:360px;
-    margin: 0 auto;
-    padding: 1rem;
-    float: right;
-    position: relative;
-    background-color: rgb(179, 60, 6);
-    border-radius: 1rem;
-  }
-  
-  h2 {
-    position: absolute;
-    font-size:16px;
+    align-items: center;    
+  } 
+
+h1 {
+    font-size:5rem;
     font-weight:bold;
-    top: 142px;
-    left: calc(50% - 72.5px);
-    width: 145px;
-    text-align:center;
-  }
+    margin-block: 0rem;
+    margin: 5rem ;
+    text-transform: uppercase;
+}
+
+#page-title{
+  text-align: right;
+  margin: 5rem;  
+
+  display: flex;
+  align-items: center;
+  max-width: 573px;  
+}
+
+
   
-  td input{
-    width: 3rem;
-    height: 3rem;
-    background: orange;
-    color: white;
-    font-size: 1.5rem;
-  }
+
   
-  .number {
-    background-color: rgb(31, 31, 31);
-  }
-  
-  #tela {
-    width: 15.5rem;
-    height: 2rem;
-    margin-bottom: .75rem;
-  }
