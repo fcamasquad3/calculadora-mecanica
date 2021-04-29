@@ -5,7 +5,7 @@
 
 /* Configurações gerais da página */ 
 body {
-  height: 100vh;
+  min-height: 100vh;
   background-color: #F25602;
   font-size: 62.5%;
 }
