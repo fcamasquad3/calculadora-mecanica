@@ -60,7 +60,7 @@
                                <input type="button" value="cos">
                            </td>
                            <td>
-                               <input type="button" value="&#8730;">
+                               <input type="button" value="&#8730;" onclick="raiz()">
                            </td>
                            <td>
                                <input type="button" value="(" onclick="adicionarNaTela(document.getElementById('tela'),'(')">
@@ -81,7 +81,7 @@
                                <input type="button" value="tan">
                            </td>
                            <td>
-                               <input type="button" value="x^y">
+                               <input type="button" value="x^y" onclick="adicionarNaTela(document.getElementById('tela'),'^')">
                            </td>
                            <td>                              
                                <input class="number" type="button" value="7" onclick="adicionarNaTela(document.getElementById('tela'),'7')">
@@ -141,10 +141,10 @@
                                <input type="button" value="cot">
                            </td>
                            <td>
-                               <input type="button" value="&#960">
+                               <input type="button" value="&#960" onclick="adicionarNaTela(document.getElementById('tela'),3.1415926535897932384626433832795) ">
                            </td>
                            <td>
-                               <input type="button" value="+/-"onclick="mudarSinal()">
+                               <input type="button" value="+/-" onclick="mudarSinal()">
                            </td>
                            <td>
                                <input class="number" type="button" value="0" onclick="adicionarNaTela(document.getElementById('tela'),0)">
