@@ -1,26 +1,39 @@
-<<<<<<< HEAD
 body {
     font-family: 'Roboto Mono',monospace;
     min-height: 854px;
     background-color: #FD5B03;
+    text-align: center;
   }
-
-  /* colors {
-    laranja: #FD5B03;
-    dark-orange: #F25602 ;
-    green: #36B336;
-  }  */
 
   .logo {
     width: 4rem;
   }
 
-  .container {
-    display: flex;
-    padding: 20px;
-    height: 100vh;
+  .page-title {
+    width: 100% 0;
+    text-align: right;
+    padding-right: 1.5rem;
   }
-  
+
+  .questions {
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .question {
+    margin: 2rem;
+		
+  }
+
+  .question input {
+    border-radius: 6px;
+    height: 3rem;
+    width: 14rem;
+  }
+
   header {
     margin-top: 1.75rem;
     margin-bottom: 1.75rem;
@@ -33,114 +46,44 @@ body {
     margin: 1rem 2rem;
   }
   
-  .calculadora {
-    width: 264px;
-    height:360px;
-    margin: 0 auto;
-    padding: 1rem;
-    float: right;
-    position: relative;
-    background-color: rgb(179, 60, 6);
-    border-radius: 1rem;
+  h1 p {
+    font-style: sans-serif;
+    font-size: 3.75rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
   }
-  
-  h2 {
-    position: absolute;
-    font-size:16px;
-    font-weight:bold;
-    top: 142px;
-    left: calc(50% - 72.5px);
-    width: 145px;
-    text-align:center;
+
+  h1 p:last-child{
+    margin-top: 0;
   }
-  
-  td input{
-    width: 3rem;
-    height: 3rem;
-    background: orange;
-    color: white;
-    font-size: 1.5rem;
+
+  .value {
+    width: 100% 0;
+    text-align: right;
+    padding-right: 1.5rem;
+    font-weight: bold;
   }
-  
-  .number {
-    background-color: rgb(31, 31, 31);
+
+  .value input {
+    width: 16rem;
+    height: 4rem;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FD5B03;
   }
   
   #tela {
     width: 15.5rem;
     height: 2rem;
     margin-bottom: .75rem;
-=======
-body {
-    font-family: 'Roboto Mono',monospace;
-    min-height: 854px;
-    background-color: #FD5B03;
   }
 
-  /* colors {
-    laranja: #FD5B03;
-    dark-orange: #F25602 ;
-    green: #36B336;
-  }  */
-
-  .logo {
-    width: 4rem;
-  }
-
-  .container {
-    display: flex;
-    padding: 20px;
-    height: 100vh;
-  }
-  
-  header {
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
+  button {
+    background: #36B336;
+    color: #ffffff;
+    margin: 2rem;
+    padding: 1.75rem;
+    border-radius: 11px;
     text-align: center;
-  }
-  
-  strong a {
-    text-decoration: none;
-    color: white;
-    margin: 1rem 2rem;
-  }
-  
-  .calculadora {
-    width: 264px;
-    height:360px;
-    margin: 0 auto;
-    padding: 1rem;
-    float: right;
-    position: relative;
-    background-color: rgb(179, 60, 6);
-    border-radius: 1rem;
-  }
-  
-  h2 {
-    position: absolute;
-    font-size:16px;
-    font-weight:bold;
-    top: 142px;
-    left: calc(50% - 72.5px);
-    width: 145px;
-    text-align:center;
-  }
-  
-  td input{
-    width: 3rem;
-    height: 3rem;
-    background: orange;
-    color: white;
-    font-size: 1.5rem;
-  }
-  
-  .number {
-    background-color: rgb(31, 31, 31);
-  }
-  
-  #tela {
-    width: 15.5rem;
-    height: 2rem;
-    margin-bottom: .75rem;
->>>>>>> a05b1d27eec53a62632662b8eb5a5d4b7211a320
   }
