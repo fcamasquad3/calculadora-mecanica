@@ -24,10 +24,9 @@ body {
   }
   
   header {
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
+    margin: 1.75rem ;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
   
@@ -40,8 +39,8 @@ body {
   }
   
   .calculadora {
-    width: 24.7rem;
-    height:37.75rem;
+    width: 24rem; /*para o caso de separação das teclas 24.7rem e 37.75rem*/
+    height:37rem;
     
     margin: 5rem;     
     background-color:#c4c4c4;
@@ -67,18 +66,30 @@ body {
  
 
   table{
-    border-collapse: collapse; 
+    
+    border:0px;
+    border-collapse:collapse;
+    border-spacing:0px;
   }
   
+  td{
+    padding:0px; 
+    border-width:0px; 
+    margin:0px; 
+     
+  }
+
   td input{
     width: 6rem;
     height: 4rem;
 
     background-color: #FD5B03;
-    color: white;
-
+    color: #ffffff;       
+   
+    /* border-color: #9b3600;
+    border-style: solid;  para uma borda e separação*/
     
-    border:none;    
+    border: none;
     font-size: 2.5rem;   
     font-weight: 600;
   }
@@ -89,7 +100,7 @@ body {
   }
   
   #tela {
-    width: 24.7rem;
+    width: 24rem; /*para o caso de separação das teclas 24.7rem*/
     height: 13rem; 
 
     box-sizing: border-box;
