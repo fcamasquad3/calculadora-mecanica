@@ -16,6 +16,10 @@ function mostrarResultado() {
     valorTela.value = eval(porcento())
   } else if (valorTela.value.includes("!")) {
     valorTela.value = eval(fatorial())
+  } else if (valorTela.value.includes("mod")) {
+    valorTela.value = eval(mod())
+  } else if (valorTela.value.includes("^")) {
+    valorTela.value = eval(exponencial())
   } else {
     valorTela.value = eval(valorTela.value)
   }
@@ -89,10 +93,61 @@ function fatorial() {
 
 function raiz() {
   let resultado = Math.sqrt(parseInt(valorTela.value))
-  valorTela.value = resultado.toString
+  valorTela.value = resultado.toString()
+}
+
+function quadrado() {
+  let resultado = parseInt(valorTela.value) ** 2
+  valorTela.value = resultado.toString()
 }
 
 function exponencial() {
-  let resultado = Math.sqrt(parseInt(valorTela.value))
-  valorTela.value = resultado.toString
+  let calculo = valorTela.value.replace("^","**")
+  return calculo
+}
+
+function log10() {
+  let resultado = Math.log10(parseInt(valorTela.value))
+  valorTela.value = resultado.toString()
+}
+
+function inverso() {
+  let resultado = 1 / parseInt(valorTela.value)
+  valorTela.value = resultado.toString()
+}
+
+//função para cálculo de resto de divisão
+function mod() {
+  let calculo = valorTela.value.replace("mod","%")
+  return calculo
+}
+
+function seno() {
+  let resultado = Math.sin(parseInt(valorTela.value))
+  valorTela.value = resultado.toString()
+}
+
+function cosseno() {
+  let resultado = Math.cos(parseInt(valorTela.value))
+  valorTela.value = resultado.toString()
+}
+
+function tangente() {
+  let resultado = Math.tan(parseInt(valorTela.value))
+  valorTela.value = resultado.toString()
+}
+
+function secante() {
+  let resultado = 1 / Math.cos(parseInt(valorTela.value))
+  valorTela.value = resultado
+}
+
+function cossecante() {
+  let resultado = 1 / Math.sin(parseInt(valorTela.value))
+  valorTela.value = resultado
+}
+
+function cotangente() {
+  let resultado = 1 / Math.tan(parseInt(valorTela.value))
+  valorTela.value = resultado
 }

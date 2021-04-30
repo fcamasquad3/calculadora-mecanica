@@ -1,4 +1,27 @@
-let valorTela = document.getElementById("tela")
+const valorTela = document.getElementById("tela");
+
+// criação de arrays para function PopulacbMedidas()
+let pacoteMedidas = {
+  'Medidas': ['Quilômetro','Milhas','Metro','Pés','Centímetros','Polegadas'],
+  'Temperaturas': ['Fahrenheit' , 'Celsius'],
+  'Dados': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte']
+}
+
+//chamada da função e desenvolvimento da mesma, populando os selects top-tipo
+$('#op-tipo1').on('change', function() {
+
+  let selectValue = $(this).val();
+
+  $('#op-tipo1').empty();
+  $('#op-tipo2').empty();
+  
+  for (i = 0; i < pacoteMedidas[selectValue].length; i++) {
+    $('#op-tipo1').append("<option value='" + pacoteMedidas[selectValue][i] + "'>" + pacoteMedidas[selectValue][i] + "</option>");
+  }
+  for (i = 0; i < pacoteMedidas[selectValue].length; i++) {
+    $('#op-tipo2').append("<option value='" + pacoteMedidas[selectValue][i] + "'>" + pacoteMedidas[selectValue][i] + "</option>");
+  }
+});
 
 //adiciona na tela da calculadora o caractere (número/operação) selecionado
 function adicionarNaTela (tela,caractere) {
@@ -19,3 +42,6 @@ function deletar() {
   let ultimo = valorTela.value.length - 1
   valorTela.value = valorTela.value.slice(0, ultimo)
 }
+
+
+

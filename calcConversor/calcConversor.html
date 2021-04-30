@@ -1,48 +1,118 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
     <head>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" href="../public/logo.svg" type="image/svg" />
+        <link rel="shortcut icon" href="../public/logo-princ.svg" type="image/svg" />
         <link rel="stylesheet" href="style.css">
+
+        <!--Importando fontes-->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600&family=Cabin:wght@700&display=swap" rel="stylesheet">
+    
+        <!--Importando Icon Github-->
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+        <!-- Importando o jquery dos selects -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
         <title>Conversor</title>
      </head>
 
-     <body>
-        <header>
-            <img src="../public/logo.svg" class="logo" alt="logo">
-            <strong>
-                <a href="">Home</a>
-            </strong>
-            <strong>
-                <a href="">Calculadora científica</a>
-            </strong>
-            <strong>
-                <a href="">Conversor</a>
-            </strong>
-            <strong>
-                <a href="">Calculadora freelancer</a>
-            </strong>
-        </header>
+     <body>       
+         <header>           
+                <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
+            <nav class="menu">
+            <ul>               
+                <li> <a href="/index.html"> Home </a> </li>
+                <li> <a href="/calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
+                <li> <a href="/calcConversor/calcConversor.html"> Conversor </a> </li>
+                <li> <a href="/calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
+            </ul>
+            </nav>
+    </header>
     
         <div class="container">
-            <h1 class="page-title">
-                Conversor
-            </h1>
-            <img src="https://www.alura.com.br/assets/img/imersoes/dev-2021/logo-imersao-calculadora.svg" class="page-logo"
-                alt="">
-            <div class="calculadora">
-            </div>
-        </div>
-        <a href="https://alura.com.br/" target="_blank">
-            <img src="https://www.alura.com.br/assets/img/home/alura-logo.svg" alt="" class="alura-logo">
-        </a>
-        <h2></h2>
-        <!-- <script src="app.js"></script> -->
+            <div id="page-title">
+                <h1>Conversor</h1>
+            </div>                                 
+            <div class="corpo-conversor">   
+                                     
+               <div id="tela"> 
+                <div class="cb-medida1">                    
+                    <select id="op-tipo1"> 
+                        <option value=""disabled selected>tipo 1</option>                       
+                    </select>
+                </div>         
+                <div class="cb-medida2">
+                    <select id="op-tipo2"> 
+                        <option value=""disabled selected>tipo 2</option>                       
+                    </select>
+                </div>     
+                </div>  
+                <div class="btnMedidas">
+                    <select id="op-conversores" >                        
+                        <option value="Medidas">Medidas</option>
+                        <option value="Temperaturas">Temperatura</option>
+                        <option value="Dados">Dados</option>
+                    </select>
+                </div>
+                <table>
+                    <tr>                  
+                        <td>
+                            <input class="number" type="button" value="7">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="8">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="9">
+                        </td>
+                        <td>
+                            <input class="btn-extra"  type="button" value="X">
+                        </td>
+                    </tr>
+                    <tr>                  
+                        <td>
+                            <input class="number" type="button" value="4">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="5">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="6">
+                        </td>                       
+                    </tr>
+                    <tr>                  
+                        <td>
+                            <input class="number" type="button" value="1">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="2">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="3">
+                        </td>                        
+                    </tr>
+                    <tr>                  
+                        <td>
+                            <input class="btn-extra"  type="button" value="C">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value="0">
+                        </td>
+                        <td>
+                            <input class="number"  type="button" value=".">
+                        </td>                     
+                    </tr>
+                </table>
+            </div>         
+        <script src="app.js"></script>
     </body>
 
 </html>
+
 
 
 
