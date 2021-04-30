@@ -186,6 +186,8 @@ button:hover {
   }
 
   img {
+    left: 50%;
+    transform: translateX(-50%);
     top: 20%;
   }
 
@@ -214,12 +216,7 @@ button:hover {
 }
 
 @media (max-width: 768px) {
-  div.home {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
+ 
   h1.page-title {
     font-size: 5rem;
   }
