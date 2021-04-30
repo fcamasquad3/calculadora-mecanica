@@ -24,7 +24,7 @@ body {
     padding: 20px;   
 
     display: flex;
-    align-items: center;    
+    justify-content: space-evenly;    
   }
   
   header {
@@ -46,7 +46,8 @@ body {
     width: 28.5rem; /*para o caso de separação das teclas 24.7rem e 37.75rem*/
     height:34rem;
     
-    margin: 0 5rem 3rem;     
+    margin: 0 0 3rem 3rem; 
+    border-spacing: 0;    
     background-color:#c4c4c4;
     box-shadow: 8px 5px 5px #9b3600
   }
@@ -58,19 +59,11 @@ body {
 
   #titulo{
     text-align: right;
-    margin: 1rem 3rem;  
+    margin-right: 3rem;  
 
     display: flex;
     align-items: center;
     max-width: 573px;    
-  }
- 
-
-  table{
-    
-    border:0px;
-    border-collapse:collapse;
-    border-spacing:0px;
   }
   
   td{
@@ -98,7 +91,7 @@ body {
   }
   
   td input:hover {
-    background-color: #FD5B03;
+    background-color: rgb(253 91 3 / 90%);
     border: none;
   }
 
@@ -112,7 +105,7 @@ body {
     border: none;
   }
   
-  #tela {
+  input#tela {
     width: 28.5rem; /*para o caso de separação das teclas 24.7rem*/
     height: 10rem; 
 
@@ -124,6 +117,7 @@ body {
     color:#ffffff;
     font-size: 2.5rem;
     opacity: 80%;
+    cursor: auto;
   }
 
   footer {
@@ -152,20 +146,25 @@ body {
     transform: translateY(-50%);
   }
 
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 850px) {
     header {
+      flex-direction: column;
+    }
+
+    .container {
       flex-direction: column;
     }
 
     #titulo {
       text-align: center;
+      margin: 0 auto;
     }
 
     h1 {
       margin: 0 0 2rem;
     }
 
-    .container {
-      flex-direction: column;
+    .calculadora {
+      margin: 0 auto;
     }
   }
