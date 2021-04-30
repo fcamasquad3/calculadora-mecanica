@@ -1,89 +1,128 @@
 body {
-    font-family: 'Roboto Mono',monospace;
-    min-height: 854px;
-    background-color: #FD5B03;
-    text-align: center;
-  }
+  font-family: 'Roboto Mono',monospace;
+  min-height: 854px;
+  background-color: #FD5B03;
+  text-align: center;
+}
 
-  .logo {
-    width: 4rem;
-  }
+.logo {
+  width: 4rem;
+}
 
-  .page-title {
-    width: 100% 0;
-    text-align: right;
-    padding-right: 1.5rem;
-  }
+.page-title {
+  width: 100% 0;
+  text-align: right;
+  padding-right: 1.5rem;
+}
 
-  .questions {
-    font-weight: bold;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-  }
+.questions {
+  font-weight: bold;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
 
-  .question {
-    margin: 2rem;
-		
-  }
+.enunciated {
+  text-align: left;
+  padding-right: 1.5rem;
+  font-weight: bold;
+  padding-left: 5rem;
+  background: #F25602;
+}
 
-  .question input {
-    border-radius: 6px;
-    height: 3rem;
-    width: 14rem;
-  }
+.question {
+  margin: 2rem;
+}
 
-  header {
-    margin-top: 1.75rem;
-    margin-bottom: 1.75rem;
-    text-align: center;
-  }
-  
-  strong a {
-    text-decoration: none;
-    color: white;
-    margin: 1rem 2rem;
-  }
-  
-  h1 p {
-    font-style: sans-serif;
-    font-size: 3.75rem;
-    letter-spacing: 2px;
-    margin-bottom: 1rem;
-  }
+.question input {
+  border-radius: 6px;
+  height: 3rem;
+  width: 14rem;
+}
 
-  h1 p:last-child{
-    margin-top: 0;
-  }
+header {
+  margin-top: 1.75rem;
+  margin-bottom: 1.75rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
-  .value {
-    width: 100% 0;
-    text-align: right;
-    padding-right: 1.5rem;
-    font-weight: bold;
-  }
+strong a {
+  text-decoration: none;
+  color: white;
+  margin: 1rem 2rem;
+}
 
-  .value input {
-    width: 16rem;
-    height: 4rem;
-    text-align: right;
-    font-size: 2rem;
-    font-weight: bold;
-    color: #FD5B03;
-  }
-  
-  #tela {
-    width: 15.5rem;
-    height: 2rem;
-    margin-bottom: .75rem;
-  }
+h1 p {
+  font-style: sans-serif;
+  font-size: 3.75rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
 
-  button {
-    background: #36B336;
-    color: #ffffff;
-    margin: 2rem;
-    padding: 1.75rem;
-    border-radius: 11px;
-    text-align: center;
-  }
+h1 p:last-child{
+  margin-top: 0;
+}
+
+.value {
+  width: 100% 0;
+  text-align: right;
+  padding-right: 1.5rem;
+  font-weight: bold;
+}
+
+.value input {
+  width: 16rem;
+  height: 4rem;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #FD5B03;
+}
+
+#tela {
+  width: 15.5rem;
+  height: 2rem;
+  margin-bottom: .75rem;
+}
+
+button {
+  background: #36B336;
+  color: #ffffff;
+  margin: 2rem;
+  padding: 1.75rem;
+  border-radius: 11px;
+  text-align: center;
+}
+
+footer {
+  bottom: 0;
+  margin: 0 0 -2rem -2rem;
+  height: 8rem;
+  width: 120%;
+  background-color: #000;
+  color: #fff;
+}
+
+footer p {
+  padding-top: 3.5rem;
+}
+
+/* .p-footer {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: 'Cabin', sans-serif;;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+*/
+.icone {
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+} 
