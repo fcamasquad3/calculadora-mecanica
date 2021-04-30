@@ -17,11 +17,8 @@
      </head>
 
      <body>       
-         <header>
-           
-                <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">
-          
-
+         <header>           
+                <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
             <nav class="menu">
             <ul>               
                 <li> <a href="/index.html"> Home </a> </li>
@@ -35,13 +32,33 @@
         <div class="container">
             <div id="page-title">
                 <h1>Conversor</h1>
-            </div>
-                                 
-            <div class="corpo-conversor">                             
-               <div id="tela">                
+            </div>                                 
+            <div class="corpo-conversor">   
+                                     
+               <div id="tela"> 
+                <div class="cb-medida1">                    
+                    <select id="op-tipo1"> 
+                        <option value="Quilômetro">Quilômetro</option>
+                        <option value="Milhas">Milhas</option>
+                        <option value="Metro">Metro</option>
+                        <option value="Centímetros">Centímetros</option>
+                        <option value="Pés">Pés</option>
+                        <option value="Polegadas">Polegadas</option>
+                    </select>
+                </div>         
+                <div class="cb-medida2">
+                    <select id="op-tipo2"> 
+                        <option value="Quilômetro">Quilômetro</option>
+                        <option value="Milhas">Milhas</option>
+                        <option value="Metro">Metro</option>
+                        <option value="Centímetros">Centímetros</option>
+                        <option value="Pés">Pés</option>
+                        <option value="Polegadas">Polegadas</option>
+                    </select>
+                </div>     
                 </div>  
                 <div class="btnMedidas">
-                    <select id="op-conversores"> 
+                    <select id="op-conversores" onchange="Teste()"> 
                         <option value="Medidas">Medidas</option>
                         <option value="Temperatura">Temperatura</option>
                         <option value="Dados">Dados</option>
@@ -96,17 +113,7 @@
                         </td>                     
                     </tr>
                 </table>
-            </div>
-            <!-- <footer>
-                <div class="p-footer">
-                    <p>Hackathon Imersão Dev - FCamara</p>
-                </div>
-                
-                <div class="icone">
-                    <a href="https://github.com/fcamasquad3/calculadora-mecanica"><span class="iconify" data-icon="akar-icons:github-fill" style="font-size: 40px; color: #F25602;"></span></a>
-                </div>
-        
-            </footer> -->
+            </div>         
         <script src="app.js"></script>
     </body>
 
