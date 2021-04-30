@@ -225,4 +225,25 @@ button:hover {
   }
 }
 
+@media (max-width: 320px) {
+  img {
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h1.page-title {
+    top: 180px;
+    font-size: 4.5rem;
+  }
+
+  .container {
+    top: 50%;
+  }
+
+  button {
+    margin: 10px;
+  }
+}
+
 
