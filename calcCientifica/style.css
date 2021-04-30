@@ -1,6 +1,10 @@
+html, body {
+  height: 100vh;
+  margin: 0;
+}
+
 body {
-    font-family: 'Advent Pro', sans-serif;
-    min-height: 854px;
+    font-family: 'Advent Pro';
     background-color: #F25602;
   }
 
@@ -39,10 +43,10 @@ body {
   }
   
   .calculadora {
-    width: 24rem; /*para o caso de separação das teclas 24.7rem e 37.75rem*/
-    height:37rem;
+    width: 28.5rem; /*para o caso de separação das teclas 24.7rem e 37.75rem*/
+    height:34rem;
     
-    margin: 5rem;     
+    margin: 0 5rem 3rem;     
     background-color:#c4c4c4;
     box-shadow: 8px 5px 5px #9b3600
   }
@@ -50,14 +54,11 @@ body {
   h1 {
     font-size:5rem;
     font-weight:bold;
-    margin-block: 0rem;
-    text-transform: uppercase;
-      
   }
 
   #titulo{
     text-align: right;
-    margin: 5rem;  
+    margin: 1rem 3rem;  
 
     display: flex;
     align-items: center;
@@ -80,7 +81,7 @@ body {
   }
 
   td input{
-    width: 6rem;
+    width: 4.75rem;
     height: 4rem;
 
     background-color: #FD5B03;
@@ -89,19 +90,31 @@ body {
     /* border-color: #9b3600;
     border-style: solid;  para uma borda e separação*/
     
-    border: none;
-    font-size: 2.5rem;   
+    border: 1px solid #111111;
+    font-family: 'Cabin';
+    font-size: 2rem;
     font-weight: 600;
+    cursor: pointer;
   }
   
+  td input:hover {
+    background-color: #FD5B03;
+    border: none;
+  }
+
   .number {
     background-color: #111111;
-    border-color: #111111;
+    border-color: #FD5B03;
+  }
+
+  .number:hover {
+    background-color: rgb(17 17 17 / 80%);
+    border: none;
   }
   
   #tela {
-    width: 24rem; /*para o caso de separação das teclas 24.7rem*/
-    height: 13rem; 
+    width: 28.5rem; /*para o caso de separação das teclas 24.7rem*/
+    height: 10rem; 
 
     box-sizing: border-box;
     padding: 0rem;
@@ -111,4 +124,48 @@ body {
     color:#ffffff;
     font-size: 2.5rem;
     opacity: 80%;
+  }
+
+  footer {
+    position: relative;
+    bottom: 0;
+    height: 12%;
+    width: 100%;
+    background-color: #000;
+  }
+  
+  .p-footer {
+    position: absolute;
+    top: 50%;
+    left: 7%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-family: 'Cabin', sans-serif;;
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+  }
+  
+  .icone {
+    position: absolute;
+    right: 7%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @media only screen and (max-width: 768px) {
+    header {
+      flex-direction: column;
+    }
+
+    #titulo {
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 2rem;
+    }
+
+    .container {
+      flex-direction: column;
+    }
   }

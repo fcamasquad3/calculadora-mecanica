@@ -9,21 +9,25 @@
         <title>Calculadora Científica</title>
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600&family=Cabin:wght@700&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;500;600&family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+        <!--Importando Icon Github-->
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     </head>
     
     <body>
         <header>
-            <img src="../public/logo.svg" class="logo" alt="logo">            
-                <a href="">HOME</a>
+            <img src="../public/logo-princ.svg" class="logo" alt="logo">            
+                <a href="">Home</a>
             
-                <a href="">CALCULADORA CIENTÍFICA</a>
+                <a href="">Calculadora Científica</a>
             
-                <a href="">CONVERSOR</a>
+                <a href="">Conversor</a>
            
-                <a href="">CALCULADORA FREELANCER</a>            
+                <a href="">Calculadora Freelance</a>            
         </header>
-        
+
+        <main>
             <div class="container">
                 <div id="titulo">
                     <h1>CALCULADORA CIENTÍFICA</h1>
@@ -98,7 +102,7 @@
                        </tr>
                        <tr>
                            <td>
-                               <input type="button" value="sec">
+                               <input type="button" value="sec" onclick="secante()">
                            </td>
                            <td>
                                 <input type="button" value="%" onclick="adicionarNaTela(document.getElementById('tela'),'%')">
@@ -118,7 +122,7 @@
                        </tr>
                        <tr>
                            <td>
-                               <input type="button" value="csc">
+                               <input type="button" value="csc" onclick="cossecante()">
                            </td>
                            <td>
                                <input type="button" value="log" onclick="log10()">
@@ -138,7 +142,7 @@
                        </tr>
                        <tr>
                            <td>
-                               <input type="button" value="cot">
+                               <input type="button" value="cot" onclick="cotangente()">
                            </td>
                            <td>
                                <input type="button" value="&#960" onclick="adicionarNaTela(document.getElementById('tela'),3.1415926535897932384626433832795) ">
@@ -158,7 +162,20 @@
                        </tr>
                     </table>
                 </div>
-            </div>           
+        </main>
+
+        <footer>
+            <div class="p-footer">
+                <p>Hackathon Imersão Dev - FCamara</p>
+            </div>
+            
+            <div class="icone">
+                <a href="https://github.com/fcamasquad3/calculadora-mecanica"><span class="iconify" data-icon="akar-icons:github-fill" style="font-size: 40px; color: #F25602;"></span></a>
+            </div>
+    
+        </footer>
+            
+            </div>        
             <script src="app.js"></script>
         </body>
 </html>
