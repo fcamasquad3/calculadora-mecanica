@@ -11,21 +11,24 @@
 
     <body>
         <header>
-            <img src="../public/logo.svg" class="logo" alt="logo">
-            <strong>
-                <a href="">Home</a>
-            </strong>
-            <strong>
-                <a href="">Calculadora científica</a>
-            </strong>
-            <strong>
-                <a href="">Conversor</a>
-            </strong>
-            <strong>
-                <a href="">Calculadora freelancer</a>
-            </strong>
+            <ul>
+                <li>  
+                    <img src="../public/logo-princ.svg" class="logo" alt="logo">
+                </li>
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="../calcCientifica/calcCientifica.html">Calculadora científica</a>
+                </li>
+                <li>
+                    <a href="../calcConversor/calcConversor.html">Conversor</a>
+                </li>
+                <li>
+                    <a href="../calcFreelancer/calcFreelancer.html">Calculadora freelancer</a>
+                </li>
+            </ul>     
         </header>
-
     <div>
         <h1 class="page-title">
            <p>CALCULADORA DE</p>  
@@ -37,32 +40,31 @@
         </div>
     </div>
         <p>Preencha os dados para calcular</p>
-        <section class="questions">
-                <div class="question">
-                    <p>Quanto quero ganhar por mês?</p>
-                    <input type="number" name="" id="">
-                </div>
-                <div class="question">
-                    <p>Quantos dias quero trabalhar por semana?</p>
-                    <input type="number" name="" id="">
-                </div>
-                <div class="question">
-                    <p>Quantas horas quero trabalhar por dia?</p>
-                    <input type="number" name="" id="">
-                </div>
-            
-                <div class="question">
-                    <p>Qual nome escolhido do seu Job?</p>
-                    <input type="number" name="" id="">
-                </div>
-                <div class="question">
-                    <p>Quantas horas vai se dedicar ao Job?</p>
-                    <input type="number" name="" id="">
-                </div>
-                <div class="question">
-                    <p>Estimativa de horas para esse Job?</p>
-                    <input type="number" name="" id="">
-                </div>  
+            <div class="question">
+                <p>Qual nome escolhido do seu Job?</p>
+                <input type="text" id="nomeJob" value="" >
+            </div>
+            <div class="question">
+                <p>Quanto eu quero ganhar por mês?</p>
+                <input type="number" id="valorMes" value="0" >
+            </div>
+            <div class="question">
+                <p>Quantas horas quero trabalhar por dia?</p>
+                <input type="number" id="valorHorasDia" value="0" >
+            </div>
+        
+            <div class="question">
+                <p>Quantos dias quero trabalhar por semana?</p>
+                <input type="number" id="valorSemana" value="0" >
+            </div>
+            <div class="question">
+                <p>Estimativa de horas para esse Job?</p>
+                <input type="number" id="horasJob"value="0" >
+            </div>
+            <div class="question">
+                <p>Esse é o valor da sua hora de trabalho:</p>
+                <input type="number" id="valorHoraTrabalho" value="0" >
+            </div>  
         </section>
         <button>CALCULAR</button>
     

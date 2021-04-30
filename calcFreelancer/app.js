@@ -1,21 +1,20 @@
-let valorTela = document.getElementById("tela")
+let nomeJob = document.createElementById('nomeJob');
 
-//adiciona na tela da calculadora o caractere (número/operação) selecionado
-function adicionarNaTela (tela,caractere) {
-  if (tela.value == null || tela.value == 0) {
-    tela.value = caractere
-  } else {
-    tela.value += caractere
-  }
+let valorMes = document.createElementById('valorMes');
+let valorHorasDia = document.createElementById('valorHorasDia');
+let valorSemana = document.createElementById('valorSemana');
+let horasJob = document.createElementById('horasJob');
+let valorHoraTrabalho = document.createElementById('valorHoraTrabalho');
+
+// ex: 4000 / 6 / 6 / 4
+valorHoraTrabalho.value = valorMes.value / valorHorasDia.value / valorSemanaSemana.value
+
+function calculate () {
+  let resultado = 0;
+
+  resultado = valorHoraTrabalho * horasJob;
+
+  return resultado
 }
 
-//pega a string formada na tela e computa o resultado
-function mostrarResultado() {
-  valorTela.value = eval(valorTela.value)
-}
-
-//deletar o último caractere inserido
-function deletar() {
-  let ultimo = valorTela.value.length - 1
-  valorTela.value = valorTela.value.slice(0, ultimo)
-}
+//valor do Job: ${nome.Job}
