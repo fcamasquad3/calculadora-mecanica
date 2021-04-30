@@ -225,6 +225,18 @@ button:hover {
   }
 }
 
+@media (max-width: 411px) {
+  div.home {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  img {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 @media (max-width: 320px) {
   img {
     top: -10px;
