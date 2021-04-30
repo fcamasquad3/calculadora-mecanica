@@ -258,4 +258,82 @@ button:hover {
   }
 }
 
+@media (min-height: 1024px) {
+  div.home {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  img {
+    width: 350px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h1.page-title {
+    text-align: center;
+    top: 370px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+  }
+
+  .container {
+    top: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    margin: 20px;
+    width: 420px;
+    font-size: 2rem;
+  }
+
+  .p-footer {
+    font-size: 1.6rem;
+  }
+}
+
+@media (min-height: 1366px) {
+  div.home {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  img {
+    width: 450px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  h1.page-title {
+    text-align: center;
+    top: 470px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 8rem;
+  }
+
+  .container {
+    top: 55%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  button {
+    margin: 30px;
+    width: 420px;
+    font-size: 2rem;
+  }
+
+  .p-footer {
+    font-size: 1.6rem;
+  }
+}
+
 
