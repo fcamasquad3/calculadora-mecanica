@@ -34,6 +34,18 @@ body {
     align-items: center;
   }
   
+  .menu{
+    letter-spacing: 5px; 
+    font-weight: 400;
+    text-align: center;
+    width: -webkit-fill-available;
+  }
+
+  ul {
+    list-style: none;
+    display: inline-flex;
+  }
+
   a {
     color: #ffffff;
     text-decoration: none;
@@ -147,8 +159,12 @@ body {
   }
 
   @media only screen and (max-width: 850px) {
-    header {
+    ul {
       flex-direction: column;
+    }
+
+    li {
+      display: contents;
     }
 
     .container {
@@ -177,5 +193,6 @@ body {
     input[type="button"] {
       max-width: 12.5vw;
       font-size: 5vw;
+      display: inline;
     }
   }
