@@ -161,10 +161,21 @@ body {
     }
 
     h1 {
+      font-size: 15vw;
       margin: 0 0 2rem;
     }
 
     .calculadora {
       margin: 0 auto;
+    }
+
+    table, tr, td, input{
+      display: flex;
+      max-width: 75vw;
+    }
+
+    input[type="button"] {
+      max-width: 12.5vw;
+      font-size: 5vw;
     }
   }
