@@ -1,4 +1,4 @@
-const valorTela = document.getElementById("tela");
+const valorTela = document.getElementById("cbMedida1");
 
 // criação de arrays para function PopulacbMedidas()
 let pacoteMedidas = {
@@ -24,11 +24,11 @@ $('#op-conversores').on('change', function() {
 });
 
 //adiciona na tela da calculadora o caractere (número/operação) selecionado
-function adicionarNaTela (tela,caractere) {
-  if (tela.value == null || tela.value == 0) {
-    tela.value = caractere
+function adicionarNaTela (cbMedida1,caractere) {
+  if (cbMedida1.value == null || cbMedida1.value == 0) {
+    cbMedida1.value = caractere
   } else {
-    tela.value += caractere
+    cbMedida1.value += caractere
   }
 }
 
