@@ -107,6 +107,14 @@ h1 {
   /* background-color:aqua; */
   height: 3rem;
   width: 20rem;
+  
+  background-color: #111111;
+  border: none;
+
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 1rem;
 }
 
 
