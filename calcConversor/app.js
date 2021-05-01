@@ -8,7 +8,7 @@ let pacoteMedidas = {
 }
 
 //chamada da função e desenvolvimento da mesma, populando os selects top-tipo
-$('#op-tipo1').on('change', function() {
+$('#op-conversores').on('change', function() {
 
   let selectValue = $(this).val();
 

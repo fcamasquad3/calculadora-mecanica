@@ -1,13 +1,55 @@
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+
 body {
-  font-family: 'Roboto Mono',monospace;
+  font-family: 'Cabin',monospace;
   min-height: 854px;
   background-color: #FD5B03;
   text-align: center;
 }
 
-.logo {
-  width: 4rem;
+
+/*--------------header e componentes------------------- */
+header {
+  
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;  
+ 
 }
+
+.menu{ 
+  font-family: 'Advent Pro', sans-serif;
+  letter-spacing: 5px; 
+  font-weight: 400;
+}
+
+
+.menu ul li {
+  display: inline;   
+  margin: 3rem 1rem;  
+  align-items: center;
+}
+
+.menu ul li a{   
+  padding: 20px 20px;   
+  color: #ffffff;
+  font-size: 20px;
+  font-size: 1.7rem;       
+} 
+
+img {
+    width: 6rem;   
+    margin-left: 3rem; 
+} 
+
+/* --------------questionario--------------------------- */
 
 .page-title {
   width: 100% 0;
@@ -41,24 +83,13 @@ body {
   width: 14rem;
 }
 
-header {
-  margin-top: 1.75rem;
-  margin-bottom: 1.75rem;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-strong a {
-  text-decoration: none;
-  color: white;
-  margin: 1rem 2rem;
-}
-
 h1 p {
-  font-style: sans-serif;
-  font-size: 3.75rem;
-  letter-spacing: 2px;
+  font-size: 6.5rem;
+  font-weight: bold;
+  font-family: 'Advent Pro', sans-serif;
+  letter-spacing: 8%; 
+  text-transform: uppercase;
+
   margin-bottom: 1rem;
 }
 
@@ -97,6 +128,8 @@ button {
   text-align: center;
 }
 
+/* 
+---------------------------footer lindo que precisa de ajuste, obrigadaa por fazer isso, gisele------------------ */
 footer {
   bottom: 0;
   margin: 0 0 -2rem -2rem;
