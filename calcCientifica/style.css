@@ -1,12 +1,16 @@
-html, body {
-  height: 100vh;
-  margin: 0;
+* {
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
-
 body {
     font-family: 'Advent Pro';
     background-color: #F25602;
-  }
+
+    min-height: 100vh;
+}
 
   /* colors {
     laranja: #FD5B03;
@@ -14,33 +18,47 @@ body {
     green: #36B336;
   }  */
 
-  .logo {
-    width: 4rem;
-    margin: 0.5rem 2rem;
-  }
-
+  /* header e componentes */
+  header {
+  
+    display: flex;
+    align-items: center; 
+    justify-content: space-around;  
    
+  }
+  
+  .menu{ 
+    font-family: 'Advent Pro', sans-serif;
+    letter-spacing: 5px; 
+    font-weight: 400;
+  }
+  
+  
+  .menu ul li {
+    display: inline;   
+    margin: 3rem 1rem;  
+    align-items: center;
+  }
+  
+  .menu ul li a{   
+    padding: 20px 20px;   
+    color: #ffffff;
+    font-size: 20px;
+    font-size: 1.7rem;       
+  } 
+  
+  img {
+      width: 6rem;   
+      margin-left: 3rem; 
+  } 
+  
+  /* corpo da calculadora */
   .container {
     padding: 20px;   
 
     display: flex;
     justify-content: space-evenly;    
-  }
-  
-  header {
-    margin: 1.75rem ;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  a {
-    color: #ffffff;
-    text-decoration: none;
-
-    font-weight: 600;    
-    margin: 0.5rem 2rem;
-  }
+  } 
   
   .calculadora {
     width: 28.5rem; /*para o caso de separação das teclas 24.7rem e 37.75rem*/
@@ -120,6 +138,8 @@ body {
     cursor: auto;
   }
 
+
+  /* -------------footer não bate com a header, lembrar de justar----------------- */
   footer {
     position: relative;
     bottom: 0;
@@ -146,6 +166,8 @@ body {
     transform: translateY(-50%);
   }
 
+
+ /*-------------- moibile -------------------- */
   @media only screen and (max-width: 850px) {
     header {
       flex-direction: column;

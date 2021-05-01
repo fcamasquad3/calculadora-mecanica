@@ -131,15 +131,19 @@ option{
 
 #op-conversores{
   width: 20rem;
+  border-color: #111111 ;
 }
 
 #op-tipo1{ 
-  margin-left: 1.5rem;
-  margin-bottom: 3rem;
+  width: 8rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 3rem; 
 }
 
 #op-tipo2{ 
-  margin-left: 1.5rem;
+  width: 8rem;
+  margin-left: 1rem;
   margin-bottom: 3rem;
 }
 /*-------- botoes do conversor --------- */
