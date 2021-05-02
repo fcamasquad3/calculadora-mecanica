@@ -4,7 +4,7 @@ let calculo = 0;
 
 // criação de arrays para function PopulacbMedidas()
 let pacoteMedidas = {
-  'Medidas': ['Quilômetro','Milha','Metro','Pé','Centímetro','Polegada'],
+  'Comprimento': ['Quilômetro','Milha','Metro','Pé','Centímetro','Polegada'],
   'Temperaturas': ['Fahrenheit' , 'Celsius'],
   'Dados': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte']
 }
