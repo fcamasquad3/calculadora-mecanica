@@ -131,6 +131,28 @@ function converte() {
       break;          
     }
   } 
+
+  else if(primeiroSelect == "Pé"){
+    switch(segundoSelect){
+      case "Quilômetro":
+        QuilometroEPe(flag);
+      break;
+      case "Milha":
+        milhaEPe(flag);
+      break;
+      case "Metro":        
+        metroEPe(flag);
+      break;
+      case "Centímetro":
+        flag = true;
+        peECm(flag);
+      break;
+      case "Polegada":
+        flag = true;
+        peEPolegada(flag);
+      break;          
+    }
+  } 
 }
 
 // funções relacionadas a unidades de comprimento
@@ -273,5 +295,6 @@ function metroEPe(flag){
   } 
 }
 
+////funções relacionadas a conversão a partir de pé
 
 
