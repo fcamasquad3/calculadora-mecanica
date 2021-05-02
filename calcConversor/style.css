@@ -87,7 +87,7 @@ h1 {
   height: 33rem;
   width: 20rem;
 
-  font-family: 'Cabin',monospace;
+  font-family:'Cabin',monospace;
 
   margin: 5rem 3rem;
   background-color: #C4C4C4;
@@ -110,11 +110,13 @@ h1 {
   
   background-color: #111111;
   border: none;
+  padding: 1rem;
 
   color: #ffffff;
   font-size: 2.5rem;
   text-align: right;
-  padding: 1rem;
+  font-family:'Cabin',monospace;
+  
 }
 
 

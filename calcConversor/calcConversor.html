@@ -40,20 +40,21 @@
             <div class="corpoConversor">                                        
                <div id="fundoTela"> 
                     <div class="corpoTela1">                                    
-                        <select id="opTipo1"> 
-                            <option value=""disabled selected>tipo 1</option>                       
+                        <select id="opTipo1" onchange="converte()"> 
+                            <option value="" disabled selected>tipo 1</option>                       
                         </select>
                         <input class="telas" id="telaEntrada" value="0">   
                     </div>         
                     <div class="corpoTela2">                   
-                        <select id="opTipo2"> 
-                            <option value=""disabled selected>tipo 2</option>                       
+                        <select id="opTipo2" onchange="converte()"> 
+                            <option value="" disabled selected>tipo 2</option>                       
                         </select>
                         <input class="telas" id="telaSaida">
                     </div>     
                 </div>  
                 <div class="btnMedidas">
-                    <select id="opConversores" >                        
+                    <select id="opConversores" >     
+                        <option value="" disabled selected>Conversores</option>                   
                         <option value="Medidas">Medidas</option>
                         <option value="Temperaturas">Temperatura</option>
                         <option value="Dados">Dados</option>
@@ -71,7 +72,7 @@
                             <input class="number"  type="button" value="9" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'9')">
                         </td>
                         <td>
-                            <input class="btn-extra"  type="button" value="X">
+                            <input class="btn-extra"  type="button" value="X" onclick="deletar()">
                         </td>
                     </tr>
                     <tr>                  
@@ -98,13 +99,13 @@
                     </tr>
                     <tr>                  
                         <td>
-                            <input class="btn-extra"  type="button" value="C">
+                            <input class="btn-extra"  type="button" value="C" onclick="deletarConteudo()">
                         </td>
                         <td>
                             <input class="number"  type="button" value="0" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'0')">
                         </td>
                         <td>
-                            <input class="number"  type="button" value=".">
+                            <input class="number"  type="button" value="." onclick="adicionarNaTela(document.getElementById('telaEntrada'),'.')">
                         </td>                     
                     </tr>
                 </table>
