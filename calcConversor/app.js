@@ -122,22 +122,19 @@ function converte() {
   else if(primeiroSelect == "Pé"){
     switch(segundoSelect){
       case "Quilômetro":
-        valorBase = 3281;
-        conversorGenerico(flag);
+        conversorGenerico({primeiroInput:false,valorBase: 3281});
       break;
       case "Milha":
-        milhaEPe(flag);
+        conversorGenerico({primeiroInput:false,valorBase: 5280});
       break;
       case "Metro":        
-        metroEPe(flag);
+        conversorGenerico({primeiroInput:false,valorBase: 3.281});
       break;
-      case "Centímetro":
-        flag = true;
-        peECm(flag);
+      case "Centímetro":      
+        conversorGenerico({primeiroInput:true,valorBase: 30.48});
       break;
-      case "Polegada":
-        flag = true;
-        peEPolegada(flag);
+      case "Polegada":      
+        conversorGenerico({primeiroInput:true,valorBase: 12});
       break;          
     }
   } 
