@@ -13,6 +13,7 @@
 }
 
 .load-page img {
+  position: absolute;
   width: 150px;
   left: 45%;
   top: 35%;
