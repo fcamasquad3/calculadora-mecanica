@@ -112,10 +112,10 @@ function converte() {
   else if(primeiroSelect == "Metro"){
     switch(segundoSelect){
       case "Quilômetro":
-        metroEKM(flag);
+        QuilometroEMetro(flag);
       break;
       case "Milha":
-        metroEMilha(flag);
+        milhaEMetro(flag);
       break;
       case "Pé":
         flag = true;
@@ -202,7 +202,7 @@ function milhaEMetro(flag){
   }
   else {
     calculo = valorTela.value / 1609;
-    valorSaida.value = calculo;
+    valorSaida.value = calculo.toFixed(4);
   }
 }
 
@@ -241,7 +241,37 @@ function milhaEPe(flag){
 }
 
 
-
+////funções relacionadas a conversão a partir de metro
+function metroECm(flag){
+  if(flag){
+    calculo = valorTela.value * 100 ;
+    valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 100;
+    valorSaida.value = calculo;
+  }   
+}
+function metroEPolegada(flag){
+  if(flag){
+    calculo = valorTela.value * 39.37;
+    valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 39.37;
+    valorSaida.value = calculo;
+  } ;
+}
+function metroEPe(flag){
+  if(flag){
+    calculo = valorTela.value * 3.281;
+    valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 3.281;
+    valorSaida.value = calculo;
+  } 
+}
 
 
 
