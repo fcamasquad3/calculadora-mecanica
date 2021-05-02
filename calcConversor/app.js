@@ -56,6 +56,7 @@ function converte() {
   let primeiroSelect = document.getElementById("opTipo1").value;
   let segundoSelect = document.getElementById("opTipo2").value; 
   let flag = false;
+  let valorBase = 0;
   
   if (primeiroSelect == segundoSelect)
   {
@@ -64,24 +65,28 @@ function converte() {
   
   else if(primeiroSelect == "Quilômetro"){
     switch(segundoSelect){
-      case "Milha":        
-        flag=true;
-        QuilometroEMilha(flag);
+      case "Milha":               
+        valorBase = 1.609;
+        conversorGenerico(flag,valorBase);
       break;
       case "Metro":   
-        flag=true;    
-        QuilometroEMetro(flag);
+        flag = true; 
+        valorBase = 1000;   
+        conversorGenerico(flag,valorBase);
       break;
       case "Pé":
-        flag=true;
-        QuilometroEPe(flag);
+        flag = true;
+        valorBase = 3281;
+        conversorGenerico(flag,valorBase);
       break;
       case "Centímetro":  
-        flag=true;      
-        QuilometroECm(flag);
+        flag = true;   
+        valorBase = 100000;   
+        conversorGenerico(flag,valorBase);
       break;
       case "Polegada":
         flag=true;
+        valorBase = 39370;
         QuilometroEPolegada(flag);
       break;          
     }
@@ -89,10 +94,12 @@ function converte() {
   else if(primeiroSelect == "Milha"){
     switch(segundoSelect){
       case "Quilômetro":
-        QuilometroEMilha(flag);
+        valorBase = 1.609;
+        conversorGenerico(flag,valorBase);
       break;
       case "Metro":
-        flag=true;
+        flag = true;
+        valorBase = 1609;
         milhaEMetro(flag);
       break;
       case "Pé":
@@ -112,9 +119,11 @@ function converte() {
   else if(primeiroSelect == "Metro"){
     switch(segundoSelect){
       case "Quilômetro":
-        QuilometroEMetro(flag);
+        valorBase = 1000;
+        conversorGenerico(flag);
       break;
       case "Milha":
+        valorBase = 1609;
         milhaEMetro(flag);
       break;
       case "Pé":
@@ -135,7 +144,8 @@ function converte() {
   else if(primeiroSelect == "Pé"){
     switch(segundoSelect){
       case "Quilômetro":
-        QuilometroEPe(flag);
+        valorBase = 3281;
+        conversorGenerico(flag);
       break;
       case "Milha":
         milhaEPe(flag);
@@ -157,7 +167,8 @@ function converte() {
   else if(primeiroSelect == "Centímetro"){
     switch(segundoSelect){
       case "Quilômetro":
-        QuilometroECm(flag);
+        valorBase = 100000;
+        conversorGenerico(flag,valorBase);
       break;
       case "Milha":
         milhaECm(flag);
@@ -197,178 +208,14 @@ function converte() {
 }
 
 // funções relacionadas a unidades de comprimento
-////funções relacionadas a conversão a partir de quilômetro
-function QuilometroEMilha(flag){    
+////funções relacionadas a conversão
+function conversorGenerico(flag,valorBase){    
   if(flag){
-    calculo = valorTela.value / 1.609;
-    valorSaida.value = calculo.toFixed(4); 
+    calculo = valorTela.value * valorBase;
+    valorSaida.value = calculo; 
   }
   else{
-    calculo = valorTela.value * 1.690;
+    calculo = valorTela.value / valorBase;
     valorSaida.value = calculo;
   }
-}
-
-function QuilometroEMetro(flag){
-  if(flag){
-  calculo = valorTela.value * 1000;
-  valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 1000;
-    valorSaida.value = calculo;
-  }
-}
-
-function QuilometroEPe(flag){
-  if(flag){
-    calculo = valorTela.value * 3281;
-    valorSaida.value = calculo;
-  }
-  else{
-    calculo = valorTela.value / 3281;
-    valorSaida.value = calculo.toFixed(7);
-  }
-  
-}
-
-function QuilometroECm(flag){
-  if(flag){
-    calculo = valorTela.value * 100000;
-    valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 100000;
-    valorSaida.value = calculo;
-  }
-}
-
-function QuilometroEPolegada(flag){
-  if(flag){
-    calculo = valorTela.value * 39370;
-    valorSaida.value = calculo;
-  }
-  else{
-    calculo = valorTela.value / 39370;
-    valorSaida.value = calculo;
-  }
-}
-
-
-
-////funções relacionadas a conversão a partir de milha
-
-function milhaEMetro(flag){
-  if(flag){
-  calculo = valorTela.value * 1609;
-  valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 1609;
-    valorSaida.value = calculo.toFixed(4);
-  }
-}
-
-function milhaECm(flag){
-  if(flag){
-  calculo = valorTela.value * 160934;
-  valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 160934;
-    valorSaida.value = calculo.toFixed(8);
-  }
-}
-
-function milhaEPolegada(flag){ 
-
-  if(flag){
-    calculo = valorTela.value * 63360;
-    valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 63360;
-    valorSaida.value = calculo;
-  }
-}
-
-function milhaEPe(flag){
-  if(flag){
-    calculo = valorTela.value * 5280;
-    valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 5280;
-    valorSaida.value = calculo.toFixed(9);
-  } 
-}
-
-
-////funções relacionadas a conversão a partir de metro
-function metroECm(flag){
-  if(flag){
-    calculo = valorTela.value * 100 ;
-    valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 100;
-    valorSaida.value = calculo;
-  }   
-}
-function metroEPolegada(flag){
-  if(flag){
-    calculo = valorTela.value * 39.37;
-    valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 39.37;
-    valorSaida.value = calculo;
-  } ;
-}
-function metroEPe(flag){
-  if(flag){
-    calculo = valorTela.value * 3.281;
-    valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 3.281;
-    valorSaida.value = calculo.toFixed(4);
-  } 
-}
-
-////funções relacionadas a conversão a partir de pé
-function peECm(flag){
-  if(flag){
-    calculo = valorTela.value * 30.48;
-    valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 30.48;
-    valorSaida.value = calculo.toFixed(6);
-  } 
-}
-
-function peEPolegada(flag){
-  if(flag){
-    calculo = valorTela.value * 12;
-    valorSaida.value = calculo;
-  }
-  else {
-    calculo = valorTela.value / 12;
-    valorSaida.value = calculo.toFixed(2);
-  } 
-}
-
-
-
-////funções relacionadas a conversão a partir de centímetros
-function cmEPolegada(flag){
-  if(flag){
-    calculo = valorTela.value  / 2.54;
-    valorSaida.value = calculo.toFixed(4);
-  }
-  else {
-    calculo = valorTela.value * 2.54;
-    valorSaida.value = calculo;
-  } 
 }
