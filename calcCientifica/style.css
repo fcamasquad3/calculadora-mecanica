@@ -16,10 +16,15 @@ body {
 
   .logo {
     width: 4rem;
-    margin: 0.5rem 2rem;
   }
 
-   
+  #menu-icon{
+    width: 0;
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
+
   .container {
     padding: 20px;   
 
@@ -34,7 +39,7 @@ body {
     align-items: center;
   }
   
-  .menu{
+  .menu-desktop{
     letter-spacing: 5px; 
     font-weight: 400;
     text-align: center;
@@ -158,13 +163,18 @@ body {
     transform: translateY(-50%);
   }
 
-  @media only screen and (max-width: 850px) {
-    ul {
-      flex-direction: column;
+  @media only screen and (max-width: 1024px) {
+    .logo {
+      margin-left: 5vw;
+      width: 15vw;
     }
 
-    li {
-      display: contents;
+    #menu-icon{
+      width: 10vw;
+    }
+
+    .menu-desktop {
+      display: none;
     }
 
     .container {
@@ -174,24 +184,36 @@ body {
     #titulo {
       text-align: center;
       margin: 0 auto;
+      max-width: fit-content;
     }
 
     h1 {
-      font-size: 15vw;
+      font-size: 12vw;
       margin: 0 0 2rem;
     }
 
     .calculadora {
       margin: 0 auto;
+      width: 90vw;
+      height: 107vw;
     }
 
     table, tr, td, input{
       display: flex;
-      max-width: 75vw;
+    }
+
+    tbody, td{
+      width: -webkit-fill-available;
+    }
+
+    input#tela {
+      width: -webkit-fill-available;
+      height: calc(107vw * 0.29);
     }
 
     input[type="button"] {
-      max-width: 12.5vw;
+      width: -webkit-fill-available;
+      height: calc(107vw * 0.119);
       font-size: 5vw;
       display: inline;
     }
