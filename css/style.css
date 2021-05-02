@@ -8,16 +8,19 @@
 .load-page {
   background-color: #000;
   position: absolute;
-  width: 10%;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  min-width: 100vw;
+  min-height: 100vh;
 }
 
-.load-img {
+.load-page img {
+  width: 150px;
+  left: 45%;
+  top: 35%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
   animation: loading 6s linear infinite;
 }
-/*
+
 @keyframes loading {
   0% {
       transform: rotate(0deg);
@@ -25,7 +28,7 @@
   100%{
       transform: rotate(360deg);
   }
-}*/
+} 
 
 /* Configurações gerais da página */ 
 body {
