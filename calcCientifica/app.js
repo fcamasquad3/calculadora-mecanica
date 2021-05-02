@@ -151,3 +151,13 @@ function cotangente() {
   let resultado = 1 / Math.tan(parseInt(valorTela.value))
   valorTela.value = resultado
 }
+
+// Funções do menu mobile
+
+function abre() {
+  document.getElementById("menu-mobile").style.right = `${'0'}`
+}
+
+function fechar() {
+  document.getElementById("menu-mobile").style.right = `${'-260px'}`
+}
