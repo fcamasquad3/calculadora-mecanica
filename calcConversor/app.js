@@ -109,6 +109,28 @@ function converte() {
       break;          
     }
   }  
+  else if(primeiroSelect == "Metro"){
+    switch(segundoSelect){
+      case "Quilômetro":
+        metroEKM(flag);
+      break;
+      case "Milha":
+        metroEMilha(flag);
+      break;
+      case "Pé":
+        flag = true;
+        metroEPe(flag);
+      break;
+      case "Centímetro":
+        flag = true;
+        metroECm(flag);
+      break;
+      case "Polegada":
+        flag = true;
+        metroEPolegada(flag);
+      break;          
+    }
+  } 
 }
 
 // funções relacionadas a unidades de comprimento
