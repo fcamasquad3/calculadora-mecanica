@@ -65,94 +65,159 @@ function converte() {
   else if(primeiroSelect == "Quilômetro"){
     switch(segundoSelect){
       case "Milha":        
-        kmParaMilha();
-      break;
-      case "Metro":
         flag=true;
-        kmParaMetro();
+        QuilometroEMilha(flag);
+      break;
+      case "Metro":   
+        flag=true;    
+        QuilometroEMetro(flag);
       break;
       case "Pé":
-        kmParaPe();
+        flag=true;
+        QuilometroEPe(flag);
       break;
-      case "Centímetro":        
-        kmEParaCm();
+      case "Centímetro":  
+        flag=true;      
+        QuilometroECm(flag);
       break;
       case "Polegada":
-        kmParaPolegada();
+        flag=true;
+        QuilometroEPolegada(flag);
       break;          
     }
   } 
   else if(primeiroSelect == "Milha"){
     switch(segundoSelect){
       case "Quilômetro":
-        kmParaMilha();
+        QuilometroEMilha(flag);
       break;
       case "Metro":
-        milhaParaMetro();
+        flag=true;
+        milhaEMetro(flag);
       break;
       case "Pé":
-        milhaParaPe();
+        flag=true;
+        milhaEPe(flag);
       break;
       case "Centímetro":
-        milhaParaCm();
+        flag=true;
+        milhaECm(flag);
       break;
       case "Polegada":
-        milhaParaPolegada();
+        flag=true;
+        milhaEPolegada(flag);
       break;          
     }
-  } 
-
-  
+  }  
 }
 
 // funções relacionadas a unidades de comprimento
 ////funções relacionadas a conversão a partir de quilômetro
-function kmParaMilha(){    
+function QuilometroEMilha(flag){    
+  if(flag){
     calculo = valorTela.value / 1.609;
     valorSaida.value = calculo.toFixed(4); 
+  }
+  else{
+    calculo = valorTela.value * 1.690;
+    valorSaida.value = calculo;
+  }
 }
 
-function kmParaMetro(){
+function QuilometroEMetro(flag){
+  if(flag){
   calculo = valorTela.value * 1000;
   valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 1000;
+    valorSaida.value = calculo;
+  }
 }
 
-function kmParaPe(){
-  calculo = valorTela.value * 3281;
-  valorSaida.value = calculo;
+function QuilometroEPe(flag){
+  if(flag){
+    calculo = valorTela.value * 3281;
+    valorSaida.value = calculo;
+  }
+  else{
+    calculo = valorTela.value / 3281;
+    valorSaida.value = calculo;
+  }
+  
 }
 
-function kmParaCm(){
-  calculo = valorTela.value * 100000;
-  valorSaida.value = calculo;
+function QuilometroECm(flag){
+  if(flag){
+    calculo = valorTela.value * 100000;
+    valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 100000;
+    valorSaida.value = calculo;
+  }
 }
 
-function kmParaPolegada(){
-  calculo = valorTela.value * 39370;
-  valorSaida.value = calculo;
+function QuilometroEPolegada(flag){
+  if(flag){
+    calculo = valorTela.value * 39370;
+    valorSaida.value = calculo;
+  }
+  else{
+    calculo = valorTela.value / 39370;
+    valorSaida.value = calculo;
+  }
 }
+
+
 
 ////funções relacionadas a conversão a partir de milha
-function milhaParaKM(){
-  calculo = valorTela.value * 1.609;
+
+function milhaEMetro(flag){
+  if(flag){
+  calculo = valorTela.value * 1609;
   valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 1609;
+    valorSaida.value = calculo;
+  }
 }
-function milhaParaMetro(){
-  calculo = valorTela.value * 1690
-  valorSaida.value = calculo;
-}
-function milhaParaCm(){
+
+function milhaECm(flag){
+  if(flag){
   calculo = valorTela.value * 160934;
   valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 160934;
+    valorSaida.value = calculo;
+  }
 }
-function milhaParaPolegada(){
-  calculo = valorTela.value * 63360;
-  valorSaida.value = calculo;
+
+function milhaEPolegada(flag){ 
+
+  if(flag){
+    calculo = valorTela.value * 63360;
+    valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 63360;
+    valorSaida.value = calculo;
+  }
 }
-function milhaParaPe(){
-  calculo = valorTela.value * 5280;
-  valorSaida.value = calculo;
+
+function milhaEPe(flag){
+  if(flag){
+    calculo = valorTela.value * 5280;
+    valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 5280;
+    valorSaida.value = calculo;
+  } 
 }
+
 
 
 
