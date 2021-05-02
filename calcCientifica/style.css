@@ -1,3 +1,8 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
 html, body {
   height: 100vh;
   margin: 0;
@@ -14,8 +19,17 @@ body {
     green: #36B336;
   }  */
 
+/* Header */
+
   .logo {
     width: 4rem;
+  }
+  
+  header {
+    margin: 1.75rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   #menu-icon{
@@ -25,20 +39,25 @@ body {
     top: 2rem;
   }
 
-  .container {
-    padding: 20px;   
+  #menu-mobile{
+    transition: right .3s ease-in-out;
+    position: fixed;
+    right: -260px;
+    top: 5px;
+    z-index: 101;
+    height: 100vh;
+    width: 260px;
+    background-color: black;
+  }
 
-    display: flex;
-    justify-content: space-evenly;    
+  #menu-mobile ul {
+    list-style: none;
   }
-  
-  header {
-    margin: 1.75rem ;
+
+  .menu-header {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
   }
-  
+
   .menu-desktop{
     letter-spacing: 5px; 
     font-weight: 400;
@@ -46,7 +65,7 @@ body {
     width: -webkit-fill-available;
   }
 
-  ul {
+  .full-menu {
     list-style: none;
     display: inline-flex;
   }
@@ -58,22 +77,15 @@ body {
     font-weight: 600;    
     margin: 0.5rem 2rem;
   }
-  
-  .calculadora {
-    width: 28.5rem; /*para o caso de separação das teclas 24.7rem e 37.75rem*/
-    height:34rem;
-    
-    margin: 0 0 3rem 3rem; 
-    border-spacing: 0;    
-    background-color:#c4c4c4;
-    box-shadow: 8px 5px 5px #9b3600
-  }
-  
-  h1 {
-    font-size:5rem;
-    font-weight:bold;
-  }
 
+/* Main */
+
+  .container {
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;    
+  }
+ 
   #titulo{
     text-align: right;
     margin-right: 3rem;  
@@ -81,6 +93,21 @@ body {
     display: flex;
     align-items: center;
     max-width: 573px;    
+  }
+
+  h1 {
+    font-size:5rem;
+    font-weight:bold;
+  }
+   
+  .calculadora {
+    width: 28.5rem;
+    height:34rem;
+    
+    margin: 0 0 3rem 3rem; 
+    border-spacing: 0;    
+    background-color:#c4c4c4;
+    box-shadow: 8px 5px 5px #9b3600
   }
   
   td{
@@ -136,6 +163,8 @@ body {
     opacity: 80%;
     cursor: auto;
   }
+
+/* Footer */
 
   footer {
     position: relative;
