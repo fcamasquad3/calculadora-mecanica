@@ -17,19 +17,37 @@
     
     <body>
         <nav id="menu-mobile">
-
+            <header class="menu-header">
+                <span onclick="fechar()">&#10005;</span>
+            </header>
+            <div>
+                <ul>
+                    <li>
+                        <a href="../index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="./calcCientifica.html">Calculadora Científica</a>
+                    </li>
+                    <li>
+                        <a href="../calcConversor/calcConversor.html">Conversor</a>
+                    </li>
+                    <li>
+                        <a href="../calcFreelancer/calcFreelancer.html"Calculadora Freelance></a>
+                    </li>
+                </ul>
+            </div>
         </nav>
         <header>                     
             <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
             <nav class="menu-desktop">
-                <ul>               
+                <ul class="full-menu">            
                     <li> <a href="../index.html"> Home </a> </li>
-                    <li> <a href="../calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
+                    <li> <a href="./calcCientifica.html"> Calculadora Científica </a> </li>
                     <li> <a href="../calcConversor/calcConversor.html"> Conversor </a> </li>
                     <li> <a href="../calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
                 </ul>
             </nav>
-            <img id="menu-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg">
+            <img id="menu-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg" onclick="abre()">
         </header>
         <main>
             <div class="container">
