@@ -54,9 +54,7 @@ function deletarConteudo() {
 function converte() {
 
   let primeiroSelect = document.getElementById("opTipo1").value;
-  let segundoSelect = document.getElementById("opTipo2").value; 
-  let flag = false;
-  let valorBase = 0;
+  let segundoSelect = document.getElementById("opTipo2").value;  
   
   if (primeiroSelect == segundoSelect)
   {
@@ -65,82 +63,58 @@ function converte() {
   
   else if(primeiroSelect == "Quilômetro"){
     switch(segundoSelect){
-      case "Milha":               
-        valorBase = 1.609;
-        conversorGenerico(flag,valorBase);
+      case "Milha":
+        conversorGenerico({primeiroInput:false,valorBase:1.609});
       break;
-      case "Metro":   
-        flag = true; 
-        valorBase = 1000;   
-        conversorGenerico(flag,valorBase);
+      case "Metro":           
+        conversorGenerico({primeiroInput:true,valorBase:1000});
       break;
-      case "Pé":
-        flag = true;
-        valorBase = 3281;
-        conversorGenerico(flag,valorBase);
+      case "Pé":        
+        conversorGenerico({primeiroInput:true,valorBase:3281});
       break;
-      case "Centímetro":  
-        flag = true;   
-        valorBase = 100000;   
-        conversorGenerico(flag,valorBase);
+      case "Centímetro":           
+        conversorGenerico({primeiroInput:true,valorBase:100000});
       break;
-      case "Polegada":
-        flag = true;
-        valorBase = 39370;
-        conversorGenerico(flag,valorBase);
+      case "Polegada":        
+        conversorGenerico({primeiroInput:true,valorBase:39370});
       break;          
     }
   } 
   else if(primeiroSelect == "Milha"){
     switch(segundoSelect){
-      case "Quilômetro":
-        flag = true;
-        valorBase = 1.609;
-        conversorGenerico(flag,valorBase);
+      case "Quilômetro":       
+        conversorGenerico({primeiroInput:true,valorBase: 1.609});
       break;
-      case "Metro":
-        flag = true;
-        valorBase = 1609;
-        conversorGenerico(flag,valorBase);
+      case "Metro":      
+        conversorGenerico({primeiroInput:true,valorBase: 1609});
       break;
-      case "Pé":
-        flag = true;
-        valorBase = 5280;
-        conversorGenerico(flag,valorBase);
+      case "Pé":      
+        conversorGenerico({primeiroInput:true,valorBase: 5280});
       break;
-      case "Centímetro":
-        flag = true;
-        valorBase = 160934;
-        conversorGenerico(flag,valorBase);
+      case "Centímetro":        
+        conversorGenerico({primeiroInput:true,valorBase: 160934});
       break;
-      case "Polegada":
-        flag = true;
-        valorBase = 63360;
-        conversorGenerico(flag,valorBase);
+      case "Polegada":       
+        conversorGenerico({primeiroInput:true,valorBase: 63360});
       break;          
     }
   }  
   else if(primeiroSelect == "Metro"){
     switch(segundoSelect){
-      case "Quilômetro":
-        valorBase = 1000;
-        conversorGenerico(flag);
+      case "Quilômetro":        
+        conversorGenerico({primeiroInput:false,valorBase: 1000});
       break;
       case "Milha":
-        valorBase = 1609;
-        milhaEMetro(flag);
+        conversorGenerico({primeiroInput:false,valorBase: 1609});
       break;
-      case "Pé":
-        flag = true;
-        metroEPe(flag);
+      case "Pé":       
+        conversorGenerico({primeiroInput:true,valorBase:3.281});
       break;
       case "Centímetro":
-        flag = true;
-        metroECm(flag);
+        conversorGenerico({primeiroInput:true,valorBase:100});
       break;
-      case "Polegada":
-        flag = true;
-        metroEPolegada(flag);
+      case "Polegada":       
+        conversorGenerico({primeiroInput:true,valorBase:39.37});
       break;          
     }
   } 
@@ -213,8 +187,8 @@ function converte() {
 
 // funções relacionadas a unidades de comprimento
 ////funções relacionadas a conversão
-function conversorGenerico(flag,valorBase){    
-  if(flag){
+function conversorGenerico({primeiroInput,valorBase}){    
+  if(primeiroInput){
     calculo = valorTela.value * valorBase;
     valorSaida.value = calculo; 
   }
