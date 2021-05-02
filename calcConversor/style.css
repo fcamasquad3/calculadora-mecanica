@@ -83,11 +83,11 @@ h1 {
 
 
 /* corpo do conversor */
-.corpo-conversor{
-  height: 32rem;
+.corpoConversor{
+  height: 33rem;
   width: 20rem;
 
-  font-family: 'Cabin',monospace;
+  font-family:'Cabin',monospace;
 
   margin: 5rem 3rem;
   background-color: #C4C4C4;
@@ -95,16 +95,30 @@ h1 {
   box-shadow: 8px 5px 5px #9b3600;
 }
 
-#tela{
-  height: 13rem;
-  width: 20rem;
-
-  color:#ffffff;
-  font-size: 2.5rem;
+#fundoTela{
+  height: 14rem;
+  width: 20rem;  
+  
   opacity: 80%;  
+  background-color: #111111;  
+}
+
+.telas{
+  /* background-color:aqua; */
+  height: 3rem;
+  width: 20rem;
+  
   background-color: #111111;
+  border: none;
+  padding: 1rem;
+
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: right;
+  font-family:'Cabin',monospace;
   
 }
+
 
 /*-------- botão opçóes de conversores --------- */
 
@@ -113,6 +127,9 @@ select {
   background-color: #111111;  
   
   height: 3rem;
+  width: 8rem;
+  margin-top: 1rem;
+  margin-left: 1rem; 
 
   font-size: 20px;  
   font-family: 'Cabin',monospace;
@@ -129,23 +146,12 @@ option{
   padding: 2rem;  
 }
 
-#op-conversores{
+#opConversores{
   width: 20rem;
+  margin: 0;
   border-color: #111111 ;
 }
 
-#op-tipo1{ 
-  width: 8rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 3rem; 
-}
-
-#op-tipo2{ 
-  width: 8rem;
-  margin-left: 1rem;
-  margin-bottom: 3rem;
-}
 /*-------- botoes do conversor --------- */
 table{
   border:0px;
