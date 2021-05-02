@@ -157,20 +157,20 @@ function converte() {
   else if(primeiroSelect == "Centímetro"){
     switch(segundoSelect){
       case "Quilômetro":
-        QuilometroEPolegada(flag);
+        QuilometroECm(flag);
       break;
       case "Milha":
-        milhaEPolegada(flag);
+        milhaECm(flag);
       break;
       case "Metro":        
-        metroEPolegada(flag);
+        metroECm(flag);
       break;
       case "Pé":
-        peEPolegada(flag);
+        peECm(flag);
       break;
       case "Polegada":
         flag=true;
-        polegadaECm(flag);
+        cmEPolegada(flag);
       break;          
     }
   } 
@@ -256,7 +256,7 @@ function milhaECm(flag){
   }
   else {
     calculo = valorTela.value / 160934;
-    valorSaida.value = calculo;
+    valorSaida.value = calculo.toFixed(8);
   }
 }
 
@@ -324,7 +324,7 @@ function peECm(flag){
   }
   else {
     calculo = valorTela.value / 30.48;
-    valorSaida.value = calculo;
+    valorSaida.value = calculo.toFixed(6);
   } 
 }
 
@@ -339,3 +339,16 @@ function peEPolegada(flag){
   } 
 }
 
+
+
+////funções relacionadas a conversão a partir de centímetros
+function cmEPolegada(flag){
+  if(flag){
+    calculo = valorTela.value  / 2.54;
+    valorSaida.value = calculo.toFixed(4);
+  }
+  else {
+    calculo = valorTela.value * 2.54;
+    valorSaida.value = calculo;
+  } 
+}
