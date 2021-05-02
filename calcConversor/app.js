@@ -186,7 +186,7 @@ function QuilometroEPe(flag){
   }
   else{
     calculo = valorTela.value / 3281;
-    valorSaida.value = calculo;
+    valorSaida.value = calculo.toFixed(7);
   }
   
 }
@@ -258,7 +258,7 @@ function milhaEPe(flag){
   }
   else {
     calculo = valorTela.value / 5280;
-    valorSaida.value = calculo;
+    valorSaida.value = calculo.toFixed(9);
   } 
 }
 
@@ -291,10 +291,31 @@ function metroEPe(flag){
   }
   else {
     calculo = valorTela.value / 3.281;
-    valorSaida.value = calculo;
+    valorSaida.value = calculo.toFixed(4);
   } 
 }
 
 ////funções relacionadas a conversão a partir de pé
 
 
+function peECm(flag){
+  if(flag){
+    calculo = valorTela.value * 30.48;
+    valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 30.48;
+    valorSaida.value = calculo;
+  } 
+}
+
+function peEPolegada(flag){
+  if(flag){
+    calculo = valorTela.value * 12;
+    valorSaida.value = calculo;
+  }
+  else {
+    calculo = valorTela.value / 12;
+    valorSaida.value = calculo;
+  } 
+}
