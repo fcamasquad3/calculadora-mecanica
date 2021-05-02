@@ -85,34 +85,38 @@ function converte() {
         conversorGenerico(flag,valorBase);
       break;
       case "Polegada":
-        flag=true;
+        flag = true;
         valorBase = 39370;
-        QuilometroEPolegada(flag);
+        conversorGenerico(flag,valorBase);
       break;          
     }
   } 
   else if(primeiroSelect == "Milha"){
     switch(segundoSelect){
       case "Quilômetro":
+        flag = true;
         valorBase = 1.609;
         conversorGenerico(flag,valorBase);
       break;
       case "Metro":
         flag = true;
         valorBase = 1609;
-        milhaEMetro(flag);
+        conversorGenerico(flag,valorBase);
       break;
       case "Pé":
-        flag=true;
-        milhaEPe(flag);
+        flag = true;
+        valorBase = 5280;
+        conversorGenerico(flag,valorBase);
       break;
       case "Centímetro":
-        flag=true;
-        milhaECm(flag);
+        flag = true;
+        valorBase = 160934;
+        conversorGenerico(flag,valorBase);
       break;
       case "Polegada":
-        flag=true;
-        milhaEPolegada(flag);
+        flag = true;
+        valorBase = 63360;
+        conversorGenerico(flag,valorBase);
       break;          
     }
   }  
