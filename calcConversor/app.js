@@ -174,6 +174,26 @@ function converte() {
       break;          
     }
   } 
+
+  else if(primeiroSelect == "Polegada"){
+    switch(segundoSelect){
+      case "Quilômetro":
+        QuilometroEPolegada(flag);
+      break;
+      case "Milha":
+        milhaEPolegada(flag);
+      break;
+      case "Metro":        
+        metroEPolegada(flag);
+      break;
+      case "Pé":
+        peEPolegada(flag);
+      break;
+      case "Centímetro":        
+        cmEPolegada(flag);
+      break;          
+    }
+  } 
 }
 
 // funções relacionadas a unidades de comprimento
@@ -335,7 +355,7 @@ function peEPolegada(flag){
   }
   else {
     calculo = valorTela.value / 12;
-    valorSaida.value = calculo;
+    valorSaida.value = calculo.toFixed(2);
   } 
 }
 
