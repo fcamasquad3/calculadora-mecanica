@@ -153,6 +153,27 @@ function converte() {
       break;          
     }
   } 
+
+  else if(primeiroSelect == "Centímetro"){
+    switch(segundoSelect){
+      case "Quilômetro":
+        QuilometroEPolegada(flag);
+      break;
+      case "Milha":
+        milhaEPolegada(flag);
+      break;
+      case "Metro":        
+        metroEPolegada(flag);
+      break;
+      case "Pé":
+        peEPolegada(flag);
+      break;
+      case "Polegada":
+        flag=true;
+        polegadaECm(flag);
+      break;          
+    }
+  } 
 }
 
 // funções relacionadas a unidades de comprimento
@@ -296,8 +317,6 @@ function metroEPe(flag){
 }
 
 ////funções relacionadas a conversão a partir de pé
-
-
 function peECm(flag){
   if(flag){
     calculo = valorTela.value * 30.48;
@@ -319,3 +338,4 @@ function peEPolegada(flag){
     valorSaida.value = calculo;
   } 
 }
+
