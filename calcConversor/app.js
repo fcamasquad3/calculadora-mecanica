@@ -4,7 +4,7 @@ let calculo = 0;
 
 // criação de arrays para function PopulacbMedidas()
 let pacoteMedidas = {
-  'Medidas': ['Quilômetro','Milhas','Metro','Pés','Centímetros','Polegadas'],
+  'Medidas': ['Quilômetro','Milha','Metro','Pé','Centímetro','Polegada'],
   'Temperaturas': ['Fahrenheit' , 'Celsius'],
   'Dados': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte']
 }
@@ -55,6 +55,7 @@ function converte() {
 
   let primeiroSelect = document.getElementById("opTipo1").value;
   let segundoSelect = document.getElementById("opTipo2").value; 
+  let flag = false;
   
   if (primeiroSelect == segundoSelect)
   {
@@ -63,49 +64,97 @@ function converte() {
   
   else if(primeiroSelect == "Quilômetro"){
     switch(segundoSelect){
-      case "Milhas":
-        KmParaMilhas();
+      case "Milha":        
+        kmParaMilha();
       break;
       case "Metro":
-        KmParaMetro();
+        flag=true;
+        kmParaMetro();
       break;
-      case "Pés":
-        KmParaPes();
+      case "Pé":
+        kmParaPe();
       break;
-      case "Centímetros":
-        KmParaCm();
+      case "Centímetro":        
+        kmEParaCm();
       break;
-      case "Polegadas":
-        KmParaPolegadas();
+      case "Polegada":
+        kmParaPolegada();
       break;          
     }
   } 
+  else if(primeiroSelect == "Milha"){
+    switch(segundoSelect){
+      case "Quilômetro":
+        kmParaMilha();
+      break;
+      case "Metro":
+        milhaParaMetro();
+      break;
+      case "Pé":
+        milhaParaPe();
+      break;
+      case "Centímetro":
+        milhaParaCm();
+      break;
+      case "Polegada":
+        milhaParaPolegada();
+      break;          
+    }
+  } 
+
   
 }
 
-function KmParaMilhas(){   
-  calculo = valorTela.value / 1.609;
-  valorSaida.value = calculo.toFixed(4);  
+// funções relacionadas a unidades de comprimento
+////funções relacionadas a conversão a partir de quilômetro
+function kmParaMilha(){    
+    calculo = valorTela.value / 1.609;
+    valorSaida.value = calculo.toFixed(4); 
 }
 
-function KmParaMetro(){
+function kmParaMetro(){
   calculo = valorTela.value * 1000;
   valorSaida.value = calculo;
 }
 
-function KmParaPes(){
+function kmParaPe(){
   calculo = valorTela.value * 3281;
   valorSaida.value = calculo;
 }
 
-function KmParaCm(){
+function kmParaCm(){
   calculo = valorTela.value * 100000;
   valorSaida.value = calculo;
 }
 
-function KmParaPolegadas(){
+function kmParaPolegada(){
   calculo = valorTela.value * 39370;
   valorSaida.value = calculo;
 }
+
+////funções relacionadas a conversão a partir de milha
+function milhaParaKM(){
+  calculo = valorTela.value * 1.609;
+  valorSaida.value = calculo;
+}
+function milhaParaMetro(){
+  calculo = valorTela.value * 1690
+  valorSaida.value = calculo;
+}
+function milhaParaCm(){
+  calculo = valorTela.value * 160934;
+  valorSaida.value = calculo;
+}
+function milhaParaPolegada(){
+  calculo = valorTela.value * 63360;
+  valorSaida.value = calculo;
+}
+function milhaParaPe(){
+  calculo = valorTela.value * 5280;
+  valorSaida.value = calculo;
+}
+
+
+
 
 
