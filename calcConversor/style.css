@@ -63,9 +63,9 @@ img {
 h1 { 
     font-size: 6.5rem;
     font-weight: bold;
-    font-family: 'Advent Pro', sans-serif;
-    letter-spacing: 8%; 
+    font-family: 'Advent Pro', sans-serif;     
     text-transform: uppercase;
+    letter-spacing: 5px;
 
     margin-block: 0rem;
     margin: 5rem ;    
