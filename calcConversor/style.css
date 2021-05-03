@@ -182,3 +182,30 @@ td input{
   border-color: #8F3402;   
 }
 
+/* Footer */
+footer {
+  position: relative;
+  bottom: 0;
+  height: 12%;
+  width: 100%;
+  background-color: #000;
+}
+
+.p-footer {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.icone {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
