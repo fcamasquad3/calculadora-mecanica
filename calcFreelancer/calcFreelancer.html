@@ -34,15 +34,16 @@
     <div>
         <h1 class="page-title">
            <p>CALCULADORA DE</p>  
-           <p>FREELANCER</p>
+           <p>FREELANCE</p>
         </h1>
     </div>
-        <p>Preencha os dados para calcular</p>
+        <h2>Preencha os dados para calcular</h2>
         <section class="questions">
-                <div class="question">
+                <div class="question1 question">
                     <p>Qual nome escolhido do seu Job?</p>
                     <input type="text" id="nomeJob" value="" >
                 </div>
+            <fieldset>
                 <div class="question">
                     <p>Quanto eu quero ganhar por mês?</p>
                     <input type="number" id="valorMes" value="" >
@@ -51,7 +52,8 @@
                     <p>Quantas horas quero trabalhar por dia?</p>
                     <input type="number" id="valorHorasDia" value="" >
                 </div>
-            
+            </fieldset>
+            <fieldset>
                 <div class="question">
                     <p>Quantos dias quero trabalhar por semana?</p>
                     <input type="number" id="valorSemana" value="" >
@@ -60,18 +62,18 @@
                     <p>Estimativa de horas para esse Job?</p>
                     <input type="number" id="horasJob"value="" >
                 </div>
-                
+            </fieldset>    
         </section>
-        <button onclick="mostrarResultado()">CALCULAR</button>
+        <button type="submit" onclick="mostrarResultado()">CALCULAR</button>
     
         <div>
-            <div class="question">
+            <div class="value question">
                 <p>Valor da sua hora de trabalho é:</p>
-                <input type="number" id="valorHoraTrabalho" value="" >
+                <input type="number" id="valorHoraTrabalho" value="" placeholder="R$ 0" readonly >
             </div>  
             <div class="value question">
-                <p>Valor do projeto:</p>
-                <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0">
+                <p id="result">Valor do projeto:</p>
+                <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0 " readonly>
             </div>
         </div>
 

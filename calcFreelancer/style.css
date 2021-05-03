@@ -21,7 +21,6 @@ header {
   display: flex;
   align-items: center; 
   justify-content: space-around;  
- 
 }
 
 .menu{ 
@@ -57,6 +56,14 @@ img {
   padding-right: 1.5rem;
 }
 
+.enunciated {
+  text-align: left;
+  padding-right: 1.5rem;
+  font-weight: bold;
+  padding-left: 5rem;
+  background: #F25602;
+}
+
 .questions {
   font-weight: bold;
   display: flex;
@@ -64,13 +71,8 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-.enunciated {
-  text-align: left;
-  padding-right: 1.5rem;
-  font-weight: bold;
-  padding-left: 5rem;
-  background: #F25602;
+.question1 {
+  width: 100%;
 }
 
 .question {
@@ -81,6 +83,11 @@ img {
   border-radius: 6px;
   height: 3rem;
   width: 14rem;
+  padding-left: 0.5rem;
+}
+
+fieldset {
+  border: none;
 }
 
 h1 p {
@@ -89,7 +96,6 @@ h1 p {
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 8%; 
   text-transform: uppercase;
-
   margin-bottom: 1rem;
 }
 
@@ -97,11 +103,19 @@ h1 p:last-child{
   margin-top: 0;
 }
 
+p {
+  padding-bottom: 0.5rem;
+}
+
+input {
+  font-size: 1rem;
+}
+
 .value {
   width: 100% 0;
   text-align: center;
-  padding-right: 1.5rem;
   font-weight: bold;
+  display: inline-block;
 }
 
 .value input {
@@ -111,6 +125,7 @@ h1 p:last-child{
   font-size: 2rem;
   font-weight: bold;
   color: #FD5B03;
+  
 }
 
 #tela {
@@ -123,8 +138,11 @@ button {
   background: #36B336;
   color: #ffffff;
   margin: 2rem;
-  padding: 1.75rem;
+  padding: 1.25rem;
   border-radius: 11px;
+  border: none;
+  box-shadow: 0px 1.5px 5px black;
+  font-size: 1.5rem;
   text-align: center;
 }
 
@@ -159,3 +177,26 @@ footer p {
   top: 50%;
   transform: translateY(-50%);
 } 
+
+@media(min-width: 720px) {
+  /* * {
+    background: blue;
+  } */
+  #nomeJob {
+    width: 32rem;
+  }
+}
+
+@media(min-width: 1080px) {
+  /* * {
+    background: white;
+  } */
+  #nomeJob {
+    width: 32rem;
+  }
+  .question input {
+    width: 32rem;
+  }
+}
+
+
