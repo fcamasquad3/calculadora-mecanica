@@ -42,20 +42,39 @@ body {
   #menu-mobile{
     transition: right .3s ease-in-out;
     position: fixed;
-    right: -260px;
-    top: 5px;
-    z-index: 101;
+    right: -100vw;
+    top: 2px;
+    z-index: 1;
     height: 100vh;
-    width: 260px;
+    width: 100vw;
     background-color: black;
   }
 
   #menu-mobile ul {
     list-style: none;
+    margin: 17vh;
+  }
+
+  #menu-mobile a {
+    margin: 1rem 0 5rem;
+    display: flex;
+    justify-content: center;
+    color: #FD5B03;
+    font-family: 'Cabin', sans-serif;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+  }
+
+  .close-button {
+    color: white;
+    font-size: 2.5rem;
+    margin-left: auto;
+    margin-right: 0.5rem;
   }
 
   .menu-header {
     display: flex;
+    margin: 0.5rem;
   }
 
   .menu-desktop{
@@ -71,10 +90,11 @@ body {
   }
 
   a {
+    display: flex;
     color: #ffffff;
+    font-size: 1.7rem;
     text-decoration: none;
-
-    font-weight: 600;    
+    text-align: center;   
     margin: 0.5rem 2rem;
   }
 
