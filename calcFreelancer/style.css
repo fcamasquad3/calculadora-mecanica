@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Cabin',monospace;
-  min-height: 854px;
+  min-height: 100vh;
   background-color: #FD5B03;
   text-align: center;
 }
