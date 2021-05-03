@@ -266,4 +266,30 @@ body {
       font-size: 5vw;
       display: inline;
     }
+
+    .p-footer {
+      font-size: 0.7rem;
+    }
+    
+    .icone {
+      right: 4px;
+      width: 30%;
+    }
+    
+  }
+
+  @media (max-width: 280px) {
+    footer {
+      height: 8%;
+      bottom: 0;
+      top: 67px;
+    }
+
+    .p-footer {
+      font-size: 0.6rem;
+    }
+
+    .icone {
+      right: 2px;
+    }
   }
