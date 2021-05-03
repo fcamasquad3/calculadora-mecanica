@@ -13,9 +13,8 @@
   }  */
 
 body {    
-    min-height: 100vh;
-    background-color: #F25602;
-   
+    font-size: 62.5%;
+    background-color: #F25602;  
   } 
 
 header {
@@ -54,11 +53,14 @@ img {
 /* corpo da página */
   
 .container {
-    padding: 20px;   
-
+    position: relative;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    padding: 20px;  
     display: flex;
     align-items: center;   
-    justify-content: space-between; 
+    justify-content: space-around; 
   } 
 
 h1 { 
@@ -74,7 +76,7 @@ h1 {
 
 #page-title{
   text-align: right;
-  margin: 5rem;  
+  /* margin: 5rem;   */
 
   display: flex;
   align-items: center;
@@ -92,6 +94,9 @@ h1 {
   margin: 5rem 3rem;
   background-color: #C4C4C4;
 
+  margin-block: 0rem;
+  margin: 5rem ;
+  margin-right: 7rem;
   box-shadow: 8px 5px 5px #9b3600;
 }
 
@@ -178,5 +183,33 @@ td input{
 .btn-extra{
   background-color: #FD5B03;
   border-color: #8F3402;   
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  top: 130%;
+  bottom: 0;
+  height: 12%;
+  width: 100%;
+  background-color: #000;
+}
+
+.p-footer {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.icone {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
