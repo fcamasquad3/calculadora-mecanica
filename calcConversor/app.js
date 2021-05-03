@@ -234,6 +234,19 @@ function converte() {
         break;        
     }
   }
+  else if(primeiroSelect == "Gigabyte"){
+    switch(segundoSelect){
+      case "Byte":
+        gigabyteParaByte();
+        break;
+      case "Megabyte":
+        gigabyteParaMegabyte();
+        break;
+      case "Terabyte":
+        gigabyteParaTerabyte();
+        break;        
+    }
+  }
 }
 
 ////funções relacionadas a conversão unidades de comprimento
@@ -305,5 +318,19 @@ function megabyteParaGigabyte(){
 }
 function megabyteParaTerabyte(){
   calculo = valorTela.value / (1 * (Math.pow(10,6)));
+  valorSaida.value = calculo;
+}
+
+//funções relacionadas a conversão de gigabyte
+function gigabyteParaByte(){
+  calculo = valorTela.value * (1 * (Math.pow(10,9)));
+  valorSaida.value = calculo;
+}
+function gigabyteParaMegabyte(){
+  calculo = (valorTela.value * (1 * (Math.pow(10,3))));
+  valorSaida.value = calculo;
+}
+function gigabyteParaTerabyte(){
+  calculo = valorTela.value / (1 * (Math.pow(10,3)));
   valorSaida.value = calculo;
 }
