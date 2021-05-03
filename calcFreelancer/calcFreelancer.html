@@ -36,10 +36,6 @@
            <p>CALCULADORA DE</p>  
            <p>FREELANCER</p>
         </h1>
-        <div class="value">
-            <p>Valor do projeto:</p>
-            <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0">
-        </div>
     </div>
         <p>Preencha os dados para calcular</p>
         <section class="questions">
@@ -49,29 +45,36 @@
                 </div>
                 <div class="question">
                     <p>Quanto eu quero ganhar por mês?</p>
-                    <input type="number" id="valorMes" value="0" >
+                    <input type="number" id="valorMes" value="" >
                 </div>
                 <div class="question">
                     <p>Quantas horas quero trabalhar por dia?</p>
-                    <input type="number" id="valorHorasDia" value="0" >
+                    <input type="number" id="valorHorasDia" value="" >
                 </div>
             
                 <div class="question">
                     <p>Quantos dias quero trabalhar por semana?</p>
-                    <input type="number" id="valorSemana" value="0" >
+                    <input type="number" id="valorSemana" value="" >
                 </div>
                 <div class="question">
                     <p>Estimativa de horas para esse Job?</p>
-                    <input type="number" id="horasJob"value="0" >
+                    <input type="number" id="horasJob"value="" >
                 </div>
-                <div class="question">
-                    <p>Esse é o valor da sua hora de trabalho:</p>
-                    <input type="number" id="valorHoraTrabalho" value="0" >
-                </div>  
+                
         </section>
-        <button>CALCULAR</button>
+        <button onclick="mostrarResultado()">CALCULAR</button>
     
-    <h2></h2>
+        <div>
+            <div class="question">
+                <p>Valor da sua hora de trabalho é:</p>
+                <input type="number" id="valorHoraTrabalho" value="" >
+            </div>  
+            <div class="value question">
+                <p>Valor do projeto:</p>
+                <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0">
+            </div>
+        </div>
+
     <footer>
         <div class="p-footer">
             <p>Hackathon Imersão Dev - FCamara</p>

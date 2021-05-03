@@ -99,7 +99,7 @@ h1 p:last-child{
 
 .value {
   width: 100% 0;
-  text-align: right;
+  text-align: center;
   padding-right: 1.5rem;
   font-weight: bold;
 }
