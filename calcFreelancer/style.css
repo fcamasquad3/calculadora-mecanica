@@ -57,6 +57,14 @@ img {
   padding-right: 1.5rem;
 }
 
+.enunciated {
+  text-align: left;
+  padding-right: 1.5rem;
+  font-weight: bold;
+  padding-left: 5rem;
+  background: #F25602;
+}
+
 .questions {
   font-weight: bold;
   display: flex;
@@ -64,13 +72,8 @@ img {
   flex-wrap: wrap;
   justify-content: space-around;
 }
-
-.enunciated {
-  text-align: left;
-  padding-right: 1.5rem;
-  font-weight: bold;
-  padding-left: 5rem;
-  background: #F25602;
+.question1 {
+  width: 100%;
 }
 
 .question {
@@ -81,6 +84,10 @@ img {
   border-radius: 6px;
   height: 3rem;
   width: 14rem;
+}
+
+fieldset {
+  border: none;
 }
 
 h1 p {
@@ -100,8 +107,8 @@ h1 p:last-child{
 .value {
   width: 100% 0;
   text-align: center;
-  padding-right: 1.5rem;
   font-weight: bold;
+  display: inline-block;
 }
 
 .value input {
