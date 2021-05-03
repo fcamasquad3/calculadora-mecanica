@@ -7,44 +7,46 @@
 }
 
 
-body {    
-  min-height: 100vh;
-  background-color: #F25602;
-  height: 100vh;
-  margin: 0;
-} 
+body {
+  font-family: 'Cabin',monospace;
+  min-height: 854px;
+  background-color: #FD5B03;
+  text-align: center;
+}
 
+
+/*--------------header e componentes------------------- */
 header {
-
-display: flex;
-align-items: center; 
-justify-content: space-around;  
-
+  
+  display: flex;
+  align-items: center; 
+  justify-content: space-around;  
+ 
 }
 
 .menu{ 
-font-family: 'Advent Pro', sans-serif;
-letter-spacing: 5px; 
-font-weight: 400;
+  font-family: 'Advent Pro', sans-serif;
+  letter-spacing: 5px; 
+  font-weight: 400;
 }
 
 
 .menu ul li {
-display: inline;   
-margin: 3rem 1rem;  
-align-items: center;
+  display: inline;   
+  margin: 3rem 1rem;  
+  align-items: center;
 }
 
 .menu ul li a{   
-padding: 20px 20px;   
-color: #ffffff;
-font-size: 20px;
-font-size: 1.7rem;       
+  padding: 20px 20px;   
+  color: #ffffff;
+  font-size: 20px;
+  font-size: 1.7rem;       
 } 
 
 img {
-  width: 6rem;   
-  margin-left: 3rem; 
+    width: 6rem;   
+    margin-left: 3rem; 
 } 
 
 /* --------------questionario--------------------------- */
@@ -97,7 +99,7 @@ h1 p:last-child{
 
 .value {
   width: 100% 0;
-  text-align: right;
+  text-align: center;
   padding-right: 1.5rem;
   font-weight: bold;
 }
@@ -126,21 +128,22 @@ button {
   text-align: center;
 }
 
-.button {
-  text-align: center;
-}
-
 /* 
 ---------------------------footer lindo que precisa de ajuste, obrigadaa por fazer isso, gisele------------------ */
 footer {
-  position: relative;
   bottom: 0;
-  height: 12%;
-  width: 100%;
+  margin: 0 0 -2rem -2rem;
+  height: 8rem;
+  width: 120%;
   background-color: #000;
+  color: #fff;
 }
 
-.p-footer {
+footer p {
+  padding-top: 3.5rem;
+}
+
+/* .p-footer {
   position: absolute;
   top: 50%;
   left: 7%;
@@ -150,10 +153,9 @@ footer {
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
 }
-
+*/
 .icone {
-  position: absolute;
   right: 7%;
   top: 50%;
   transform: translateY(-50%);
-}
+} 

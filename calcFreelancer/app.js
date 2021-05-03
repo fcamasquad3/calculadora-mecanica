@@ -1,22 +1,28 @@
-//IDEIA INICIAL
+var  valorHorasDia = document.getElementById("valorHorasDia")
+var valorSemana = document.getElementById("valorSemana")
+var valorMes = document.getElementById("valorMes")
+var valorHoraTrabalho = document.getElementById("valorHoraTrabalho")
+var horasJob = document.getElementById("horasJob")              
+var valorJob = document.getElementById("ValorJob")
 
-let nomeJob = document.getElementById("nomeJob")
-
-let valorMes = document.getElementById("valorMes")
-let ValorHorasDia = document.getElementById("ValorHorasDia")
-let valorSemana = document.getElementById("valorSemana")
-let horasJob = document.getElementById("horasJob")
-let valorHoraTrabalho = document.getElementById("valorHoraTrabalho")
-
-//ex: 4000 = 6 / 4 / 4
-valorHoraTrabalho = valorMes.value / ValorHorasDia.value / valorSemana.value
-
-function calculate () {
-  let resultado = 0;
-
-  resultado = valorHoraTrabalho * horasJob;
-
-  return resultado
+// Calcula valor das horas trabalhadas
+function calcularValorHorasTrabalhadas(valorMes,valorHorasDia,valorSemana ){
+  let valorHora = valorMes.value /  valorHorasDia.value / valorSemana.value
+  return valorHora.toFixed(2)
 }
 
-//valor do Job ${nome.Job}
+// Calcula o valor do projeto input ValorJob
+function calcularValorDoProjeto(valorHora, horasJob){
+  calcularValorHorasTrabalhadas(valorMes,valorHorasDia,valorSemana)
+  let resultado = valorHora    * horasJob.value
+  return resultado.toFixed(2)
+}
+
+// Mostra resultado nos inputs valorHoraTrabalho e ValorJob ao 
+// pressiona o botao CALCULAR 
+function mostrarResultado() {
+  valorHoraTrabalho.value = calcularValorHorasTrabalhadas(valorMes,valorHorasDia,valorSemana)
+
+  valorJob.value = calcularValorDoProjeto(
+  calcularValorHorasTrabalhadas(valorMes,valorHorasDia,valorSemana),horasJob)
+}
