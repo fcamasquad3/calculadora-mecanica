@@ -21,7 +21,6 @@ header {
   display: flex;
   align-items: center; 
   justify-content: space-around;  
- 
 }
 
 .menu{ 
@@ -84,6 +83,7 @@ img {
   border-radius: 6px;
   height: 3rem;
   width: 14rem;
+  padding-left: 0.5rem;
 }
 
 fieldset {
@@ -96,12 +96,15 @@ h1 p {
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 8%; 
   text-transform: uppercase;
-
   margin-bottom: 1rem;
 }
 
 h1 p:last-child{
   margin-top: 0;
+}
+
+p {
+  padding-bottom: 0.5rem;
 }
 
 .value {
@@ -118,6 +121,7 @@ h1 p:last-child{
   font-size: 2rem;
   font-weight: bold;
   color: #FD5B03;
+  
 }
 
 #tela {
@@ -130,8 +134,10 @@ button {
   background: #36B336;
   color: #ffffff;
   margin: 2rem;
-  padding: 1.75rem;
+  padding: 1rem 1.25rem;
   border-radius: 11px;
+  border: none;
+  font-size: 1.5rem;
   text-align: center;
 }
 
