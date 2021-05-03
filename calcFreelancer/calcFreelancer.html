@@ -23,10 +23,10 @@
             <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
             <nav class="menu">
             <ul>               
-                <li> <a href="/index.html"> Home </a> </li>
-                <li> <a href="/calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
-                <li> <a href="/calcConversor/calcConversor.html"> Conversor </a> </li>
-                <li> <a href="/calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
+                <li> <a href="../index.html"> Home </a> </li>
+                <li> <a href="../calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
+                <li> <a href="../calcConversor/calcConversor.html"> Conversor </a> </li>
+                <li> <a href="./calcFreelancer.html"> Calculadora Freelance </a> </li>
             </ul>
             </nav>
        </header>
@@ -34,44 +34,49 @@
     <div>
         <h1 class="page-title">
            <p>CALCULADORA DE</p>  
-           <p>FREELANCER</p>
+           <p>FREELANCE</p>
         </h1>
-        <div class="value">
-            <p>Valor do projeto:</p>
-            <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0">
-        </div>
     </div>
-        <p>Preencha os dados para calcular</p>
+        <h2>Preencha os dados para calcular</h2>
         <section class="questions">
-                <div class="question">
+                <div class="question1 question">
                     <p>Qual nome escolhido do seu Job?</p>
                     <input type="text" id="nomeJob" value="" >
                 </div>
+            <fieldset>
                 <div class="question">
                     <p>Quanto eu quero ganhar por mês?</p>
-                    <input type="number" id="valorMes" value="0" >
+                    <input type="number" id="valorMes" value="" >
                 </div>
                 <div class="question">
                     <p>Quantas horas quero trabalhar por dia?</p>
-                    <input type="number" id="valorHorasDia" value="0" >
+                    <input type="number" id="valorHorasDia" value="" >
                 </div>
-            
+            </fieldset>
+            <fieldset>
                 <div class="question">
                     <p>Quantos dias quero trabalhar por semana?</p>
-                    <input type="number" id="valorSemana" value="0" >
+                    <input type="number" id="valorSemana" value="" >
                 </div>
                 <div class="question">
                     <p>Estimativa de horas para esse Job?</p>
-                    <input type="number" id="horasJob"value="0" >
+                    <input type="number" id="horasJob"value="" >
                 </div>
-                <div class="question">
-                    <p>Esse é o valor da sua hora de trabalho:</p>
-                    <input type="number" id="valorHoraTrabalho" value="0" >
-                </div>  
+            </fieldset>    
         </section>
-        <button>CALCULAR</button>
+        <button type="submit" onclick="mostrarResultado()">CALCULAR</button>
     
-    <h2></h2>
+        <div>
+            <div class="value question">
+                <p>Valor da sua hora de trabalho é:</p>
+                <input type="number" id="valorHoraTrabalho" value="" placeholder="R$ 0" readonly >
+            </div>  
+            <div class="value question">
+                <p id="result">Valor do projeto:</p>
+                <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0 " readonly>
+            </div>
+        </div>
+
     <footer>
         <div class="p-footer">
             <p>Hackathon Imersão Dev - FCamara</p>
@@ -86,3 +91,4 @@
     </body>
 
 </html>
+

@@ -3,6 +3,35 @@
   padding: 0;
 }
 
+/* Div de carregamento */
+
+.load-page {
+  background-color: #000;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 99999;
+}
+
+.load-page img {
+  position: absolute;
+  width: 150px;
+  left: 45%;
+  top: 35%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  animation: loading 6s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+} 
+
 /* Configurações gerais da página */ 
 body {
   min-height: 100vh;

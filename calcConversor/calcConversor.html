@@ -25,35 +25,37 @@
                 <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
             <nav class="menu">
             <ul>               
-                <li> <a href="/index.html"> Home </a> </li>
-                <li> <a href="/calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
-                <li> <a href="/calcConversor/calcConversor.html"> Conversor </a> </li>
-                <li> <a href="/calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
+                <li> <a href="../index.html"> Home </a> </li>
+                <li> <a href="../calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
+                <li> <a href="./calcConversor.html"> Conversor </a> </li>
+                <li> <a href="../calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
             </ul>
             </nav>
-    </header>
+        </header>
     
         <div class="container">
             <div id="page-title">
                 <h1>Conversor</h1>
             </div>                                 
-            <div class="corpo-conversor">   
-                                     
-               <div id="tela"> 
-                <div class="cb-medida1">                    
-                    <select id="op-tipo1"> 
-                        <option value=""disabled selected>tipo 1</option>                       
-                    </select>
-                </div>         
-                <div class="cb-medida2">
-                    <select id="op-tipo2"> 
-                        <option value=""disabled selected>tipo 2</option>                       
-                    </select>
-                </div>     
+            <div class="corpoConversor">                                        
+               <div id="fundoTela"> 
+                    <div class="corpoTela1">                                    
+                        <select id="opTipo1" onchange="converte()"> 
+                            <option value="" disabled selected>tipo 1</option>                       
+                        </select>
+                        <input class="telas" id="telaEntrada" value="0">   
+                    </div>         
+                    <div class="corpoTela2">                   
+                        <select id="opTipo2" onchange="converte()"> 
+                            <option value="" disabled selected>tipo 2</option>                       
+                        </select>
+                        <input class="telas" id="telaSaida">
+                    </div>     
                 </div>  
                 <div class="btnMedidas">
-                    <select id="op-conversores" >                        
-                        <option value="Medidas">Medidas</option>
+                    <select id="opConversores" >     
+                        <option value="" disabled selected>Conversores</option>                   
+                        <option value="Comprimento">Comprimento</option>
                         <option value="Temperaturas">Temperatura</option>
                         <option value="Dados">Dados</option>
                     </select>
@@ -61,54 +63,67 @@
                 <table>
                     <tr>                  
                         <td>
-                            <input class="number" type="button" value="7">
+                            <input class="number" type="button" value="7" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'7')">
                         </td>
                         <td>
-                            <input class="number"  type="button" value="8">
+                            <input class="number"  type="button" value="8" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'8')">
                         </td>
                         <td>
-                            <input class="number"  type="button" value="9">
+                            <input class="number"  type="button" value="9" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'9')">
                         </td>
                         <td>
-                            <input class="btn-extra"  type="button" value="X">
+                            <input class="btn-extra"  type="button" value="X" onclick="deletar()">
                         </td>
                     </tr>
                     <tr>                  
                         <td>
-                            <input class="number" type="button" value="4">
+                            <input class="number" type="button" value="4" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'4')">
                         </td>
                         <td>
-                            <input class="number"  type="button" value="5">
+                            <input class="number"  type="button" value="5" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'5')">
                         </td>
                         <td>
-                            <input class="number"  type="button" value="6">
+                            <input class="number"  type="button" value="6" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'6')">
                         </td>                       
                     </tr>
                     <tr>                  
                         <td>
-                            <input class="number" type="button" value="1">
+                            <input class="number" type="button" value="1" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'1')">
                         </td>
                         <td>
-                            <input class="number"  type="button" value="2">
+                            <input class="number"  type="button" value="2" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'2')">
                         </td>
                         <td>
-                            <input class="number"  type="button" value="3">
+                            <input class="number"  type="button" value="3" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'3')">
                         </td>                        
                     </tr>
                     <tr>                  
                         <td>
-                            <input class="btn-extra"  type="button" value="C">
+                            <input class="btn-extra"  type="button" value="C" onclick="deletarConteudo()">
                         </td>
                         <td>
-                            <input class="number"  type="button" value="0">
+                            <input class="number"  type="button" value="0" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'0')">
                         </td>
                         <td>
-                            <input class="number"  type="button" value=".">
+                            <input class="number"  type="button" value="." onclick="adicionarNaTela(document.getElementById('telaEntrada'),'.')">
                         </td>                     
                     </tr>
                 </table>
             </div>         
+        </div>
+        
+        <footer>
+            <div class="p-footer">
+                <p>Hackathon Imersão Dev - FCamara</p>
+            </div>
+            
+            <div class="icone">
+                <a href="https://github.com/fcamasquad3/calculadora-mecanica"><span class="iconify" data-icon="akar-icons:github-fill" style="font-size: 40px; color: #F25602;"></span></a>
+            </div>
+        </footer>
+
         <script src="app.js"></script>
+
     </body>
 
 </html>

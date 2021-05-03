@@ -13,9 +13,8 @@
   }  */
 
 body {    
-    min-height: 100vh;
-    background-color: #F25602;
-   
+    font-size: 62.5%;
+    background-color: #F25602;  
   } 
 
 header {
@@ -54,19 +53,22 @@ img {
 /* corpo da página */
   
 .container {
-    padding: 20px;   
-
+    position: relative;
+    top: 15%;
+    left: 0;
+    width: 100%;
+    padding: 20px;  
     display: flex;
     align-items: center;   
-    justify-content: space-between; 
+    justify-content: space-around; 
   } 
 
 h1 { 
     font-size: 6.5rem;
     font-weight: bold;
-    font-family: 'Advent Pro', sans-serif;
-    letter-spacing: 8%; 
+    font-family: 'Advent Pro', sans-serif;     
     text-transform: uppercase;
+    letter-spacing: 5px;
 
     margin-block: 0rem;
     margin: 5rem ;    
@@ -74,7 +76,7 @@ h1 {
 
 #page-title{
   text-align: right;
-  margin: 5rem;  
+  /* margin: 5rem;   */
 
   display: flex;
   align-items: center;
@@ -83,28 +85,45 @@ h1 {
 
 
 /* corpo do conversor */
-.corpo-conversor{
-  height: 32rem;
+.corpoConversor{
+  height: 33rem;
   width: 20rem;
 
-  font-family: 'Cabin',monospace;
+  font-family:'Cabin',monospace;
 
   margin: 5rem 3rem;
   background-color: #C4C4C4;
 
+  margin-block: 0rem;
+  margin: 5rem ;
+  margin-right: 7rem;
   box-shadow: 8px 5px 5px #9b3600;
 }
 
-#tela{
-  height: 13rem;
-  width: 20rem;
-
-  color:#ffffff;
-  font-size: 2.5rem;
+#fundoTela{
+  height: 14rem;
+  width: 20rem;  
+  
   opacity: 80%;  
+  background-color: #111111;  
+}
+
+.telas{
+  /* background-color:aqua; */
+  height: 3rem;
+  width: 20rem;
+  
   background-color: #111111;
+  border: none;
+  padding: 1rem;
+
+  color: #ffffff;
+  font-size: 2.5rem;
+  text-align: right;
+  font-family:'Cabin',monospace;
   
 }
+
 
 /*-------- botão opçóes de conversores --------- */
 
@@ -113,6 +132,9 @@ select {
   background-color: #111111;  
   
   height: 3rem;
+  width: 8rem;
+  margin-top: 1rem;
+  margin-left: 1rem; 
 
   font-size: 20px;  
   font-family: 'Cabin',monospace;
@@ -129,23 +151,12 @@ option{
   padding: 2rem;  
 }
 
-#op-conversores{
+#opConversores{
   width: 20rem;
+  margin: 0;
   border-color: #111111 ;
 }
 
-#op-tipo1{ 
-  width: 8rem;
-  margin-top: 1rem;
-  margin-left: 1rem;
-  margin-bottom: 3rem; 
-}
-
-#op-tipo2{ 
-  width: 8rem;
-  margin-left: 1rem;
-  margin-bottom: 3rem;
-}
 /*-------- botoes do conversor --------- */
 table{
   border:0px;
@@ -172,5 +183,33 @@ td input{
 .btn-extra{
   background-color: #FD5B03;
   border-color: #8F3402;   
+}
+
+/* Footer */
+footer {
+  position: absolute;
+  top: 130%;
+  bottom: 0;
+  height: 12%;
+  width: 100%;
+  background-color: #000;
+}
+
+.p-footer {
+  position: absolute;
+  top: 50%;
+  left: 7%;
+  transform: translateY(-50%);
+  color: #fff;
+  font-family: 'Cabin', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.icone {
+  position: absolute;
+  right: 7%;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
