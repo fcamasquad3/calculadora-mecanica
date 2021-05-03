@@ -347,3 +347,18 @@ function gigabyteParaTerabyte(){
   calculo = valorTela.value / (1 * (Math.pow(10,3)));
   valorSaida.value = calculo;
 }
+
+//funções relacionadas a conversão de terabyte
+function terabyteParaByte(){
+  calculo = valorTela.value * (1 * (Math.pow(10,12)));
+  valorSaida.value = calculo;
+}
+function terabyteParaMegabyte(){
+  calculo = valorTela.value * (1 * (Math.pow(10,6)));
+  valorSaida.value = calculo;
+}
+function terabyteParaGigabyte(){
+  calculo = valorTela.value * (1 * (Math.pow(10,3)));
+  valorSaida.value = calculo;
+}
+
