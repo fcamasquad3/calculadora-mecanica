@@ -267,6 +267,10 @@ body {
       display: inline;
     }
 
+    footer {
+      bottom: -2%;
+    }
+
     .p-footer {
       font-size: 0.7rem;
     }
@@ -278,11 +282,11 @@ body {
     
   }
 
-  @media (max-width: 280px) {
+  @media only screen and (max-width: 280px) {
     footer {
       height: 8%;
       bottom: 0;
-      top: 67px;
+      top: 80px;
     }
 
     .p-footer {
@@ -291,5 +295,20 @@ body {
 
     .icone {
       right: 2px;
+    }
+  }
+
+  @media only screen and (max-height: 1366px) {
+    footer {
+      height: 10%;
+    }
+    
+    .p-footer {
+      font-size: 1rem;
+    }
+
+    .icone {
+      position: absolute;
+      right: -10%;
     }
   }
