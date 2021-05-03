@@ -66,11 +66,14 @@
                 </div>
                 <div class="question">
                     <p>Esse é o valor da sua hora de trabalho:</p>
-                    <input type="number" id="valorHoraTrabalho" value="0" >
+                    <input type="text" id="valorHoraTrabalho" value="0" readonly >
                 </div>  
         </section>
-        <button>CALCULAR</button>
-    
+
+        <div class="button">
+            <button onclick="mostrarResultado()">CALCULAR</button>
+        </div>
+
     <h2></h2>
     <footer>
         <div class="p-footer">
@@ -82,7 +85,9 @@
         </div>
 
     </footer>
-    <script src="app.js"></script>
+        
+        </div>        
+        <script src="app.js"></script>
     </body>
 
 </html>
