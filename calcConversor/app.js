@@ -118,7 +118,6 @@ function converte() {
       break;          
     }
   } 
-
   else if(primeiroSelect == "Pé"){
     switch(segundoSelect){
       case "Quilômetro":
@@ -138,7 +137,6 @@ function converte() {
       break;          
     }
   } 
-
   else if(primeiroSelect == "Centímetro"){
     switch(segundoSelect){
       case "Quilômetro":
@@ -158,7 +156,6 @@ function converte() {
       break;          
     }
   } 
-
   else if(primeiroSelect == "Polegada"){
     switch(segundoSelect){
       case "Quilômetro":
@@ -208,9 +205,61 @@ function converte() {
         break;
     }
   }
+  else if(primeiroSelect == "Byte"){
+    switch(segundoSelect){
+      case "Megabyte":
+        conversorDadosGenerico({primeiroInput:false,valorBase:6});
+        break;
+      case "Gigabyte":
+        conversorDadosGenerico({primeiroInput:false,valorBase:9});
+        break;
+      case "Terabyte":
+        conversorDadosGenerico({primeiroInput:false,valorBase:12});
+        break;        
+    }
+  }
+  else if(primeiroSelect == "Megabyte"){
+    switch(segundoSelect){
+      case "Byte":
+        conversorDadosGenerico({primeiroInput:true,valorBase:6});
+        break;
+      case "Gigabyte":
+        conversorDadosGenerico({primeiroInput:false,valorBase:3});
+        break;
+      case "Terabyte":
+        conversorDadosGenerico({primeiroInput:false,valorBase:6});
+        break;        
+    }
+  }
+  else if(primeiroSelect == "Gigabyte"){
+    switch(segundoSelect){
+      case "Byte":
+        conversorDadosGenerico({primeiroInput:true,valorBase:9});
+        break;
+      case "Megabyte":
+        conversorDadosGenerico({primeiroInput:true,valorBase:3});
+        break;
+      case "Terabyte":
+        conversorDadosGenerico({primeiroInput:false,valorBase:3});
+        break;        
+    }
+  }
+  else if(primeiroSelect == "Terabyte"){
+    switch(segundoSelect){
+      case "Byte":
+        conversorDadosGenerico({primeiroInput:true,valorBase:12});
+        break;
+      case "Megabyte":
+        conversorDadosGenerico({primeiroInput:true,valorBase:6});
+        break;
+      case "Gigabyte":
+        conversorDadosGenerico({primeiroInput:true,valorBase:3});
+        break;        
+    }
+  }
 }
 
-////funções relacionadas a conversão unidades de comprimento
+////função relacionada a conversão unidades de comprimento
 function conversorGenerico({primeiroInput,valorBase}){    
   if(primeiroInput){
     calculo = valorTela.value * valorBase;
@@ -253,3 +302,14 @@ function kelvinParaFahrenheit(){
   valorSaida.value = calculo;
 }
 
+////função relacionada a conversão de dados
+function conversorDadosGenerico ({primeiroInput,valorBase}){
+  if(primeiroInput){
+    calculo = valorTela.value * (1 * (Math.pow(10,valorBase)));
+    valorSaida.value = calculo;    
+  }
+  else {    
+    calculo = valorTela.value / (1 * (Math.pow(10,valorBase)));
+    valorSaida.value = calculo;
+  }  
+}
