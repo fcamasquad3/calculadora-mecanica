@@ -118,7 +118,6 @@ function converte() {
       break;          
     }
   } 
-
   else if(primeiroSelect == "Pé"){
     switch(segundoSelect){
       case "Quilômetro":
@@ -138,7 +137,6 @@ function converte() {
       break;          
     }
   } 
-
   else if(primeiroSelect == "Centímetro"){
     switch(segundoSelect){
       case "Quilômetro":
@@ -158,7 +156,6 @@ function converte() {
       break;          
     }
   } 
-
   else if(primeiroSelect == "Polegada"){
     switch(segundoSelect){
       case "Quilômetro":
@@ -211,58 +208,58 @@ function converte() {
   else if(primeiroSelect == "Byte"){
     switch(segundoSelect){
       case "Megabyte":
-        byteParaMegabyte();
+        conversorDadosGenerico({primeiroInput:false,valorBase:6});
         break;
       case "Gigabyte":
-        byteParaGigabyte();
+        conversorDadosGenerico({primeiroInput:false,valorBase:9});
         break;
       case "Terabyte":
-        byteParaTerabyte();
+        conversorDadosGenerico({primeiroInput:false,valorBase:12});
         break;        
     }
   }
   else if(primeiroSelect == "Megabyte"){
     switch(segundoSelect){
       case "Byte":
-        megabyteParaByte();
+        conversorDadosGenerico({primeiroInput:true,valorBase:6});
         break;
       case "Gigabyte":
-        megabyteParaGigabyte();
+        conversorDadosGenerico({primeiroInput:false,valorBase:3});
         break;
       case "Terabyte":
-        megabyteParaTerabyte();
+        conversorDadosGenerico({primeiroInput:false,valorBase:6});
         break;        
     }
   }
   else if(primeiroSelect == "Gigabyte"){
     switch(segundoSelect){
       case "Byte":
-        gigabyteParaByte();
+        conversorDadosGenerico({primeiroInput:true,valorBase:9});
         break;
       case "Megabyte":
-        gigabyteParaMegabyte();
+        conversorDadosGenerico({primeiroInput:true,valorBase:3});
         break;
       case "Terabyte":
-        gigabyteParaTerabyte();
+        conversorDadosGenerico({primeiroInput:false,valorBase:3});
         break;        
     }
   }
   else if(primeiroSelect == "Terabyte"){
     switch(segundoSelect){
       case "Byte":
-        terabyteParaByte();
+        conversorDadosGenerico({primeiroInput:true,valorBase:12});
         break;
       case "Megabyte":
-        terabyteParaMegabyte();
+        conversorDadosGenerico({primeiroInput:true,valorBase:6});
         break;
       case "Gigabyte":
-        terabyteParaGigabyte();
+        conversorDadosGenerico({primeiroInput:true,valorBase:3});
         break;        
     }
   }
 }
 
-////funções relacionadas a conversão unidades de comprimento
+////função relacionada a conversão unidades de comprimento
 function conversorGenerico({primeiroInput,valorBase}){    
   if(primeiroInput){
     calculo = valorTela.value * valorBase;
@@ -305,60 +302,14 @@ function kelvinParaFahrenheit(){
   valorSaida.value = calculo;
 }
 
-////funções relacionadas a conversão de dados
-//funções relacionadas a conversão de byte
-function byteParaMegabyte(){
-  calculo = valorTela.value / (1 * (Math.pow(10,6)));
-  valorSaida.value = calculo;
+////função relacionada a conversão de dados
+function conversorDadosGenerico ({primeiroInput,valorBase}){
+  if(primeiroInput){
+    calculo = valorTela.value * (1 * (Math.pow(10,valorBase)));
+    valorSaida.value = calculo;    
+  }
+  else {    
+    calculo = valorTela.value / (1 * (Math.pow(10,valorBase)));
+    valorSaida.value = calculo;
+  }  
 }
-function byteParaGigabyte(){
-  calculo = valorTela.value / (1 * (Math.pow(10,9)));
-  valorSaida.value = calculo;
-}
-function byteParaTerabyte(){
-  calculo = valorTela.value / (1 * (Math.pow(10,12)));
-  valorSaida.value = calculo;
-}
-
-//funções relacionadas a conversão de megabyte
-function megabyteParaByte(){
-  calculo = valorTela.value * (1 * (Math.pow(10,6)));
-  valorSaida.value = calculo;
-}
-function megabyteParaGigabyte(){
-  calculo = valorTela.value / (1 * (Math.pow(10,3)));
-  valorSaida.value = calculo;
-}
-function megabyteParaTerabyte(){
-  calculo = valorTela.value / (1 * (Math.pow(10,6)));
-  valorSaida.value = calculo;
-}
-
-//funções relacionadas a conversão de gigabyte
-function gigabyteParaByte(){
-  calculo = valorTela.value * (1 * (Math.pow(10,9)));
-  valorSaida.value = calculo;
-}
-function gigabyteParaMegabyte(){
-  calculo = (valorTela.value * (1 * (Math.pow(10,3))));
-  valorSaida.value = calculo;
-}
-function gigabyteParaTerabyte(){
-  calculo = valorTela.value / (1 * (Math.pow(10,3)));
-  valorSaida.value = calculo;
-}
-
-//funções relacionadas a conversão de terabyte
-function terabyteParaByte(){
-  calculo = valorTela.value * (1 * (Math.pow(10,12)));
-  valorSaida.value = calculo;
-}
-function terabyteParaMegabyte(){
-  calculo = valorTela.value * (1 * (Math.pow(10,6)));
-  valorSaida.value = calculo;
-}
-function terabyteParaGigabyte(){
-  calculo = valorTela.value * (1 * (Math.pow(10,3)));
-  valorSaida.value = calculo;
-}
-
