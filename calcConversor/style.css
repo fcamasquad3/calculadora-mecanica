@@ -14,8 +14,7 @@
 
 body {    
     min-height: 100vh;
-    background-color: #F25602;
-   
+    background-color: #F25602;  
   } 
 
 header {
@@ -58,7 +57,7 @@ img {
 
     display: flex;
     align-items: center;   
-    justify-content: space-between; 
+    justify-content: space-around; 
   } 
 
 h1 { 
@@ -74,7 +73,7 @@ h1 {
 
 #page-title{
   text-align: right;
-  margin: 5rem;  
+  /* margin: 5rem;   */
 
   display: flex;
   align-items: center;
@@ -92,6 +91,9 @@ h1 {
   margin: 5rem 3rem;
   background-color: #C4C4C4;
 
+  margin-block: 0rem;
+  margin: 5rem ;
+  margin-right: 7rem;
   box-shadow: 8px 5px 5px #9b3600;
 }
 
