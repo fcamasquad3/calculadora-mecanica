@@ -54,6 +54,7 @@ img {
 /* corpo da página */
   
 .container {
+    top: 5%;
     left: 0;
     width: 100%;
     padding: 20px;  
