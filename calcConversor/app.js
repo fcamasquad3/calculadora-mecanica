@@ -198,6 +198,16 @@ function converte() {
         break;
     }
   }
+  else if(primeiroSelect == "Kelvin"){
+    switch(segundoSelect){
+      case "Celsius":
+        kelvinParaCelsius();
+        break;
+      case "Fahrenheit":
+        kelvinParaFahrenheit();
+        break;
+    }
+  }
 }
 
 ////funções relacionadas a conversão unidades de comprimento
