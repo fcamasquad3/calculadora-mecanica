@@ -271,4 +271,11 @@ function byteParaMegabyte(){
   calculo = valorTela.value / (1 * (Math.pow(10,6)));
   valorSaida.value = calculo;
 }
-
+function byteParaGigabyte(){
+  calculo = valorTela.value / (1 * (Math.pow(10,9)));
+  valorSaida.value = calculo;
+}
+function byteParaTerabyte(){
+  calculo = valorTela.value / (1 * (Math.pow(10,12)));
+  valorSaida.value = calculo;
+}
