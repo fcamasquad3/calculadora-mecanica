@@ -266,3 +266,9 @@ function kelvinParaFahrenheit(){
   valorSaida.value = calculo;
 }
 
+////funções relacionadas a conversão de dados
+function byteParaMegabyte(){
+  calculo = valorTela.value / (1 * (Math.pow(10,6)));
+  valorSaida.value = calculo;
+}
+
