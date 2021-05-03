@@ -208,6 +208,19 @@ function converte() {
         break;
     }
   }
+  else if(primeiroSelect == "Byte"){
+    switch(segundoSelect){
+      case "Megabyte":
+        byteParaMegabyte();
+        break;
+      case "Gigabyte":
+        byteParaGigabyte();
+        break;
+      case "Terabyte":
+        byteParaTerabyte();
+        break;        
+    }
+  }
 }
 
 ////funções relacionadas a conversão unidades de comprimento
