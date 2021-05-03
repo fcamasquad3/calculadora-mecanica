@@ -5,7 +5,7 @@ let calculo = 0;
 // criação de arrays para function PopulacbMedidas()
 let pacoteMedidas = {
   'Comprimento': ['Quilômetro','Milha','Metro','Pé','Centímetro','Polegada'],
-  'Temperaturas': ['Fahrenheit' , 'Celsius'],
+  'Temperaturas': ['Fahrenheit' , 'Celsius', 'Kelvin'],
   'Dados': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte']
 }
 
@@ -178,10 +178,19 @@ function converte() {
       break;          
     }
   } 
+  else if(primeiroSelect == "Fahrenheit"){
+    switch(segundoSelect){
+      case "Kelvin":
+        fahrenheitParaKelvin();
+        break;
+      case "Celsius":
+        fahrenheitParaCelsius();
+        break;
+    }
+  }
 }
 
-// funções relacionadas a unidades de comprimento
-////funções relacionadas a conversão
+////funções relacionadas a conversão unidades de comprimento
 function conversorGenerico({primeiroInput,valorBase}){    
   if(primeiroInput){
     calculo = valorTela.value * valorBase;
@@ -192,3 +201,17 @@ function conversorGenerico({primeiroInput,valorBase}){
     valorSaida.value = calculo;
   }
 }
+
+////funções relacionadas a conversão de temperatura
+function fahrenheitParaKelvin(){    
+  calculo = (valorTela.value - 32) * 5/9 + 273.15
+  valorSaida.value = calculo;
+}
+
+function fahrenheitParaCelsius(){    
+  calculo = (valorTela.value - 32) * 5/9;
+  valorSaida.value = calculo;
+}
+
+
+
