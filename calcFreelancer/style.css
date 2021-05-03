@@ -9,7 +9,7 @@
 
 body {
   font-family: 'Cabin',monospace;
-  min-height: 854px;
+  min-height: 100vh;
   background-color: #FD5B03;
   text-align: center;
 }
@@ -91,12 +91,13 @@ fieldset {
 }
 
 h1 p {
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   font-weight: bold;
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 8%; 
   text-transform: uppercase;
   margin-bottom: 1rem;
+  margin-right: 45px;
 }
 
 h1 p:last-child{
@@ -109,6 +110,8 @@ p {
 
 input {
   font-size: 1rem;
+  border: none;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25)
 }
 
 .value {
@@ -146,37 +149,33 @@ button {
   text-align: center;
 }
 
-/* 
----------------------------footer lindo que precisa de ajuste, obrigadaa por fazer isso, gisele------------------ */
+/* Footer */
 footer {
+  position: absolute;
+  top: 180%;
   bottom: 0;
-  margin: 0 0 -2rem -2rem;
-  height: 8rem;
-  width: 120%;
+  height: 12%;
+  width: 100%;
   background-color: #000;
-  color: #fff;
 }
 
-footer p {
-  padding-top: 3.5rem;
-}
-
-/* .p-footer {
+.p-footer {
   position: absolute;
   top: 50%;
   left: 7%;
   transform: translateY(-50%);
   color: #fff;
-  font-family: 'Cabin', sans-serif;;
+  font-family: 'Cabin', sans-serif;
   font-size: 0.9rem;
   letter-spacing: 0.1rem;
 }
-*/
+
 .icone {
+  position: absolute;
   right: 7%;
   top: 50%;
   transform: translateY(-50%);
-} 
+}
 
 @media(min-width: 720px) {
   /* * {
