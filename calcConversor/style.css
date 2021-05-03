@@ -13,8 +13,7 @@
   }  */
 
 body {    
-    min-width: 100%;
-    min-height: 100vh;
+    font-size: 62.5%;
     background-color: #F25602;  
   } 
 
@@ -54,11 +53,11 @@ img {
 /* corpo da página */
   
 .container {
-    top: 5%;
+    position: relative;
+    top: 15%;
     left: 0;
     width: 100%;
     padding: 20px;  
-    position: absolute; 
     display: flex;
     align-items: center;   
     justify-content: space-around; 
@@ -189,8 +188,8 @@ td input{
 /* Footer */
 footer {
   position: absolute;
+  top: 130%;
   bottom: 0;
-  left: 0;
   height: 12%;
   width: 100%;
   background-color: #000;
