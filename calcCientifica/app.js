@@ -159,5 +159,5 @@ function abre() {
 }
 
 function fechar() {
-  document.getElementById("menu-mobile").style.right = `${'-260px'}`
+  document.getElementById("menu-mobile").style.right = `${'-100vw'}`
 }
