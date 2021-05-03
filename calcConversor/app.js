@@ -280,6 +280,7 @@ function kelvinParaFahrenheit(){
 }
 
 ////funções relacionadas a conversão de dados
+//funções relacionadas a conversão de byte
 function byteParaMegabyte(){
   calculo = valorTela.value / (1 * (Math.pow(10,6)));
   valorSaida.value = calculo;
@@ -290,5 +291,19 @@ function byteParaGigabyte(){
 }
 function byteParaTerabyte(){
   calculo = valorTela.value / (1 * (Math.pow(10,12)));
+  valorSaida.value = calculo;
+}
+
+//funções relacionadas a conversão de megabyte
+function megabyteParaByte(){
+  calculo = valorTela.value * (1 * (Math.pow(10,6)));
+  valorSaida.value = calculo;
+}
+function megabyteParaGigabyte(){
+  calculo = valorTela.value / (1 * (Math.pow(10,3)));
+  valorSaida.value = calculo;
+}
+function megabyteParaTerabyte(){
+  calculo = valorTela.value / (1 * (Math.pow(10,6)));
   valorSaida.value = calculo;
 }
