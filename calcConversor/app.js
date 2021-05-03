@@ -247,6 +247,19 @@ function converte() {
         break;        
     }
   }
+  else if(primeiroSelect == "Terabyte"){
+    switch(segundoSelect){
+      case "Byte":
+        terabyteParaByte();
+        break;
+      case "Megabyte":
+        terabyteParaMegabyte();
+        break;
+      case "Gigabyte":
+        terabyteParaGigabyte();
+        break;        
+    }
+  }
 }
 
 ////funções relacionadas a conversão unidades de comprimento
