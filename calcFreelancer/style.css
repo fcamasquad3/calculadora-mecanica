@@ -9,11 +9,40 @@
 
 body {
   font-family: 'Cabin',monospace;
-  min-height: 854px;
+  min-height: 100vh;
+  min-width: 100vw;
   background-color: #FD5B03;
   text-align: center;
 }
 
+/* Div de carregamento */
+
+.load-page {
+  background-color: #000;
+  position: absolute;
+  min-width: 100vw;
+  min-height: 100vh;
+  z-index: 99999;
+}
+
+.load-page img {
+  position: absolute;
+  width: 150px;
+  left: 45%;
+  top: 35%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  animation: loading 6s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+} 
 
 /*--------------header e componentes------------------- */
 header {
