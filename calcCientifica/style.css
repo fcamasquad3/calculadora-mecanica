@@ -52,7 +52,7 @@ body {
 
   #menu-mobile ul {
     list-style: none;
-    margin: 17vh;
+    margin: 10vh 0;
   }
 
   #menu-mobile a {
@@ -67,7 +67,7 @@ body {
 
   .close-button {
     color: white;
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     margin-left: auto;
     margin-right: 0.5rem;
   }
