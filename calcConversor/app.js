@@ -191,7 +191,7 @@ function converte() {
   else if(primeiroSelect == "Celsius"){
     switch(segundoSelect){
       case "Kelvin":
-        celciusParaKelvin();
+        celsiusParaKelvin();
         break;
       case "Fahrenheit":
         celsiusParaFahrenheit();
@@ -220,6 +220,16 @@ function fahrenheitParaKelvin(){
 
 function fahrenheitParaCelsius(){    
   calculo = (valorTela.value - 32) * 5/9;
+  valorSaida.value = calculo;
+}
+
+function celsiusParaKelvin(){    
+  calculo = +valorTela.value + 273.15; 
+  valorSaida.value = calculo;
+}
+
+function celsiusParaFahrenheit(){    
+  calculo = (valorTela.value * 9/5) + 32;
   valorSaida.value = calculo;
 }
 
