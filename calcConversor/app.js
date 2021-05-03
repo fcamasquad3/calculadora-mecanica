@@ -243,5 +243,13 @@ function celsiusParaFahrenheit(){
   valorSaida.value = calculo;
 }
 
+function kelvinParaCelsius(){    
+  calculo = +valorTela.value - 273.15;
+  valorSaida.value = calculo;
+}
 
+function kelvinParaFahrenheit(){    
+  calculo = (valorTela.value - 273.15) * 9/5 + 32;
+  valorSaida.value = calculo;
+}
 
