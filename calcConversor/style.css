@@ -11,45 +11,91 @@
     dark-orange: #F25602 ;
     green: #36B336;
   }  */
-
-body {    
-    font-size: 62.5%;
-    background-color: #F25602;  
-  } 
-
-header {
   
-  display: flex;
-  align-items: center; 
-  justify-content: space-around;  
- 
-}
-
-.menu{ 
-  font-family: 'Advent Pro', sans-serif;
-  letter-spacing: 5px; 
-  font-weight: 400;
-}
-
-
-.menu ul li {
-  display: inline;   
-  margin: 3rem 1rem;  
-  align-items: center;
-}
-
-.menu ul li a{   
-  padding: 20px 20px;   
-  color: #ffffff;
-  font-size: 20px;
-  font-size: 1.7rem;       
+body {        
+    background-color: #F25602;  
 } 
+
+header {  
+    margin: 1.75rem ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+}
+
+.menu-desktop{    
+  letter-spacing: 5px; 
+  text-align: center;
+ 
+  width: -webkit-fill-available;
+}
+
+.full-menu {   
+  display: inline-flex;
+}
+
+a {
+  display: flex;
+  margin: 0.5rem 2rem;
+
+  color: #ffffff;
+  text-align: center; 
+
+  font-size: 1.7rem;  
+  font-family: 'Advent Pro', sans-serif; 
+}
 
 img {
     width: 6rem;   
     margin-left: 3rem; 
 } 
 
+
+/* ----------------menu mobile---------------- */
+#menu-icon{
+  width: 0;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
+
+#menu-mobile{
+  transition: right .3s ease-in-out;
+  position: fixed;
+  right: -100vw;
+  top: 2px;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+#menu-mobile ul {
+  list-style: none;
+  margin: 10vh 0;
+}
+
+#menu-mobile a {
+  margin: 1rem 0 5rem;
+  display: flex;
+  justify-content: center;
+  color: #FD5B03;
+  font-family: 'Cabin', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.close-button {
+  color: white;
+  font-size: 3.5rem;
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
+.menu-header {
+  display: flex;
+  margin: 0.5rem;
+}
 /* corpo da página */
   
 .container {
@@ -213,3 +259,102 @@ footer {
   transform: translateY(-50%);
 }
 
+
+@media only screen and (max-width: 1024px) {
+  .logo {
+    margin-left: 5vw;
+    width: 15vw;
+  }
+
+  #menu-icon{
+    width: 10vw;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+  #titulo {
+    text-align: center;
+    margin: 0 auto;
+    max-width: fit-content;
+  }
+
+  h1 {
+    font-size: 12vw;
+    margin: 0 0 2rem;
+  }
+
+  .corpoConversor {
+    margin: 0 auto;
+    width: 80vw;
+    height: 110vw;
+  }
+
+  #fundoTela{
+    margin: 0 auto;
+    width: 80vw;
+    height: 40vw;
+  }
+
+  .telas{
+    margin: 0 auto;
+    width: 80vw;
+    height: 8vw;
+    font-size: 7vw;
+  }
+
+  #opTipo1{    
+    width: 45vw;
+    height: 10vw;
+  }
+
+  #opTipo2{    
+    width: 45vw;
+    height: 10vw;
+  }
+
+  table{
+    border:0px;
+    border-collapse:collapse;
+    border-spacing:0px;  
+  }
+  
+  td input{
+    width: 20vw;
+    height: 15vw;
+   
+    font-size: 10vw; 
+  }
+  
+  select {        
+    height: 10vw;
+  
+    /* margin-top: 1rem;
+    margin-left: 1rem;  */
+  
+    font-size: 7vw;     
+  
+    align-items: center;
+    text-align-last: center;
+  }
+  
+  option{
+    border-radius: 5vw;
+    margin: 2vw;  
+  
+    padding: 2vw;  
+  }
+  
+  #opConversores{
+    width: 80vw;      
+  }
+
+ 
+
+  
+}
