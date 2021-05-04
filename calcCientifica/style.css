@@ -22,7 +22,8 @@ body {
 /* Header */
 
   .logo {
-    width: 4rem;
+    width: 6rem;
+    margin-left: 3rem;
   }
   
   header {
@@ -174,8 +175,9 @@ body {
     height: 10rem; 
 
     box-sizing: border-box;
-    padding: 0rem;
-    border-color: #111111;   
+    padding: 1rem;
+    border-color: #111111;
+    text-align: right; 
 
     background-color: #111111;
     color:#ffffff;
