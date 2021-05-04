@@ -48,7 +48,6 @@ body {
   text-align: center;
 }
 
-
 /*--------------header e componentes------------------- */
 .logo {
   width: 6rem;
@@ -162,7 +161,7 @@ a {
 .question input {
   border-radius: 6px;
   height: 3rem;
-  width: 14rem;
+  width: 32rem;
   padding-left: 0.5rem;
 }
 
@@ -290,6 +289,23 @@ footer {
   transform: translateY(-50%);
 }
 
+@media only screen and (max-width: 1024px) {
+  .logo {
+    margin-left: 5vw;
+    width: 15vw;
+  }
+
+  #menu-icon{
+    width: 10vw;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+
+}
+
+/*
 @media(min-width: 720px) {
   #nomeJob {
     width: 32rem;
@@ -304,20 +320,6 @@ footer {
     width: 32rem;
   }
 }
-
-@media only screen and (max-width: 1024px) {
-  .logo {
-    margin-left: 5vw;
-    width: 15vw;
-  }
-
-  #menu-icon{
-    width: 10vw;
-  }
-
-  .menu-desktop {
-    display: none;
-  }
-}
+*/
 
 

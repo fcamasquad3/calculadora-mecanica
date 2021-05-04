@@ -62,52 +62,53 @@
             </nav>
             <img id="menu-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg" onclick="abre()">
         </header>
-
-        <div>
-            <h1 class="page-title">
-            <p>CALCULADORA<br>FREELANCE</p>  
-            </h1>
-        </div>
-        <h2>Preencha os dados para calcular</h2>
-        <section class="questions">
-                <div class="question1 question">
-                    <p class="p-form">Qual nome escolhido do seu Job?</p>
-                    <input type="text" id="nomeJob" value="" >
+        
+        <div class="container">
+            <div>
+                <h1 class="page-title">
+                <p>CALCULADORA<br>FREELANCE</p>  
+                </h1>
+            </div>
+            <h2>Preencha os dados para calcular</h2>
+            <section class="questions">
+                    <div class="question1 question">
+                        <p class="p-form">Qual nome escolhido do seu Job?</p>
+                        <input type="text" id="nomeJob" value="" >
+                    </div>
+                <fieldset>
+                    <div class="question">
+                        <p class="p-form">Quanto eu quero ganhar por mês?</p>
+                        <input type="number" id="valorMes" value="" >
+                    </div>
+                    <div class="question">
+                        <p class="p-form">Quantas horas quero trabalhar por dia?</p>
+                        <input type="number" id="valorHorasDia" value="" >
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <div class="question">
+                        <p class="p-form">Quantos dias quero trabalhar por semana?</p>
+                        <input type="number" id="valorSemana" value="" >
+                    </div>
+                    <div class="question">
+                        <p class="p-form">Estimativa de horas para esse Job?</p>
+                        <input type="number" id="horasJob"value="" >
+                    </div>
+                </fieldset>    
+            </section>
+            <button type="submit" onclick="mostrarResultado()">CALCULAR</button>
+        
+            <div>
+                <div class="value question">
+                    <p class="p-result">Valor da sua hora de trabalho</p>
+                    <input type="text" id="valorHoraTrabalho" value="" placeholder="R$ 0 " readonly >
+                </div>  
+                <div class="value question">
+                    <p id="result" class="p-result">Valor do projeto</p>
+                    <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0 " readonly>
                 </div>
-            <fieldset>
-                <div class="question">
-                    <p class="p-form">Quanto eu quero ganhar por mês?</p>
-                    <input type="number" id="valorMes" value="" >
-                </div>
-                <div class="question">
-                    <p class="p-form">Quantas horas quero trabalhar por dia?</p>
-                    <input type="number" id="valorHorasDia" value="" >
-                </div>
-            </fieldset>
-            <fieldset>
-                <div class="question">
-                    <p class="p-form">Quantos dias quero trabalhar por semana?</p>
-                    <input type="number" id="valorSemana" value="" >
-                </div>
-                <div class="question">
-                    <p class="p-form">Estimativa de horas para esse Job?</p>
-                    <input type="number" id="horasJob"value="" >
-                </div>
-            </fieldset>    
-        </section>
-        <button type="submit" onclick="mostrarResultado()">CALCULAR</button>
-    
-        <div>
-            <div class="value question">
-                <p class="p-result">Valor da sua hora de trabalho</p>
-                <input type="text" id="valorHoraTrabalho" value="" placeholder="R$ 0 " readonly >
-            </div>  
-            <div class="value question">
-                <p id="result" class="p-result">Valor do projeto</p>
-                <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0 " readonly>
             </div>
         </div>
-
         <footer>
             <div class="p-footer">
                 <p>Hackathon Imersão Dev - FCamara</p>
