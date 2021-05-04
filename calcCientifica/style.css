@@ -249,7 +249,7 @@ body {
       height: 107vw;
     }
 
-    table, tr, td, input{
+    table, tr, td {
       display: flex;
     }
 
@@ -266,6 +266,17 @@ body {
       width: -webkit-fill-available;
       height: calc(107vw * 0.119);
       font-size: 5vw;
-      display: inline;
+    }
+  }
+
+  @media only screen and (max-width:425px) {
+    main {
+      height: -webkit-fill-available;
+      display: flex;
+      align-items: center;
+    }
+
+    .p-footer {
+      padding-right: 7rem;
     }
   }
