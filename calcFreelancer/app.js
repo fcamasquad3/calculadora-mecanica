@@ -35,3 +35,13 @@ function mostrarResultado() {
     result.innerText = `Valor do projeto ${nomeJob.value.toUpperCase()} é de:`;
   }
 }
+
+// Funções do menu mobile
+
+function abre() {
+  document.getElementById("menu-mobile").style.right = `${'0'}`
+}
+
+function fechar() {
+  document.getElementById("menu-mobile").style.right = `${'-100vw'}`
+}

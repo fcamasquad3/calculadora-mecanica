@@ -256,18 +256,12 @@ footer {
 }
 
 @media(min-width: 720px) {
-  /* * {
-    background: blue;
-  } */
   #nomeJob {
     width: 32rem;
   }
 }
 
 @media(min-width: 1080px) {
-  /* * {
-    background: white;
-  } */
   #nomeJob {
     width: 32rem;
   }
