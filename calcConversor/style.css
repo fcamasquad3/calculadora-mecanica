@@ -11,9 +11,9 @@
     dark-orange: #F25602 ;
     green: #36B336;
   }  */
-  
+
 body {        
-    background-color: #F25602;  
+    background-color: #F25602;    
 } 
 
 header {  
@@ -26,7 +26,7 @@ header {
 .menu-desktop{    
   letter-spacing: 5px; 
   text-align: center;
- 
+  font-weight: 400;
   width: -webkit-fill-available;
 }
 
@@ -66,23 +66,20 @@ img {
   top: 2px;
   z-index: 1;
   height: 100vh;
-  width: 100vw;
-  background-color: black;
+  width: 100vw; 
+  background-color: black; 
 }
 
-#menu-mobile ul {
-  list-style: none;
-  margin: 10vh 0;
-}
+
 
 #menu-mobile a {
-  margin: 1rem 0 5rem;
+  margin: 1vw 0 5vw;
   display: flex;
   justify-content: center;
   color: #FD5B03;
   font-family: 'Cabin', sans-serif;
   font-size: 2.5rem;
-  text-transform: uppercase;
+  text-transform: uppercase;  
 }
 
 .close-button {
@@ -136,10 +133,9 @@ h1 {
   width: 20rem;
 
   font-family:'Cabin',monospace;
-
-  margin: 5rem 3rem;
   background-color: #C4C4C4;
 
+  margin: 5rem 3rem;
   margin-block: 0rem;
   margin: 5rem ;
   margin-right: 7rem;
@@ -166,8 +162,7 @@ h1 {
   color: #ffffff;
   font-size: 2.5rem;
   text-align: right;
-  font-family:'Cabin',monospace;
-  
+  font-family:'Cabin',monospace;  
 }
 
 
@@ -234,11 +229,11 @@ td input{
 /* Footer */
 footer {
   position: absolute;
-  top: 130%;
+  top: 110%;
   bottom: 0;
   height: 12%;
   width: 100%;
-  background-color: #000;
+  background-color: #000;  
 }
 
 .p-footer {
@@ -262,9 +257,8 @@ footer {
 
 @media only screen and (max-width: 1024px) {
   .logo {
-    margin-left: 5vw;
-    width: 15vw;
-  }
+    width: 15vw;    
+  } 
 
   #menu-icon{
     width: 10vw;
@@ -272,6 +266,11 @@ footer {
 
   .menu-desktop {
     display: none;
+  }
+
+  #menu-mobile ul {
+    margin-top: 25rem; 
+    margin-bottom: 20rem;
   }
 
   .container {
@@ -292,34 +291,35 @@ footer {
   .corpoConversor {
     margin: 0 auto;
     width: 80vw;
-    height: 110vw;
+    height: 120vw;
   }
 
   #fundoTela{
     margin: 0 auto;
     width: 80vw;
-    height: 40vw;
+    height: 50vw;
   }
 
   .telas{
-    margin: 0 auto;
+    margin-top: 2 vw;
     width: 80vw;
-    height: 8vw;
-    font-size: 7vw;
+    height: 10vw;
+    font-size: 7vw;   
   }
 
   #opTipo1{    
     width: 45vw;
-    height: 10vw;
+    height: 10vw;      
   }
 
   #opTipo2{    
     width: 45vw;
     height: 10vw;
+    margin-top: 0;
   }
 
   table{
-    border:0px;
+    border: 0px;
     border-collapse:collapse;
     border-spacing:0px;  
   }
@@ -331,30 +331,63 @@ footer {
     font-size: 10vw; 
   }
   
-  select {        
-    height: 10vw;
-  
-    /* margin-top: 1rem;
-    margin-left: 1rem;  */
-  
-    font-size: 7vw;     
-  
-    align-items: center;
-    text-align-last: center;
+  select { 
+    font-size: 7vw;         
   }
   
   option{
     border-radius: 5vw;
-    margin: 2vw;  
-  
+    margin: 2vw;    
     padding: 2vw;  
   }
   
   #opConversores{
-    width: 80vw;      
+    width: 80vw; 
+    height: 10vw;     
+  }  
+
+  footer {
+    display: flex;
+    justify-content: space-between; 
+    top:130%;
   }
 
- 
-
+  .p-footer {  
+    font-size: 4vw;  
+    margin-left: 2vw;
+    max-width: fit-content;
+  }  
   
+  .icone {
+    position: absolute; 
+ }
 }
+
+@media (max-width: 768px){
+  #menu-mobile ul {
+    margin-top: 30vw;
+  }
+}
+
+@media (max-width:480px) { 
+footer {
+  display: flex;
+  justify-content: space-between;  
+  top:110%;
+}
+
+.p-footer {    
+  letter-spacing: 0vw; 
+}  
+  
+.icone {
+    position: absolute;    
+}
+
+ .icone a{
+  margin: 0;    
+}
+
+#menu-mobile ul {
+  margin-top: 20vw;
+}}

@@ -2,6 +2,16 @@ let valorTela = document.getElementById("telaEntrada");
 let valorSaida = document.getElementById("telaSaida");
 let calculo = 0;
 
+// Funções do menu mobile
+
+function abreMenu() {
+  document.getElementById("menu-mobile").style.right = `${'0'}`
+}
+
+function fecharMenu() {
+  document.getElementById("menu-mobile").style.right = `${'-100vw'}`
+}
+
 // criação de arrays para function PopulacbMedidas()
 let pacoteMedidas = {
   'Comprimento': ['Quilômetro','Milha','Metro','Pé','Centímetro','Polegada'],
