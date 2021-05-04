@@ -8,7 +8,7 @@
 
 
 body {
-  font-family: 'Cabin',monospace;
+  font-family: 'Advent Pro';
   min-height: 100vh;
   background-color: #FD5B03;
   text-align: center;
@@ -16,37 +16,83 @@ body {
 
 
 /*--------------header e componentes------------------- */
+.logo {
+  width: 6rem;
+  margin-left: 3rem; 
+}
+
 header {
-  
+  margin: 1.75rem ;
   display: flex;
-  align-items: center; 
-  justify-content: space-around;  
-}
-
-.menu{ 
-  font-family: 'Advent Pro', sans-serif;
-  letter-spacing: 5px; 
-  font-weight: 400;
-}
-
-
-.menu ul li {
-  display: inline;   
-  margin: 3rem 1rem;  
+  justify-content: space-between;
   align-items: center;
 }
 
-.menu ul li a{   
-  padding: 20px 20px;   
-  color: #ffffff;
-  font-size: 20px;
-  font-size: 1.7rem;       
-} 
+#menu-icon{
+  width: 0;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
 
-img {
-    width: 6rem;   
-    margin-left: 3rem; 
-} 
+#menu-mobile{
+  transition: right .3s ease-in-out;
+  position: fixed;
+  right: -100vw;
+  top: 2px;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+#menu-mobile ul {
+  list-style: none;
+  margin: 10vh 0;
+}
+
+#menu-mobile a {
+  margin: 1rem 0 5rem;
+  display: flex;
+  justify-content: center;
+  color: #FD5B03;
+  font-family: 'Cabin', sans-serif;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+
+.close-button {
+  color: white;
+  font-size: 3.5rem;
+  margin-left: auto;
+  margin-right: 0.5rem;
+}
+
+.menu-header {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.menu-desktop {
+  letter-spacing: 5px; 
+  font-weight: 400;
+  text-align: center;
+  width: -webkit-fill-available;
+}
+
+.full-menu {
+  list-style: none;
+  display: inline-flex;
+}
+
+a {
+  display: flex;
+  color: #ffffff;
+  font-size: 1.7rem;
+  text-decoration: none;
+  text-align: center;   
+  margin: 0.5rem 2rem;
+}
 
 /* --------------questionario--------------------------- */
 
@@ -104,7 +150,14 @@ h1 p:last-child{
   margin-top: 0;
 }
 
+h2 {
+  font-family: 'Cabin';
+  font-size: 1.6rem;
+}
+
 p {
+  font-family: 'Cabin';
+  font-size: 1.2rem;
   padding-bottom: 0.5rem;
 }
 
@@ -195,6 +248,21 @@ footer {
   }
   .question input {
     width: 32rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .logo {
+    margin-left: 5vw;
+    width: 15vw;
+  }
+
+  #menu-icon{
+    width: 10vw;
+  }
+
+  .menu-desktop {
+    display: none;
   }
 }
 

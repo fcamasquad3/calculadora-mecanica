@@ -19,17 +19,18 @@
     </head>
 
     <body>
-        <header>           
+        <header>
             <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
-            <nav class="menu">
-            <ul>               
-                <li> <a href="../index.html"> Home </a> </li>
-                <li> <a href="../calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
-                <li> <a href="../calcConversor/calcConversor.html"> Conversor </a> </li>
-                <li> <a href="./calcFreelancer.html"> Calculadora Freelance </a> </li>
-            </ul>
+            <nav class="menu-desktop">
+                <ul class="full-menu">            
+                    <li> <a href="../index.html"> Home </a> </li>
+                    <li> <a href="./calcCientifica.html"> Calculadora Científica </a> </li>
+                    <li> <a href="../calcConversor/calcConversor.html"> Conversor </a> </li>
+                    <li> <a href="../calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
+                </ul>
             </nav>
-       </header>
+            <img id="menu-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg" onclick="abre()">
+        </header>
 
         <div>
             <h1 class="page-title">
@@ -68,7 +69,7 @@
         <div>
             <div class="value question">
                 <p>Valor da sua hora de trabalho é:</p>
-                <input type="text" id="valorHoraTrabalho" value="" placeholder="R$ 0" readonly >
+                <input type="text" id="valorHoraTrabalho" value="" placeholder="R$ 0 " readonly >
             </div>  
             <div class="value question">
                 <p id="result">Valor do projeto:</p>
