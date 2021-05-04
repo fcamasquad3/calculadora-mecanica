@@ -129,6 +129,10 @@ a {
 
 /* --------------questionario--------------------------- */
 
+.container {
+  position: absolute;
+}
+
 .page-title {
   width: 100% 0;
   text-align: right;
@@ -260,13 +264,15 @@ button:hover {
   transform: scale(1.05);
 }
 
+.resultado-tela {
+  margin-bottom: 8rem;
+}
+
 /* Footer */
 footer {
-  margin-top: 4rem;
   position: absolute;
-  top: 180%;
   bottom: 0;
-  height: 12%;
+  height: 65px;
   width: 100%;
   background-color: #000;
 }
@@ -289,6 +295,17 @@ footer {
   transform: translateY(-50%);
 }
 
+/*@media (max-width: 1326px) {
+  .container {
+    min-height: 100vh;
+    margin-bottom: 80px;
+  }
+
+  footer {
+    margin-top: 320px;
+  }
+}*/
+
 @media only screen and (max-width: 1024px) {
   .logo {
     margin-left: 5vw;
@@ -301,6 +318,10 @@ footer {
 
   .menu-desktop {
     display: none;
+  }
+
+  footer {
+
   }
 
 }
