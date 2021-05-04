@@ -91,12 +91,13 @@ fieldset {
 }
 
 h1 p {
-  font-size: 6.5rem;
+  font-size: 5.5rem;
   font-weight: bold;
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 8%; 
   text-transform: uppercase;
   margin-bottom: 1rem;
+  margin-right: 60px;
 }
 
 h1 p:last-child{
