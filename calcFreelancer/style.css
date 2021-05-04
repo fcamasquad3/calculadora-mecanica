@@ -155,10 +155,21 @@ h2 {
   font-size: 1.6rem;
 }
 
-p {
-  font-family: 'Cabin';
+.p-form {
+  font-family: 'Cabin', sans-serif;
   font-size: 1.2rem;
   padding-bottom: 0.5rem;
+}
+
+.p-result {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.6rem;
+  padding: 0.3rem;
+  margin-bottom: 1rem;
+  letter-spacing: 0.1rem;
+  background-color: #fff;
+  color: #F25602;
+  text-align: right;
 }
 
 input {
@@ -209,6 +220,7 @@ button:hover {
 
 /* Footer */
 footer {
+  margin-top: 4rem;
   position: absolute;
   top: 180%;
   bottom: 0;
