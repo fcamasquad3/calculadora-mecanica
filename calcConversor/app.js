@@ -12,20 +12,20 @@ function fecharMenu() {
   document.getElementById("menu-mobile").style.right = `${'-100vw'}`
 }
 
-// criação de arrays para function PopulacbMedidas()
+// criação de arrays para function que popula o pacoteMedidas
 let pacoteMedidas = {
   'Comprimento': ['Quilômetro','Milha','Metro','Pé','Centímetro','Polegada'],
-  'Temperaturas': ['Fahrenheit' , 'Celsius', 'Kelvin'],
-  'Dados': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte']
+  'Temperatura': ['Fahrenheit' , 'Celsius', 'Kelvin'],
+  'Dado': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte']
 }
 
-//chamada da função e desenvolvimento da mesma, populando os selects top-tipo
+//chamada da função e desenvolvimento da mesma, populando os selects op-tipo
 $('#opConversores').on('change', function() {
 
   let selectValue = $(this).val();
 
   $('#opTipo1').empty();
-  $('#opTipo2').empty();
+  $('#opTipo2').empty();  
   
   for (i = 0; i < pacoteMedidas[selectValue].length; i++) {
     $('#opTipo1').append("<option value='" + pacoteMedidas[selectValue][i] + "'>" + pacoteMedidas[selectValue][i] + "</option>");
@@ -62,9 +62,8 @@ function deletarConteudo() {
 }
 
 function converte() {
-
   let primeiroSelect = document.getElementById("opTipo1").value;
-  let segundoSelect = document.getElementById("opTipo2").value;  
+  let segundoSelect = document.getElementById("opTipo2").value; 
   
   if (primeiroSelect == segundoSelect)
   {
