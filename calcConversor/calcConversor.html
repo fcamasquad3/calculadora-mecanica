@@ -13,35 +13,47 @@
     
         <!--Importando Icon Github-->
         <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
-
+   
         <!-- Importando o jquery dos selects -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
         <title>Conversor</title>
      </head>
 
-     <body>     
-        
-        <!-- estrutura load-page -->
-        <div class="load-page">
-            <div class="load-img">
-                <img src="../public/load.svg" alt="Imagem de carregamento">
+     <body>  
+        <nav id="menu-mobile">
+            <header class="menu-header">
+                <span class="close-button" onclick="fecharMenu()">&#10005;</span>
+            </header>
+            <div>
+                <ul>
+                    <li>
+                        <a href="./index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="../calcCientifica/calcCientifica.html">Calculadora Científica</a>
+                    </li>
+                    <li>
+                        <a href="./calcConversor.html">Conversor</a>
+                    </li>
+                    <li>
+                        <a href="../calcFreelancer/calcFreelancer.html">Calculadora Freelance</a>
+                    </li>
+                </ul>
             </div>
-        </div>
-        <!-- fim da estrutura load-page -->
-        
-         <header>           
-                <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
-            <nav class="menu">
-            <ul>               
-                <li> <a href="../index.html"> Home </a> </li>
-                <li> <a href="../calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
-                <li> <a href="./calcConversor.html"> Conversor </a> </li>
-                <li> <a href="../calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
-            </ul>
+        </nav>
+        <header>
+            <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
+            <nav class="menu-desktop">
+                <ul class="full-menu">            
+                    <li> <a href="../index.html"> Home </a> </li>
+                    <li> <a href="../calcCientifica/calcCientifica.html"> Calculadora Científica </a> </li>
+                    <li> <a href="./calcConversor.html"> Conversor </a> </li>
+                    <li> <a href="../calcFreelancer/calcFreelancer.html"> Calculadora Freelance </a> </li>
+                </ul>
             </nav>
+            <img id="menu-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg" onclick="abreMenu()">
         </header>
-    
         <div class="container">
             <div id="page-title">
                 <h1>Conversor</h1>
@@ -52,13 +64,13 @@
                         <select id="opTipo1" onchange="converte()"> 
                             <option value="" disabled selected>tipo 1</option>                       
                         </select>
-                        <input class="telas" id="telaEntrada" value="0">   
+                        <input class="telas" id="telaEntrada" value="0" readonly>   
                     </div>         
                     <div class="corpoTela2">                   
                         <select id="opTipo2" onchange="converte()"> 
                             <option value="" disabled selected>tipo 2</option>                       
                         </select>
-                        <input class="telas" id="telaSaida">
+                        <input class="telas" id="telaSaida" readonly>
                     </div>     
                 </div>  
                 <div class="btnMedidas">
@@ -119,7 +131,7 @@
                     </tr>
                 </table>
             </div>         
-        </div>
+        </div>      
         
         <footer>
             <div class="p-footer">
@@ -136,8 +148,4 @@
     </body>
 
 </html>
-
-
-
-
 
