@@ -211,8 +211,9 @@ body {
     height: 10rem; 
 
     box-sizing: border-box;
-    padding: 0rem;
-    border-color: #111111;   
+    padding: 0.8rem;
+    border-color: #111111;
+    text-align: right;   
 
     background-color: #111111;
     color:#ffffff;
@@ -328,6 +329,12 @@ body {
   
     .close-button {
       font-size: 2rem;
+    }
+
+    main {
+      height: -webkit-fill-available;
+      display: flex;
+      align-items: center;
     }
   }
 
