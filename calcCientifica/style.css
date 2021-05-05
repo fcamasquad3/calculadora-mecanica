@@ -329,6 +329,12 @@ body {
     .close-button {
       font-size: 2rem;
     }
+
+    main {
+      height: -webkit-fill-available;
+      display: flex;
+      align-items: center;
+    }
   }
 
   @media only screen and (max-width: 280px) {
