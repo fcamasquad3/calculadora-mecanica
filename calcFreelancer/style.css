@@ -136,7 +136,7 @@ a {
 .page-title {
   width: 100% 0;
   text-align: right;
-  margin-right: 5rem;
+  margin-right: 10rem;
   margin-bottom: 4rem;
   font-size: 6rem;
 }
@@ -304,9 +304,9 @@ footer {
     margin-right: -2rem;
   }
 
-  footer {
+  /*footer {
     width: 104vw;
-  }
+  }*/
 }
 
 @media only screen and (max-width: 1024px) {
@@ -327,6 +327,21 @@ footer {
 @media (max-width: 414px) {
   .container {
     width: 100vw;
+  }
+
+  #menu-mobile{
+    overflow: hidden;
+  }
+
+  #menu-mobile a {
+    margin: 1rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+  
+  .close-button {
+    font-size: 2rem;
   }
 
   .page-title {
@@ -357,12 +372,13 @@ footer {
 
   .p-result {
     font-size: 1.2rem;
-
+    width: 14rem;
   }
 
   #valorHoraTrabalho,
   #ValorJob {
     width: 14rem;
+    font-size: 2rem;
   }
 
   .icone {
