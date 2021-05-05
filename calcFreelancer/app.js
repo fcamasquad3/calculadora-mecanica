@@ -26,7 +26,7 @@ function calcularValorDoProjeto(valorHora, horasJob){
 // pressiona o botao CALCULAR 
 function mostrarResultado() {
   if (valorMes.value == '' || valorHorasDia.value == '' || valorSemana.value == '' || horasJob.value == '') {
-    alert("Por favor preencha todos os campos.")
+    swal("🤭OPS!", "Por favor, preencha todos os campos antes de clicar em CALCULAR.");
   } else {
     valorHoraTrabalho.value = calcularValorHorasTrabalhadas(valorMes,valorHorasDia,valorSemana)
 
