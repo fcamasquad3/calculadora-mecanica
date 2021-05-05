@@ -136,7 +136,9 @@ a {
 .page-title {
   width: 100% 0;
   text-align: right;
-  padding-right: 1.5rem;
+  margin-right: 5rem;
+  margin-bottom: 4rem;
+  font-size: 6rem;
 }
 
 .enunciated {
@@ -295,16 +297,17 @@ footer {
   transform: translateY(-50%);
 }
 
-/*@media (max-width: 1326px) {
-  .container {
-    min-height: 100vh;
-    margin-bottom: 80px;
+@media (max-width: 1151px) {
+  .page-title {
+    text-align: center;
+    margin: 0 auto;
+    margin-right: -2rem;
   }
 
   footer {
-    margin-top: 320px;
+    width: 102vw;
   }
-}*/
+}
 
 @media only screen and (max-width: 1024px) {
   .logo {
@@ -319,28 +322,35 @@ footer {
   .menu-desktop {
     display: none;
   }
-
-  footer {
-
-  }
-
 }
 
-/*
-@media(min-width: 720px) {
-  #nomeJob {
-    width: 32rem;
+@media (max-width: 414px) {
+  .container {
+    width: 100vw;
   }
-}
 
-@media(min-width: 1080px) {
-  #nomeJob {
-    width: 32rem;
+  .page-title {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    margin-left: -1.5rem;
   }
+
   .question input {
-    width: 32rem;
+    width: 22rem;
+  }
+
+  .p-result {
+    font-size: 1.5rem;
+
+  }
+
+  #valorHoraTrabalho,
+  #ValorJob {
+    width: 22rem;
+  }
+
+  .icone {
+    right: 0;
   }
 }
-*/
-
-
