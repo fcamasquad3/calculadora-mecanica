@@ -1,5 +1,5 @@
 # Calculadora Mecânica
-[![NPM](https://img.shields.io/npm/l/react)](https://github.com/fcamasquad3/calculadora-mecanica/blob/paulo-update-readme/LICENSE)
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/fcamasquad3/calculadora-mecanica/blob/main/LICENSE)
 
 # Sobre o projeto
 
