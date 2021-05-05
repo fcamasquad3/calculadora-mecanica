@@ -92,20 +92,21 @@ body {
   }
 
   #menu-mobile a {
-    margin: 1rem 0 5rem;
+    margin: 1rem 0 8rem;
     display: flex;
     justify-content: center;
     color: #FD5B03;
     font-family: 'Cabin', sans-serif;
-    font-size: 2.5rem;
+    font-size: 3rem;
     text-transform: uppercase;
   }
 
   .close-button {
     color: white;
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     margin-left: auto;
-    margin-right: 0.5rem;
+    margin-right: 1.4rem;
+    margin-top: 1rem;
   }
 
   .menu-header {
@@ -314,6 +315,19 @@ body {
 
     footer .icone {
       right: 4px;
+    }
+  }
+
+  @media (max-width: 414px) {
+    #menu-mobile a {
+      margin: 1rem 0 2rem;
+      display: flex;
+      justify-content: center;
+      font-size: 2rem;
+    }
+  
+    .close-button {
+      font-size: 2rem;
     }
   }
 
