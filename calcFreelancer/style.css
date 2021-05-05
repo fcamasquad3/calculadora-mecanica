@@ -6,54 +6,142 @@
   padding: 0px;
 }
 
+/* Div de carregamento */
+
+.load-page {
+  position: fixed;
+  background-color: rgba(0,0,0,0.8);
+  z-index: 5;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.load-page img {
+  position: absolute;
+  width: 120px;
+  left: 45%;
+  top: 35%;
+  transform: translateX(-50%);
+  transform: translateY(-50%);
+  animation: loading 6s linear infinite;
+}
+
+@keyframes loading {
+  0% {
+      transform: rotate(0deg);
+  }
+  100%{
+      transform: rotate(360deg);
+  }
+}
+
+/* fim da div de carregamento */
 
 body {
-  font-family: 'Cabin',monospace;
+  font-family: 'Advent Pro';
   min-height: 100vh;
-  background-color: #FD5B03;
+  background-color: #F25602;
   text-align: center;
 }
 
-
 /*--------------header e componentes------------------- */
+.logo {
+  width: 6rem;
+  margin-left: 3rem; 
+}
+
 header {
-  
+  margin: 1.75rem ;
   display: flex;
-  align-items: center; 
-  justify-content: space-around;  
-}
-
-.menu{ 
-  font-family: 'Advent Pro', sans-serif;
-  letter-spacing: 5px; 
-  font-weight: 400;
-}
-
-
-.menu ul li {
-  display: inline;   
-  margin: 3rem 1rem;  
+  justify-content: space-between;
   align-items: center;
 }
 
-.menu ul li a{   
-  padding: 20px 20px;   
-  color: #ffffff;
-  font-size: 20px;
-  font-size: 1.7rem;       
-} 
+#menu-icon{
+  width: 0;
+  position: absolute;
+  right: 2rem;
+  top: 2rem;
+}
 
-img {
-    width: 6rem;   
-    margin-left: 3rem; 
-} 
+#menu-mobile{
+  transition: right .3s ease-in-out;
+  position: fixed;
+  right: -100vw;
+  top: 2px;
+  z-index: 1;
+  height: 100vh;
+  width: 100vw;
+  background-color: black;
+}
+
+#menu-mobile ul {
+  list-style: none;
+  margin: 10vh 0;
+}
+
+#menu-mobile a {
+  margin: 1rem 0 8rem;
+  display: flex;
+  justify-content: center;
+  color: #FD5B03;
+  font-family: 'Cabin', sans-serif;
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+.close-button {
+  color: white;
+  font-size: 4.5rem;
+  margin-left: auto;
+  margin-right: 1.4rem;
+  margin-top: 1rem;
+}
+
+.menu-header {
+  display: flex;
+  margin: 0.5rem;
+}
+
+.menu-desktop {
+  letter-spacing: 5px; 
+  font-weight: 400;
+  text-align: center;
+  width: -webkit-fill-available;
+}
+
+.full-menu {
+  list-style: none;
+  display: inline-flex;
+}
+
+a {
+  display: flex;
+  color: #ffffff;
+  font-size: 1.7rem;
+  text-decoration: none;
+  text-align: center;   
+  margin: 0.5rem 2rem;
+}
 
 /* --------------questionario--------------------------- */
+
+.container {
+  position: absolute;
+}
 
 .page-title {
   width: 100% 0;
   text-align: right;
-  padding-right: 1.5rem;
+  margin-right: 10rem;
+  margin-bottom: 4rem;
+  font-size: 6rem;
 }
 
 .enunciated {
@@ -82,7 +170,7 @@ img {
 .question input {
   border-radius: 6px;
   height: 3rem;
-  width: 14rem;
+  width: 32rem;
   padding-left: 0.5rem;
 }
 
@@ -91,27 +179,52 @@ fieldset {
 }
 
 h1 p {
-  font-size: 5.5rem;
+  font-size: 6rem;
   font-weight: bold;
   font-family: 'Advent Pro', sans-serif;
   letter-spacing: 8%; 
   text-transform: uppercase;
-  margin-bottom: 1rem;
-  margin-right: 45px;
+  margin-bottom: 3rem;
+  margin-right: 60px;
 }
 
 h1 p:last-child{
   margin-top: 0;
 }
 
-p {
+h2 {
+  font-family: 'Cabin';
+  font-size: 1.6rem;
+}
+
+.p-form {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.2rem;
   padding-bottom: 0.5rem;
+}
+
+.p-result {
+  font-family: 'Cabin', sans-serif;
+  font-size: 1.6rem;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  text-align: right;
+  text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  width: auto;
 }
 
 input {
   font-size: 1rem;
   border: none;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25)
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+#valorHoraTrabalho,
+#ValorJob {
+  box-shadow: none;
+  width: 25rem;
 }
 
 .value {
@@ -125,8 +238,9 @@ input {
   width: 16rem;
   height: 4rem;
   text-align: right;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: bold;
+  padding-right: 0.5rem;
   color: #FD5B03;
   
 }
@@ -144,17 +258,26 @@ button {
   padding: 1.25rem;
   border-radius: 11px;
   border: none;
-  box-shadow: 0px 1.5px 5px black;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
   font-size: 1.5rem;
   text-align: center;
+  cursor: pointer;
+  transition: transform 200ms ease-in-out;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.resultado-tela {
+  margin-bottom: 8rem;
 }
 
 /* Footer */
 footer {
   position: absolute;
-  top: 180%;
   bottom: 0;
-  height: 12%;
+  height: 65px;
   width: 100%;
   background-color: #000;
 }
@@ -177,25 +300,92 @@ footer {
   transform: translateY(-50%);
 }
 
-@media(min-width: 720px) {
-  /* * {
-    background: blue;
-  } */
-  #nomeJob {
-    width: 32rem;
+@media (max-width: 1151px) {
+  .page-title {
+    text-align: center;
+    margin: 0 auto;
   }
 }
 
-@media(min-width: 1080px) {
-  /* * {
-    background: white;
-  } */
-  #nomeJob {
-    width: 32rem;
+@media only screen and (max-width: 1024px) {
+  .logo {
+    margin-left: 5vw;
+    width: 15vw;
   }
+
+  #menu-icon{
+    width: 10vw;
+  }
+
+  .menu-desktop {
+    display: none;
+  }
+}
+
+@media (max-width: 414px) {
+  .container {
+    align-items: center;
+    justify-content: center;
+  }
+
+  #menu-mobile{
+    overflow: hidden;
+  }
+
+  #menu-mobile a {
+    margin: 1rem 0 2rem;
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+  }
+
+  .close-button {
+    font-size: 2rem;
+  }
+
+  .page-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  .p-form {
+    font-size: 0.9rem;
+  }
+
   .question input {
-    width: 32rem;
+    width: 14rem;
+  }
+
+  button {
+    width: 8rem;
+    height: 4rem;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .p-result {
+    font-size: 1.2rem;
+    width: 14rem;
+  }
+
+  #valorHoraTrabalho,
+  #ValorJob {
+    width: 14rem;
+    font-size: 2rem;
+  }
+
+  .icone {
+    right: 0;
+  }
+
+  .p-footer {
+    font-size: 0.8rem;
+    width: 70%;
+    text-align: left;
   }
 }
-
-
