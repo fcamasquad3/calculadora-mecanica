@@ -22,12 +22,12 @@ O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecâ
 
 
 ## Layout Web
-![Web 1](https://github.com/fcamasquad3/calculadora-mecanica/blob/paulo-update-readme/public/assets/desktop.png)
+![Web 1](https://github.com/fcamasquad3/calculadora-mecanica/blob/main/public/assets/desktop.png)
 
 
 
 ## Layout Mobile
-![Web 1](https://github.com/fcamasquad3/calculadora-mecanica/blob/paulo-update-readme/public/assets/mobile.png)
+![Web 1](https://github.com/fcamasquad3/calculadora-mecanica/blob/main/public/assets/mobile.png)
 
 
 # Tecnologias utilizadas 
