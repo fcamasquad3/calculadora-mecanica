@@ -305,7 +305,7 @@ footer {
   }
 
   footer {
-    width: 102vw;
+    width: 104vw;
   }
 }
 
@@ -331,26 +331,47 @@ footer {
 
   .page-title {
     text-align: center;
-    font-size: 4rem;
+    font-size: 2.5rem;
     margin-bottom: 2rem;
     margin-left: -1.5rem;
   }
 
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  .p-form {
+    font-size: 0.9rem;
+  }
+
   .question input {
-    width: 22rem;
+    width: 14rem;
+  }
+
+  button {
+    width: 8rem;
+    height: 4rem;
+    font-size: 1rem;
+    text-align: center;
   }
 
   .p-result {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 
   }
 
   #valorHoraTrabalho,
   #ValorJob {
-    width: 22rem;
+    width: 14rem;
   }
 
   .icone {
     right: 0;
+  }
+
+  .p-footer {
+    font-size: 0.8rem;
+    width: 70%;
+    text-align: left;
   }
 }
