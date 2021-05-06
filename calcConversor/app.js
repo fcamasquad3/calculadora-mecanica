@@ -112,11 +112,11 @@ let unidadesDeMedida = {
         {"Medida": 'Celsius', "primeiroInput": false},
         {"Medida": 'Kelvin', "primeiroInput": true}],
       "Kelvin" : [
-        {"Medida": 'Celsius'},
-        {"Medida": 'Fahrenheit'}],  
+        {"Medida": 'Celsius',"primeiroInput": true},
+        {"Medida": 'Fahrenheit', "primeiroInput": false}],  
       "Celsius" : [
-        {"Medida": 'Fahrenheit'},
-        {"Medida": 'Kelvin'}]     
+        {"Medida": 'Fahrenheit', "primeiroInput": false},
+        {"Medida": 'Kelvin', "primeiroInput": true}]     
       },
       
     Dado: {
@@ -401,35 +401,36 @@ function conversorGenerico({primeiroInput,valorBase}){
 }
 
 ////funções relacionadas a conversão de temperatura
-function fahrenheitParaKelvin(){    
-  calculo = (valorTela.value - 32) * 5/9 + 273.15
-  valorSaida.value = calculo;
+function converteFahrenheit(){  
+  if(primeiroInput){
+    calculo = (valorTela.value - 32) * 5/9 + 273.15
+    valorSaida.value = calculo;
+  }else{
+    calculo = (valorTela.value - 32) * 5/9;
+    valorSaida.value = calculo;
+  }
 }
 
-function fahrenheitParaCelsius(){    
-  calculo = (valorTela.value - 32) * 5/9;
-  valorSaida.value = calculo;
-}
-
-function celsiusParaKelvin(){    
+function converteCelsius(){    
+  if(primeiroInput){
   calculo = +valorTela.value + 273.15; 
   valorSaida.value = calculo;
+  }else {
+    calculo = (valorTela.value * 9/5) + 32;
+    valorSaida.value = calculo;
+  }
 }
 
-function celsiusParaFahrenheit(){    
-  calculo = (valorTela.value * 9/5) + 32;
-  valorSaida.value = calculo;
-}
-
-function kelvinParaCelsius(){    
+function converteKelvin(){ 
+  if(primeiroInput) {  
   calculo = +valorTela.value - 273.15;
   valorSaida.value = calculo;
+  }else{
+    calculo = (valorTela.value - 273.15) * 9/5 + 32;
+    valorSaida.value = calculo;
+  }
 }
 
-function kelvinParaFahrenheit(){    
-  calculo = (valorTela.value - 273.15) * 9/5 + 32;
-  valorSaida.value = calculo;
-}
 
 ////função relacionada a conversão de dados
 function conversorDadosGenerico ({primeiroInput,valorBase}){
