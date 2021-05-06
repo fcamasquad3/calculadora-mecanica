@@ -105,46 +105,79 @@ let unidadesDeMedida = {
         {"Medida": 'Metro', "primeiroInput":false, "valorBase":3.281},
         {"Medida": 'Centímetro', "primeiroInput":true, "valorBase":30.48},
         {"Medida": 'Metro', "primeiroInput":true, "valorBase":12}]  
-        },
-             
-      
+        },  
        
     Temperatura: {
       "Fahrenheit" : [
-        {"Medida": 'Celsius'},
-        {"Medida": 'Kelvin'}],
+        {"Medida": 'Celsius', "primeiroInput": false},
+        {"Medida": 'Kelvin', "primeiroInput": true}],
       "Kelvin" : [
         {"Medida": 'Celsius'},
         {"Medida": 'Fahrenheit'}],  
       "Celsius" : [
-        {"Medida": 'Celsius'},
+        {"Medida": 'Fahrenheit'},
         {"Medida": 'Kelvin'}]     
-      }  
+      },
+      
+    Dado: {
+      "Byte" : [
+        {"Medida": 'Megabyte', "primeiroInput":false, "valorBase":6},
+        {"Medida": 'Gigabyte', "primeiroInput":false, "valorBase":9},
+        {"Medida": 'Terabyte', "primeiroInput":false, "valorBase":12},],
+
+      "Megabyte" :[
+        {"Medida": 'Byte', "primeiroInput":true, "valorBase":6},
+        {"Medida": 'Gigabyte', "primeiroInput":false, "valorBase":3},
+        {"Medida": 'Terabyte', "primeiroInput":false, "valorBase":6},],
+      "Gigabyte" : [ 
+        {"Medida": 'Byte', "primeiroInput":true, "valorBase":9},
+        {"Medida": 'Megabyte', "primeiroInput":true, "valorBase":3},
+        {"Medida": 'Terabyte', "primeiroInput":false, "valorBase":3},],
+      "Terabyte" : [          
+        {"Medida": 'Byte', "primeiroInput":true, "valorBase":12},
+        {"Medida": 'Megabyte', "primeiroInput":true, "valorBase":6},
+        {"Medida": 'Gigabyte', "primeiroInput":true, "valorBase":3},]  
+      } 
   }
 
   
-  function teste()
+  function terminalDeFunction()
   {
     let primeiroSelect = document.getElementById("opTipo1").value;
     let segundoSelect = document.getElementById("opTipo2").value;   
 
-    let x = document.getElementById("opConversores").value;
-    // unidadesDeMedida[x][primeiroSelect].forEach(element => {
-    //   console.log(element)
-    // });
-    let i; 
+    let x = document.getElementById("opConversores").value;    
+     
     if (primeiroSelect == segundoSelect)
     {
       valorSaida.value = valorTela.value;
-    }  
+    }      
     else {
       unidadesDeMedida[x][primeiroSelect].forEach(element => {
-        if(element.Medida == segundoSelect){
-        conversorGenerico({primeiroInput:element.primeiroInput,valorBase:element.valorBase});
+        console.log(unidadesDeMedida[x]);
+        if(element.Medida == segundoSelect && x == "Comprimento"){    
+                 
+          conversorGenerico({primeiroInput:element.primeiroInput,valorBase:element.valorBase}); 
+        }
+        else if (element.Medida == segundoSelect && x == "Dado"){
+          conversorDadosGenerico({primeiroInput:element.primeiroInput,valorBase:element.valorBase});
+        }
+        else {
+          controleConversorTemperatura()
         }
       });   
     }
   }
+
+function controleConversorTemperatura(){
+  unidadesDeMedida.Temperatura[primeiroSelect].forEach(element => {
+    if(element.Medida == segundoSelect && element.Medida == "Fahrenheit"){
+
+    }
+    
+  });
+
+    } 
 
 // funcoes que recebe o objeto balor valor 
 function converte() {
@@ -271,88 +304,88 @@ function converte() {
   //     break;          
   //   }
   // } 
-  else if(primeiroSelect == "Fahrenheit"){
-    switch(segundoSelect){
-      case "Kelvin":
-        fahrenheitParaKelvin();
-        break;
-      case "Celsius":
-        fahrenheitParaCelsius();
-        break;
-    }
-  }
-  else if(primeiroSelect == "Celsius"){
-    switch(segundoSelect){
-      case "Kelvin":
-        celsiusParaKelvin();
-        break;
-      case "Fahrenheit":
-        celsiusParaFahrenheit();
-        break;
-    }
-  }
-  else if(primeiroSelect == "Kelvin"){
-    switch(segundoSelect){
-      case "Celsius":
-        kelvinParaCelsius();
-        break;
-      case "Fahrenheit":
-        kelvinParaFahrenheit();
-        break;
-    }
-  }
-  else if(primeiroSelect == "Byte"){
-    switch(segundoSelect){
-      case "Megabyte":
-        conversorDadosGenerico({primeiroInput:false,valorBase:6});
-        break;
-      case "Gigabyte":
-        conversorDadosGenerico({primeiroInput:false,valorBase:9});
-        break;
-      case "Terabyte":
-        conversorDadosGenerico({primeiroInput:false,valorBase:12});
-        break;        
-    }
-  }
-  else if(primeiroSelect == "Megabyte"){
-    switch(segundoSelect){
-      case "Byte":
-        conversorDadosGenerico({primeiroInput:true,valorBase:6});
-        break;
-      case "Gigabyte":
-        conversorDadosGenerico({primeiroInput:false,valorBase:3});
-        break;
-      case "Terabyte":
-        conversorDadosGenerico({primeiroInput:false,valorBase:6});
-        break;        
-    }
-  }
-  else if(primeiroSelect == "Gigabyte"){
-    switch(segundoSelect){
-      case "Byte":
-        conversorDadosGenerico({primeiroInput:true,valorBase:9});
-        break;
-      case "Megabyte":
-        conversorDadosGenerico({primeiroInput:true,valorBase:3});
-        break;
-      case "Terabyte":
-        conversorDadosGenerico({primeiroInput:false,valorBase:3});
-        break;        
-    }
-  }
-  else if(primeiroSelect == "Terabyte"){
-    switch(segundoSelect){
-      case "Byte":
-        conversorDadosGenerico({primeiroInput:true,valorBase:12});
-        break;
-      case "Megabyte":
-        conversorDadosGenerico({primeiroInput:true,valorBase:6});
-        break;
-      case "Gigabyte":
-        conversorDadosGenerico({primeiroInput:true,valorBase:3});
-        break;        
-    }
-  }
+  // else if(primeiroSelect == "Fahrenheit"){
+  //   switch(segundoSelect){
+  //     case "Kelvin":
+  //       fahrenheitParaKelvin();
+  //       break;
+  //     case "Celsius":
+  //       fahrenheitParaCelsius();
+  //       break;
+  //   }
+  // }
+  // else if(primeiroSelect == "Celsius"){
+  //   switch(segundoSelect){
+  //     case "Kelvin":
+  //       celsiusParaKelvin();
+  //       break;
+  //     case "Fahrenheit":
+  //       celsiusParaFahrenheit();
+  //       break;
+  //   }
+  // }
+  // // else if(primeiroSelect == "Kelvin"){
+  //   switch(segundoSelect){
+  //     case "Celsius":
+  //       kelvinParaCelsius();
+  //       break;
+  //     case "Fahrenheit":
+  //       kelvinParaFahrenheit();
+  //       break;
+  //   }
+  // }
+  // else if(primeiroSelect == "Byte"){
+  //   switch(segundoSelect){
+  //     case "Megabyte":
+  //       conversorDadosGenerico({primeiroInput:false,valorBase:6});
+  //       break;
+  //     case "Gigabyte":
+  //       conversorDadosGenerico({primeiroInput:false,valorBase:9});
+  //       break;
+  //     case "Terabyte":
+  //       conversorDadosGenerico({primeiroInput:false,valorBase:12});
+  //       break;        
+  //   }
+  // }
+  // else if(primeiroSelect == "Megabyte"){
+  //   switch(segundoSelect){
+  //     case "Byte":
+  //       conversorDadosGenerico({primeiroInput:true,valorBase:6});
+  //       break;
+  //     case "Gigabyte":
+  //       conversorDadosGenerico({primeiroInput:false,valorBase:3});
+  //       break;
+  //     case "Terabyte":
+  //       conversorDadosGenerico({primeiroInput:false,valorBase:6});
+  //       break;        
+  //   }
+  // }
+  // else if(primeiroSelect == "Gigabyte"){
+  //   switch(segundoSelect){
+  //     case "Byte":
+  //       conversorDadosGenerico({primeiroInput:true,valorBase:9});
+  //       break;
+  //     case "Megabyte":
+  //       conversorDadosGenerico({primeiroInput:true,valorBase:3});
+  //       break;
+  //     case "Terabyte":
+  //       conversorDadosGenerico({primeiroInput:false,valorBase:3});
+  //       break;        
+  //   }
+  // }
+  // else if(primeiroSelect == "Terabyte"){
+  //   switch(segundoSelect){
+  //     case "Byte":
+  //       conversorDadosGenerico({primeiroInput:true,valorBase:12});
+  //       break;
+  //     case "Megabyte":
+  //       conversorDadosGenerico({primeiroInput:true,valorBase:6});
+  //       break;
+  //     case "Gigabyte":
+  //       conversorDadosGenerico({primeiroInput:true,valorBase:3});
+  //       break;        
+  //   }
+  // }
 }
 
 ////função relacionada a conversão unidades de comprimento
