@@ -61,14 +61,33 @@ function deletarConteudo() {
   valorSaida.value = 0;
 }
 
+// // inicio da refatoração da function converte()
+// let UnidadesDeMedida = {
+//   {
+//     "Quilômetro":
+//       [{"valorBase": 1.609,},{"valorBase": 1.609,}],
+//       {"medida":'Milha',"valorBase": 1.609,}
+//       {"medida":'Metro',"valorBase": 1.609,}
+//       {"medida":'Quilômetro',"valorBase": 1.609,}
+//       {"medida":'Quilômetro',"valorBase": 1.609,}]
+//     {
+
+//     }
+//   }
+//   "Quilômetro": ['1.609', '1000', '3281', '100000','39370'],
+//   "Milha": ['1609','2'],
+//   "Metro": ['3','4']
+// }
+
+// funcoes que recebe o objeto balor valor 
 function converte() {
   let primeiroSelect = document.getElementById("opTipo1").value;
-  let segundoSelect = document.getElementById("opTipo2").value; 
-  
+  let segundoSelect = document.getElementById("opTipo2").value;   
   if (primeiroSelect == segundoSelect)
   {
      valorSaida.value = valorTela.value;
   }  
+
   
   else if(primeiroSelect == "Quilômetro"){
     switch(segundoSelect){
