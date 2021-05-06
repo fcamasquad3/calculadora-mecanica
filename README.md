@@ -6,6 +6,8 @@
 
 
 
+
+
 Calculadora Mecânica é uma aplicação  web e mobile construída durante a edição do Hackathon **FCamara & Immersão Dev**, evento organizado pelo [Grupo FCamara](https://www.fcamara.com.br/ "Site da FCamara").
 
 O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecânica** na qual os usuário poderão utilizar as funções de Calculadora Científica, Conversor de Medidas e Calculadora Freelance. 
