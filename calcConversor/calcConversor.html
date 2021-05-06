@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -61,13 +62,13 @@
             <div class="corpoConversor">                                        
                <div id="fundoTela"> 
                     <div class="corpoTela1">                                    
-                        <select id="opTipo1" onchange="converte()"> 
+                        <select id="opTipo1" onchange="terminalDeFunction()"> 
                             <option value="" disabled selected>tipo 1</option>                       
                         </select>
                         <input class="telas" id="telaEntrada" value="0" readonly>   
                     </div>         
                     <div class="corpoTela2">                   
-                        <select id="opTipo2" onchange="converte()"> 
+                        <select id="opTipo2" onchange="terminalDeFunction()"> 
                             <option value="" disabled selected>tipo 2</option>                       
                         </select>
                         <input class="telas" id="telaSaida" readonly>
@@ -77,8 +78,8 @@
                     <select id="opConversores" >     
                         <option value="" disabled selected>Conversores</option>                   
                         <option value="Comprimento">Comprimento</option>
-                        <option value="Temperaturas">Temperatura</option>
-                        <option value="Dados">Dados</option>
+                        <option value="Temperatura">Temperatura</option>
+                        <option value="Dado">Dado</option>
                     </select>
                 </div>
                 <table>
@@ -131,7 +132,6 @@
                     </tr>
                 </table>
             </div>  
-            
             <footer>
                 <div class="p-footer">
                     <p>Hackathon Imersão Dev - FCamara</p>
@@ -140,12 +140,8 @@
                 <div class="icone">
                     <a href="https://github.com/fcamasquad3/calculadora-mecanica"><span class="iconify" data-icon="akar-icons:github-fill" style="font-size: 40px; color: #F25602;"></span></a>
                 </div>
-            </footer>
-            
-        </div>      
-
+            </footer>       
+        </div>  
         <script src="app.js"></script>
-
     </body>
-
 </html>
