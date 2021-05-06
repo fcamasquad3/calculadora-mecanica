@@ -264,11 +264,10 @@ td input{
 /* Footer */
 footer {
   position: absolute;
-  top: 110%;
   bottom: 0;
-  height: 12%;
+  height: 65px;
   width: 100%;
-  background-color: #000;  
+  background-color: #000;
 }
 
 .p-footer {
