@@ -62,147 +62,215 @@ function deletarConteudo() {
 }
 
 // // inicio da refatoração da function converte()
-// let UnidadesDeMedida = {
-//   {
-//     "Quilômetro":
-//       [{"valorBase": 1.609,},{"valorBase": 1.609,}],
-//       {"medida":'Milha',"valorBase": 1.609,}
-//       {"medida":'Metro',"valorBase": 1.609,}
-//       {"medida":'Quilômetro',"valorBase": 1.609,}
-//       {"medida":'Quilômetro',"valorBase": 1.609,}]
-//     {
+let unidadesDeMedida = {
+  
+    Comprimento : {
+      "Quilômetro": [
+        {"Medida":'Milha', "primeiroInput":false, 'valorBase':1.609},
+        {"Medida": 'Metro', "primeiroInput":true, "valorBase":1000},
+        {"Medida": 'Pé', "primeiroInput":true, "valorBase":3281},
+        {"Medida": 'Centímetro', "primeiroInput":true, "valorBase":100000},
+        {"Medida": 'Polegada', "primeiroInput":true, "valorBase":39370}],
 
-//     }
-//   }
-//   "Quilômetro": ['1.609', '1000', '3281', '100000','39370'],
-//   "Milha": ['1609','2'],
-//   "Metro": ['3','4']
-// }
+      "Milha" : [
+        {"Medida": 'Quilômetro', "primeiroInput":true, "valorBase":1.609},
+        {"Medida": 'Metro', "primeiroInput":true, "valorBase":1609},
+        {"Medida": 'Pé', "primeiroInput":true, "valorBase":5280},
+        {"Medida": 'Centímetro', "primeiroInput":true, "valorBase":160934},
+        {"Medida": 'Polegada', "primeiroInput":true, "valorBase":63360}],
+
+      "Centímetro": [
+        {"Medida": 'Quilômetro', "primeiroInput":false, "valorBase":100000},
+        {"Medida": 'Milha', "primeiroInput":false, "valorBase":160934},
+        {"Medida": 'Metro', "primeiroInput":false, "valorBase":100},
+        {"Medida": 'Pé', "primeiroInput":false, "valorBase":30.48},
+        {"Medida": 'Polegada', "primeiroInput":false, "valorBase":2.54}],  
+        
+       "Polegada" : [
+        {"Medida": 'Quilômetro', "primeiroInput":false, "valorBase":39370},
+        {"Medida": 'Milha', "primeiroInput":false, "valorBase":63360},
+        {"Medida": 'Metro', "primeiroInput":false, "valorBase":39.37},
+        {"Medida": 'Pé', "primeiroInput":false, "valorBase":12},
+        {"Medida": 'Centímetro', "primeiroInput":true, "valorBase":2.54}],
+      
+      "Metro": [
+        {"Medida": 'Quilômetro', "primeiroInput":false, "valorBase":1000},
+        {"Medida": 'Milha', "primeiroInput":false, "valorBase":1609},
+        {"Medida": 'Pé', "primeiroInput":true, "valorBase":3.281},
+        {"Medida": 'Polegada', "primeiroInput":true, "valorBase":39.37},
+        {"Medida": 'Centímetro', "primeiroInput":true, "valorBase":100}],
+      "Pé" : [
+        {"Medida": 'Quilômetro', "primeiroInput":false, "valorBase":3281},
+        {"Medida": 'Milha', "primeiroInput":false, "valorBase":5280},
+        {"Medida": 'Metro', "primeiroInput":false, "valorBase":3.281},
+        {"Medida": 'Centímetro', "primeiroInput":true, "valorBase":30.48},
+        {"Medida": 'Metro', "primeiroInput":true, "valorBase":12}]  
+        },
+             
+      
+       
+    Temperatura: {
+      "Fahrenheit" : [
+        {"Medida": 'Celsius'},
+        {"Medida": 'Kelvin'}],
+      "Kelvin" : [
+        {"Medida": 'Celsius'},
+        {"Medida": 'Fahrenheit'}],  
+      "Celsius" : [
+        {"Medida": 'Celsius'},
+        {"Medida": 'Kelvin'}]     
+      }  
+  }
+
+  
+  function teste()
+  {
+    let primeiroSelect = document.getElementById("opTipo1").value;
+    let segundoSelect = document.getElementById("opTipo2").value;   
+
+    let x = document.getElementById("opConversores").value;
+    // unidadesDeMedida[x][primeiroSelect].forEach(element => {
+    //   console.log(element)
+    // });
+    let i; 
+    if (primeiroSelect == segundoSelect)
+    {
+      valorSaida.value = valorTela.value;
+    }  
+    else {
+      unidadesDeMedida[x][primeiroSelect].forEach(element => {
+        if(element.Medida == segundoSelect){
+        conversorGenerico({primeiroInput:element.primeiroInput,valorBase:element.valorBase});
+        }
+      });   
+    }
+  }
 
 // funcoes que recebe o objeto balor valor 
 function converte() {
   let primeiroSelect = document.getElementById("opTipo1").value;
   let segundoSelect = document.getElementById("opTipo2").value;   
-  if (primeiroSelect == segundoSelect)
+
+    if (primeiroSelect == segundoSelect)
   {
      valorSaida.value = valorTela.value;
   }  
 
   
-  else if(primeiroSelect == "Quilômetro"){
-    switch(segundoSelect){
-      case "Milha":
-        conversorGenerico({primeiroInput:false,valorBase:1.609});
-      break;
-      case "Metro":           
-        conversorGenerico({primeiroInput:true,valorBase:1000});
-      break;
-      case "Pé":        
-        conversorGenerico({primeiroInput:true,valorBase:3281});
-      break;
-      case "Centímetro":           
-        conversorGenerico({primeiroInput:true,valorBase:100000});
-      break;
-      case "Polegada":        
-        conversorGenerico({primeiroInput:true,valorBase:39370});
-      break;          
-    }
-  } 
-  else if(primeiroSelect == "Milha"){
-    switch(segundoSelect){
-      case "Quilômetro":       
-        conversorGenerico({primeiroInput:true,valorBase: 1.609});
-      break;
-      case "Metro":      
-        conversorGenerico({primeiroInput:true,valorBase: 1609});
-      break;
-      case "Pé":      
-        conversorGenerico({primeiroInput:true,valorBase: 5280});
-      break;
-      case "Centímetro":        
-        conversorGenerico({primeiroInput:true,valorBase: 160934});
-      break;
-      case "Polegada":       
-        conversorGenerico({primeiroInput:true,valorBase: 63360});
-      break;          
-    }
-  }  
-  else if(primeiroSelect == "Metro"){
-    switch(segundoSelect){
-      case "Quilômetro":        
-        conversorGenerico({primeiroInput:false,valorBase: 1000});
-      break;
-      case "Milha":
-        conversorGenerico({primeiroInput:false,valorBase: 1609});
-      break;
-      case "Pé":       
-        conversorGenerico({primeiroInput:true,valorBase:3.281});
-      break;
-      case "Centímetro":
-        conversorGenerico({primeiroInput:true,valorBase:100});
-      break;
-      case "Polegada":       
-        conversorGenerico({primeiroInput:true,valorBase:39.37});
-      break;          
-    }
-  } 
-  else if(primeiroSelect == "Pé"){
-    switch(segundoSelect){
-      case "Quilômetro":
-        conversorGenerico({primeiroInput:false,valorBase: 3281});
-      break;
-      case "Milha":
-        conversorGenerico({primeiroInput:false,valorBase: 5280});
-      break;
-      case "Metro":        
-        conversorGenerico({primeiroInput:false,valorBase: 3.281});
-      break;
-      case "Centímetro":      
-        conversorGenerico({primeiroInput:true,valorBase: 30.48});
-      break;
-      case "Polegada":      
-        conversorGenerico({primeiroInput:true,valorBase: 12});
-      break;          
-    }
-  } 
-  else if(primeiroSelect == "Centímetro"){
-    switch(segundoSelect){
-      case "Quilômetro":
-        conversorGenerico({primeiroInput:false,valorBase: 100000});
-      break;
-      case "Milha":
-        conversorGenerico({primeiroInput:false,valorBase: 160934});
-      break;
-      case "Metro":        
-        conversorGenerico({primeiroInput:false,valorBase: 100});
-      break;
-      case "Pé":
-        conversorGenerico({primeiroInput:false,valorBase: 30.48});
-      break;
-      case "Polegada":
-        conversorGenerico({primeiroInput:false,valorBase: 2.54});
-      break;          
-    }
-  } 
-  else if(primeiroSelect == "Polegada"){
-    switch(segundoSelect){
-      case "Quilômetro":
-        conversorGenerico({primeiroInput:false,valorBase: 39370});
-      break;
-      case "Milha":
-        conversorGenerico({primeiroInput:false,valorBase: 63360});
-      break;
-      case "Metro":        
-        conversorGenerico({primeiroInput:false,valorBase:39.37});
-      break;
-      case "Pé":
-        conversorGenerico({primeiroInput:false,valorBase: 12});
-      break;
-      case "Centímetro":        
-        conversorGenerico({primeiroInput:true,valorBase: 2.54});
-      break;          
-    }
-  } 
+  // else if(primeiroSelect == "Quilômetro"){
+  //   switch(segundoSelect){
+  //     case "Milha":
+  //       conversorGenerico({primeiroInput:false,valorBase:1.609});
+  //     break;
+  //     case "Metro":           
+  //       conversorGenerico({primeiroInput:true,valorBase:1000});
+  //     break;
+  //     case "Pé":        
+  //       conversorGenerico({primeiroInput:true,valorBase:3281});
+  //     break;
+  //     case "Centímetro":           
+  //       conversorGenerico({primeiroInput:true,valorBase:100000});
+  //     break;
+  //     case "Polegada":        
+  //       conversorGenerico({primeiroInput:true,valorBase:39370});
+  //     break;          
+  //   }
+  // } 
+  // else if(primeiroSelect == "Milha"){
+  //   switch(segundoSelect){
+  //     case "Quilômetro":       
+  //       conversorGenerico({primeiroInput:true,valorBase: 1.609});
+  //     break;
+  //     case "Metro":      
+  //       conversorGenerico({primeiroInput:true,valorBase: 1609});
+  //     break;
+  //     case "Pé":      
+  //       conversorGenerico({primeiroInput:true,valorBase: 5280});
+  //     break;
+  //     case "Centímetro":        
+  //       conversorGenerico({primeiroInput:true,valorBase: 160934});
+  //     break;
+  //     case "Polegada":       
+  //       conversorGenerico({primeiroInput:true,valorBase: 63360});
+  //     break;          
+  //   }
+  // }  
+  // else if(primeiroSelect == "Metro"){
+  //   switch(segundoSelect){
+  //     case "Quilômetro":        
+  //       conversorGenerico({primeiroInput:false,valorBase: 1000});
+  //     break;
+  //     case "Milha":
+  //       conversorGenerico({primeiroInput:false,valorBase: 1609});
+  //     break;
+  //     case "Pé":       
+  //       conversorGenerico({primeiroInput:true,valorBase:3.281});
+  //     break;
+  //     case "Centímetro":
+  //       conversorGenerico({primeiroInput:true,valorBase:100});
+  //     break;
+  //     case "Polegada":       
+  //       conversorGenerico({primeiroInput:true,valorBase:39.37});
+  //     break;          
+  //   }
+  // } 
+  // else if(primeiroSelect == "Pé"){
+  //   switch(segundoSelect){
+  //     case "Quilômetro":
+  //       conversorGenerico({primeiroInput:false,valorBase: 3281});
+  //     break;
+  //     case "Milha":
+  //       conversorGenerico({primeiroInput:false,valorBase: 5280});
+  //     break;
+  //     case "Metro":        
+  //       conversorGenerico({primeiroInput:false,valorBase: 3.281});
+  //     break;
+  //     case "Centímetro":      
+  //       conversorGenerico({primeiroInput:true,valorBase: 30.48});
+  //     break;
+  //     case "Polegada":      
+  //       conversorGenerico({primeiroInput:true,valorBase: 12});
+  //     break;          
+  //   }
+  // } 
+  // else if(primeiroSelect == "Centímetro"){
+  //   switch(segundoSelect){
+  //     case "Quilômetro":
+  //       conversorGenerico({primeiroInput:false,valorBase: 100000});
+  //     break;
+  //     case "Milha":
+  //       conversorGenerico({primeiroInput:false,valorBase: 160934});
+  //     break;
+  //     case "Metro":        
+  //       conversorGenerico({primeiroInput:false,valorBase: 100});
+  //     break;
+  //     case "Pé":
+  //       conversorGenerico({primeiroInput:false,valorBase: 30.48});
+  //     break;
+  //     case "Polegada":
+  //       conversorGenerico({primeiroInput:false,valorBase: 2.54});
+  //     break;          
+  //   }
+  // } 
+  // else if(primeiroSelect == "Polegada"){
+  //   switch(segundoSelect){
+  //     case "Quilômetro":
+  //       conversorGenerico({primeiroInput:false,valorBase: 39370});
+  //     break;
+  //     case "Milha":
+  //       conversorGenerico({primeiroInput:false,valorBase: 63360});
+  //     break;
+  //     case "Metro":        
+  //       conversorGenerico({primeiroInput:false,valorBase:39.37});
+  //     break;
+  //     case "Pé":
+  //       conversorGenerico({primeiroInput:false,valorBase: 12});
+  //     break;
+  //     case "Centímetro":        
+  //       conversorGenerico({primeiroInput:true,valorBase: 2.54});
+  //     break;          
+  //   }
+  // } 
   else if(primeiroSelect == "Fahrenheit"){
     switch(segundoSelect){
       case "Kelvin":
