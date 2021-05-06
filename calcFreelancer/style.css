@@ -389,3 +389,66 @@ footer {
     text-align: left;
   }
 }
+
+div .selectTable {
+  text-align: center;
+  margin: auto;
+  font-weight: bold;
+}
+
+table.selectTable {
+  background-color: #F25602;
+  width: 80%;
+  height: 12rem;
+  text-align: left;
+  border-collapse: collapse;
+}
+table.selectTable td, table.selectTable th {
+  border: 1px solid #AAAAAA;
+  padding: 3px 4px;
+}
+table.selectTable tbody td {
+  font-size: 1.25rem;
+  color: #000000;
+  padding-left: 1rem;
+}
+table.selectTable thead {
+  background: #F25602;
+  background: -moz-linear-gradient(top, #f58041 0%, #f3671b 66%, #F25602 100%);
+  background: -webkit-linear-gradient(top, #f58041 0%, #f3671b 66%, #F25602 100%);
+  background: linear-gradient(to bottom, #f58041 0%, #f3671b 66%, #F25602 100%);
+  border-bottom: 2px solid #D0E4F5;
+}
+table.selectTable thead th {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #000000;
+  text-align: center;
+  border-left: 2px solid #D0E4F5;
+}
+table.selectTable thead th:first-child {
+  border-left: none;
+}
+
+.idNumber {
+  width: 2rem;
+}
+
+.exclui {
+  text-align: center;
+}
+
+.buttonExcluir {
+  background:tomato;
+  color: rgb(31, 65, 1);
+  height: 1rem;
+  width: 5rem;
+  padding: 1rem;
+  margin: 0;
+  vertical-align: bottom;
+  transition:cubic-bezier(1, 0, 0, 1);
+}
+
+.buttonExcluir:hover {
+  background: rgb(240, 198, 135);
+}
