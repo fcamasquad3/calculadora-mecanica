@@ -440,13 +440,10 @@ table.selectTable thead th:first-child {
 
 .buttonExcluir {
   background:tomato;
-  color: rgb(31, 65, 1);
-  height: 1rem;
-  width: 5rem;
-  padding: 1rem;
-  margin: 0;
-  vertical-align: bottom;
-  transition:cubic-bezier(1, 0, 0, 1);
+  text-align: center;
+  height: 2rem;
+  width: 80%;
+  
 }
 
 .buttonExcluir:hover {

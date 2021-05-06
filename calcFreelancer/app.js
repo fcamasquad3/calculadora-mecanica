@@ -1,6 +1,7 @@
 var nomeJob = document.getElementById("nomeJob")
 var result = document.querySelector('#result');
 var selectTable = document.querySelector('#selectTable');
+var table = document.querySelector('#table');
 
 var valorMes = document.getElementById("valorMes")
 var valorHorasDia = document.getElementById("valorHorasDia")
@@ -34,46 +35,62 @@ function mostrarResultado() {
     valorJob.value = calcularValorDoProjeto(
     calcularValorHorasTrabalhadas(valorMes,valorHorasDia,valorSemana),horasJob)
     result.innerText = `Valor do projeto ${nomeJob.value.toUpperCase()} é de:`;
-    // Pergunta para adição na tabela
+    // Pergunta para adição de Freelance na tabela
     selectTable.innerHTML = `Deseja incluir ${nomeJob.value.toUpperCase()} na tabela?`
-     + '<div><button onclick="adicionarTabela()">Sim</button>' + ' ou ' + '<button onclick="window.location.reload()">Não</button></div>';
+     + '<div><button><input type="button" id ="addDep" value="Add" onclick = "add()">Sim</button>' + ' ou ' + '<button onclick="window.location.reload()">Não</button></div>';
   }
 }
 
-// function adicionarTabela() {
-  selectTable.innerHTML = `
-  <table class="selectTable">
-<thead>
-<tr>
-<th class="idNumber">Id</th>
-<th>Freelance</th>
-<th>Valor</th>
-<th>Excluir</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1</td>
-<td>Calculadora Freelance</td>
-<td>R$3000</td>
-<td class="exclui"><button onclick="excluirFreeLance" class="buttonExcluir" ></button></td>
-</tr>
-<tr>
-<td>2</td>
-<td>daHora Bank</td>
-<td>R$8000</td>
-<td class="exclui"><button onclick="excluirFreeLance" class="buttonExcluir" ></button></td>
-</tr>
-<tr>
-<td>3</td>
-<td>Super Trunfão</td>
-<td>R$2500</td>
-<td class="exclui"><button onclick="excluirFreeLance" class="buttonExcluir" ></button></td>
-</tr>
-</tbody>
-</tr>
+function add() {
+  
+  table.innerHTML = `
+    <tbody>  
+      <tr>
+        <td>4</td>
+        <td>Calculadora Freelance</td>
+        <td>R$3000</td>
+        <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+      </tr>
+    </tbody>
+  `
+}
+
+  table.innerHTML = `
+<table id = "dsTable" class="selectTable">
+  <thead>
+    <tr>
+      <th class="idNumber">Id</th>
+      <th>Freelance</th>
+      <th>Valor</th>
+      <th>Excluir</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Calculadora Freelance</td>
+      <td>R$3000</td>
+      <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+    </tr>
+  <tr>
+    <td>2</td>
+    <td>daHora Bank</td>
+    <td>R$8000</td>
+    <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Super Trunfão</td>
+    <td>R$2500</td>
+    <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+  </tr>
+  </tbody>
 </table>`
-// }
+
+function deleteRow(row){
+  var d = row.parentNode.parentNode.rowIndex;
+  document.getElementById("dsTable").deleteRow(d);
+  }
 
 // Funções do menu mobile
 
