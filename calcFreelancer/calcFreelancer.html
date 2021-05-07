@@ -7,6 +7,9 @@
         <link rel="shortcut icon" href="../public/logo-princ.svg" type="image/svg" />
         <link rel="stylesheet" href="style.css">
 
+        <!-- import para estilização do alert -->
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
          <!--Importando fontes-->
          <link rel="preconnect" href="https://fonts.gstatic.com">
          <link href="https://fonts.googleapis.com/css2?family=Advent+Pro:wght@400;600&family=Cabin:wght@700&display=swap" rel="stylesheet">
@@ -14,7 +17,7 @@
          <!--Importando Icon Github-->
          <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
          
-        <title>Calculadora Freelance</title>
+        <title>Calculadora Freelancer</title>
 
     </head>
 
@@ -63,6 +66,8 @@
             <img id="menu-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/59/Hamburger_icon_white.svg" onclick="abre()">
         </header>
 
+        
+
         <div class="container">
             <div>
                 <h1 class="page-title">
@@ -105,10 +110,20 @@
                 </div>  
                 <div class="value question">
                     <p id="result" class="p-result">Valor do projeto</p>
-                    <input type="text" name="valorJob" id="ValorJob" placeholder="R$ 0 " readonly>
+                    <input type="text" id="ValorJob" value="" placeholder="R$ 0 " readonly>
                 </div>
+                <h2 id="selectTable"></h2>
+                <h2 id="table"></h2>
+                <!-- <h2 id="columnAdd"></h2> -->
             </div>
-
+            <!-- <div>
+                <iframe src="http://localhost:8080/" width="780" height="480" allowfullscreen></iframe>
+            </div> -->
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
             <footer>
                 <div class="p-footer">
                     <p>Hackathon Imersão Dev - FCamara</p>
@@ -125,4 +140,3 @@
     </body>
 
 </html>
-
