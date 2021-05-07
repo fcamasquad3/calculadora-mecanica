@@ -206,7 +206,7 @@ select {
   background-color: #111111;  
   
   height: 3rem;
-  width: 8rem;
+  width: 12rem;
   margin-top: 1rem;
   margin-left: 1rem; 
 
@@ -353,15 +353,10 @@ footer {
     font-size: 7vw;   
   }
 
-  #opTipo1{    
-    width: 45vw;
-    height: 10vw;      
-  }
-
-  #opTipo2{    
-    width: 45vw;
-    height: 10vw;
-    margin-top: 0;
+  select{
+    width: 52vw;
+    height: 10vw; 
+    font-size: 7vw;
   }
 
   table{
@@ -422,6 +417,9 @@ footer {
 @media (max-width: 768px){
   #menu-mobile ul {
     margin-top: 30vw;
+  }
+  select{
+    font-size: 6vw;
   }
 }
 
