@@ -17,7 +17,8 @@ function fecharMenu() {
 let pacoteMedidas = {
   'Comprimento': ['Quilômetro','Milha','Metro','Pé','Centímetro','Polegada'],
   'Temperatura': ['Fahrenheit' , 'Celsius', 'Kelvin'],
-  'Dado': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte']
+  'Dado': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte'],
+  'Moeda': ['Dólar americano', 'Euro', 'Real', 'Iene', 'Libra esterlina']
 }
 
 //chamada da função e desenvolvimento da mesma, populando os selects op-tipo
@@ -138,6 +139,34 @@ let unidadesDeMedida = {
         {"Medida": 'Byte', "primeiroInput":true, "valorBase":12},
         {"Medida": 'Megabyte', "primeiroInput":true, "valorBase":6},
         {"Medida": 'Gigabyte', "primeiroInput":true, "valorBase":3}]
+      },
+
+      Moeda: {
+        "Dólar americano":[
+          {"Medida": 'Real', "valorBase":5.24},
+          {"Medida": 'Euro', "valorBase":0.82},
+          {"Medida": 'Iene', "valorBase":108.65},
+          {"Medida": 'Libra esterlina', "valorBase":0.71}],
+        "Real":[
+          {"Medida": 'Dólar', "valorBase":0.19},
+          {"Medida": 'Euro', "valorBase":0.16},
+          {"Medida": 'Iene', "valorBase":20.77},
+          {"Medida": 'Libra esterlina', "valorBase":0.14}],
+        "Euro":[
+          {"Medida": 'Real', "valorBase":6.37},
+          {"Medida": 'Dólar', "valorBase":1.22},
+          {"Medida": 'Iene', "valorBase":132.13},
+          {"Medida": 'Libra esterlina', "valorBase":0.87}],
+        "Iene":[
+          {"Medida": 'Real', "valorBase":0.048},
+          {"Medida": 'Dólar', "valorBase":0.0092},
+          {"Medida": 'Euro', "valorBase":0.0076},
+          {"Medida": 'Libra esterlina', "valorBase":0.0066}],
+        "Libra esterlina":[ 
+          {"Medida": 'Real', "valorBase":7.32},
+          {"Medida": 'Dólar', "valorBase":1.40},
+          {"Medida": 'Euro', "valorBase":1.15},
+          {"Medida": 'Iene', "valorBase":152.04}]
       }
   }
 
@@ -163,6 +192,9 @@ function terminalDeFunction(){
         }
         else if (element.Medida == segundoSelect && selectMedidas == "Temperatura"){
           controleConversorTemperatura(primeiroSelect,segundoSelect)
+        }
+        else if (element.Medida == segundoSelect && selectMedidas == "Moeda"){
+          conversorMoedasGenerico({valorBase:element.valorBase})
         }
       });
     }
@@ -247,6 +279,13 @@ function conversorDadosGenerico ({primeiroInput,valorBase}){
   }
 }
 
+////função de conversão de moedas
+function conversorMoedasGenerico({valorBase}){
+  calculo = valorTela.value * valorBase;
+ 
+  valorSaida.value = calculo  ;
+}
+ 
 ////função para cortar 0 desnecessarios 
 function formataResultado(resultado) {
   // if (resultado <= 0){
