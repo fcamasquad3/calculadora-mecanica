@@ -37,25 +37,11 @@ function mostrarResultado() {
     result.innerText = `Valor do projeto ${nomeJob.value.toUpperCase()} é de:`;
     // Pergunta para adição de Freelance na tabela
     selectTable.innerHTML = `Deseja incluir ${nomeJob.value.toUpperCase()} na tabela?`
-     + '<div><button><input type="button" id ="addDep" value="Add" onclick = "add()">Sim</button>' + ' ou ' + '<button onclick="window.location.reload()">Não</button></div>';
+     + '<div><button id ="addDep" value=" " onclick = "add()" >Sim</button>' + ' ou ' + '<button onclick="window.location.reload()">Não</button></div>';
   }
 }
 
-function add() {
-  
-  table.innerHTML = `
-    <tbody>  
-      <tr>
-        <td>4</td>
-        <td>Calculadora Freelance</td>
-        <td>R$3000</td>
-        <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
-      </tr>
-    </tbody>
-  `
-}
-
-  table.innerHTML = `
+var tabela = table.innerHTML = `
 <table id = "dsTable" class="selectTable">
   <thead>
     <tr>
@@ -69,23 +55,38 @@ function add() {
     <tr>
       <td>1</td>
       <td>Calculadora Freelance</td>
-      <td>R$3000</td>
+      <td>R$ 3000</td>
       <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
     </tr>
   <tr>
     <td>2</td>
     <td>daHora Bank</td>
-    <td>R$8000</td>
+    <td>R$ 8000</td>
     <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
   </tr>
   <tr>
     <td>3</td>
     <td>Super Trunfão</td>
-    <td>R$2500</td>
+    <td>R$ 2500</td>
     <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
   </tr>
-  </tbody>
-</table>`
+ `
+
+function add() {
+  
+  var linha = table.innerHTML = `
+      
+      <tr>
+        <td>4</td>
+        <td>${nomeJob.value}</td>
+        <td>R$ ${valorJob.value}</td>
+        <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+      </tr>
+      </tbody>
+      </table>
+  `
+  document.getElementById("table").innerHTML = tabela + linha
+}
 
 function deleteRow(row){
   var d = row.parentNode.parentNode.rowIndex;
