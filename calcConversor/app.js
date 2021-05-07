@@ -2,6 +2,7 @@ let valorTela = document.getElementById("telaEntrada");
 let valorSaida = document.getElementById("telaSaida");
 let calculo = 0;
 let resultado;
+let aux;
 
 // Funções do menu mobile
 
@@ -148,23 +149,23 @@ let unidadesDeMedida = {
           {"Medida": 'Iene', "valorBase":108.65},
           {"Medida": 'Libra esterlina', "valorBase":0.71}],
         "Real":[
-          {"Medida": 'Dólar', "valorBase":0.19},
+          {"Medida": 'Dólar americano', "valorBase":0.19},
           {"Medida": 'Euro', "valorBase":0.16},
           {"Medida": 'Iene', "valorBase":20.77},
           {"Medida": 'Libra esterlina', "valorBase":0.14}],
         "Euro":[
           {"Medida": 'Real', "valorBase":6.37},
-          {"Medida": 'Dólar', "valorBase":1.22},
+          {"Medida": 'Dólar americano', "valorBase":1.22},
           {"Medida": 'Iene', "valorBase":132.13},
           {"Medida": 'Libra esterlina', "valorBase":0.87}],
         "Iene":[
           {"Medida": 'Real', "valorBase":0.048},
-          {"Medida": 'Dólar', "valorBase":0.0092},
+          {"Medida": 'Dólar americano', "valorBase":0.0092},
           {"Medida": 'Euro', "valorBase":0.0076},
           {"Medida": 'Libra esterlina', "valorBase":0.0066}],
         "Libra esterlina":[ 
           {"Medida": 'Real', "valorBase":7.32},
-          {"Medida": 'Dólar', "valorBase":1.40},
+          {"Medida": 'Dólar americano', "valorBase":1.40},
           {"Medida": 'Euro', "valorBase":1.15},
           {"Medida": 'Iene', "valorBase":152.04}]
       }
@@ -217,7 +218,7 @@ function controleConversorTemperatura(primeiroSelect,segundoSelect){
 ////função relacionada a conversão unidades de comprimento
 function conversorGenerico({primeiroInput,valorBase}){
   if(primeiroInput){
-    calculo = valorTela.value * valorBase;
+    calculo = valorTela.value * valorBase;     
     resultado = calculo.toString();
     valorSaida.value = formataResultado(resultado);
   }
@@ -282,18 +283,20 @@ function conversorDadosGenerico ({primeiroInput,valorBase}){
 ////função de conversão de moedas
 function conversorMoedasGenerico({valorBase}){
   calculo = valorTela.value * valorBase;
- 
-  valorSaida.value = calculo  ;
+  resultado = calculo.toLocaleString('pt-BR', { minimumFractionDigits: 2});	
+  valorSaida.value = resultado;
 }
  
 ////função para cortar 0 desnecessarios 
-function formataResultado(resultado) {
-  // if (resultado <= 0){
-  //     resultado.toFixed(6)
-      resultado.replace(/(^0+(?=\d))|(,?0+$)/g, '')      
-  // }
-  return resultado;
-}
+// function formataResultado(resultado) {
+ 
+//   if (resultado < 0){   
+//       aux = resultad.
+//       resultado2 = resultado.replace(/(^0+(?=\d))|(,?0+$)/g, '');     
+//   }
+  
+//   return resultado;
+// }
 
 // Carregamento da load-page
 document.addEventListener("DOMContentLoaded", function(event) {
