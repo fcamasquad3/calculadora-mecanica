@@ -1,6 +1,7 @@
 let valorTela = document.getElementById("telaEntrada");
 let valorSaida = document.getElementById("telaSaida");
 let calculo = 0;
+let resultado;
 
 // Funções do menu mobile
 
@@ -37,7 +38,7 @@ $('#opConversores').on('change', function() {
 
 //adiciona na tela da calculadora o caractere (número/operação) selecionado
 function adicionarNaTela (telaEntrada,caractere) {
-  if (telaEntrada.value == null || telaEntrada.value == 0) {
+  if (telaEntrada.value == null) {
     telaEntrada.value = caractere
   } else {
     telaEntrada.value += caractere
@@ -57,8 +58,8 @@ function deletar() {
 }
 
 function deletarConteudo() {
-  valorTela.value = 0;
-  valorSaida.value = 0;
+  valorTela.value = null;
+  valorSaida.value = null;
 }
 
 //// objeto que mantém os dados necessários para as funções de conversão
@@ -185,11 +186,13 @@ function controleConversorTemperatura(primeiroSelect,segundoSelect){
 function conversorGenerico({primeiroInput,valorBase}){
   if(primeiroInput){
     calculo = valorTela.value * valorBase;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
   else{
     calculo = valorTela.value / valorBase;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
 }
 
@@ -197,30 +200,36 @@ function conversorGenerico({primeiroInput,valorBase}){
 function converteFahrenheit({primeiroInput}){
   if(primeiroInput){
     calculo = (valorTela.value - 32) * 5/9 + 273.15
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }else{
     calculo = (valorTela.value - 32) * 5/9;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
 }
 
 function converteCelsius({primeiroInput}){
   if(primeiroInput){
-  calculo = +valorTela.value + 273.15;
-  valorSaida.value = calculo;
+    calculo = +valorTela.value + 273.15;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }else {
     calculo = (valorTela.value * 9/5) + 32;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
 }
 
 function converteKelvin({primeiroInput}){
   if(primeiroInput) {
-  calculo = +valorTela.value - 273.15;
-  valorSaida.value = calculo;
+    calculo = +valorTela.value - 273.15;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }else{
     calculo = (valorTela.value - 273.15) * 9/5 + 32;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
 }
 
@@ -228,12 +237,18 @@ function converteKelvin({primeiroInput}){
 function conversorDadosGenerico ({primeiroInput,valorBase}){
   if(primeiroInput){
     calculo = valorTela.value * (1 * (Math.pow(10,valorBase)));
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
   else {
     calculo = valorTela.value / (1 * (Math.pow(10,valorBase)));
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
+}
+
+function formataResultado(resultado) {
+  return resultado.replace(/(^0+(?=\d))|(,?0+$)/g, '');
 }
 
 // Carregamento da load-page
