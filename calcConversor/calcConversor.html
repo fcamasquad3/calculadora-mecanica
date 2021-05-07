@@ -14,6 +14,9 @@
     
         <!--Importando Icon Github-->
         <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+        <!-- Importando icone do backspace -->
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
    
         <!-- Importando o jquery dos selects -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -62,13 +65,13 @@
             <div class="corpoConversor">                                        
                <div id="fundoTela"> 
                     <div class="corpoTela1">                                    
-                        <select id="opTipo1" onchange="terminalDeFunction()"> 
+                        <select id="opTipo1" onchange="terminalDeFunction()" onclick="terminalDeFunction()"> 
                             <option value="" disabled selected>tipo 1</option>                       
                         </select>
                         <input class="telas" id="telaEntrada" value="" readonly placeholder="0">   
                     </div>         
                     <div class="corpoTela2">                   
-                        <select id="opTipo2" onchange="terminalDeFunction()"> 
+                        <select id="opTipo2" onchange="terminalDeFunction()" onclick="terminalDeFunction()"> 
                             <option value="" disabled selected>tipo 2</option>                       
                         </select>
                         <input class="telas" id="telaSaida" readonly placeholder="0">
@@ -76,7 +79,7 @@
                 </div>  
                 <div class="btnMedidas">
                     <select id="opConversores" >     
-                        <option value="" disabled selected>Conversores</option>                   
+                        <option value="" disabled selected>Selecione um conversor</option>                   
                         <option value="Comprimento">Comprimento</option>
                         <option value="Temperatura">Temperatura</option>
                         <option value="Dado">Dado</option>
@@ -93,8 +96,8 @@
                         <td>
                             <input class="number"  type="button" value="9" onclick="adicionarNaTela(document.getElementById('telaEntrada'),'9')">
                         </td>
-                        <td>
-                            <input class="btn-extra"  type="button" value="X" onclick="deletar()">
+                        <td>                                
+                            <button class="btn-extra" id="backspace" type="button" value="" onclick="deletar()"><span class="iconify" data-inline="false" data-icon="akar-icons:backspace"></span></button>                    
                         </td>
                     </tr>
                     <tr>                  

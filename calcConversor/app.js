@@ -67,7 +67,7 @@ let unidadesDeMedida = {
 
     Comprimento : {
       "Quilômetro": [
-        {"Medida":'Milha', "primeiroInput":false, 'valorBase':1.609},
+        {"Medida": 'Milha', "primeiroInput":false, 'valorBase':1.609},
         {"Medida": 'Metro', "primeiroInput":true, "valorBase":1000},
         {"Medida": 'Pé', "primeiroInput":true, "valorBase":3281},
         {"Medida": 'Centímetro', "primeiroInput":true, "valorBase":100000},
@@ -249,7 +249,11 @@ function conversorDadosGenerico ({primeiroInput,valorBase}){
 
 ////função para cortar 0 desnecessarios 
 function formataResultado(resultado) {
-  return resultado.replace(/(^0+(?=\d))|(,?0+$)/g, '');
+  // if (resultado <= 0){
+  //     resultado.toFixed(6)
+      resultado.replace(/(^0+(?=\d))|(,?0+$)/g, '')      
+  // }
+  return resultado;
 }
 
 // Carregamento da load-page
