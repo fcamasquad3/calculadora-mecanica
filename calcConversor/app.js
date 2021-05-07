@@ -288,15 +288,15 @@ function conversorMoedasGenerico({valorBase}){
 }
  
 ////função para cortar 0 desnecessarios 
-// function formataResultado(resultado) {
- 
-//   if (resultado < 0){   
-//       aux = resultad.
-//       resultado2 = resultado.replace(/(^0+(?=\d))|(,?0+$)/g, '');     
-//   }
+function formataResultado(resultado) {  
+  if(resultado.includes('.'))
+  {
+    resultado = (parseFloat(resultado)).toFixed(6);
+    resultado = resultado.replace(/(^0+(?=\d))|(,?0+$)/g, ''); 
+  }
   
-//   return resultado;
-// }
+  return resultado;
+}
 
 // Carregamento da load-page
 document.addEventListener("DOMContentLoaded", function(event) {
