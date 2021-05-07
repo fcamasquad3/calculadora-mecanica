@@ -247,6 +247,7 @@ function conversorDadosGenerico ({primeiroInput,valorBase}){
   }
 }
 
+////função para cortar 0 desnecessarios 
 function formataResultado(resultado) {
   return resultado.replace(/(^0+(?=\d))|(,?0+$)/g, '');
 }
