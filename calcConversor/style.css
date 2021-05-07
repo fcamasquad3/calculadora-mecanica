@@ -104,9 +104,6 @@ img {
   width: 100vw; 
   background-color: black; 
 }
-
-
-
 #menu-mobile a {
   margin: 1vw 0 5vw;
   display: flex;
@@ -114,14 +111,15 @@ img {
   color: #FD5B03;
   font-family: 'Cabin', sans-serif;
   font-size: 2.5rem;
-  text-transform: uppercase;  
+  text-transform: uppercase;   
 }
 
 .close-button {
   color: white;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   margin-left: auto;
-  margin-right: 0.5rem;
+  margin-right: 1.4rem;
+  margin-top: 1rem;
 }
 
 .menu-header {
@@ -208,7 +206,7 @@ select {
   background-color: #111111;  
   
   height: 3rem;
-  width: 8rem;
+  width: 12rem;
   margin-top: 1rem;
   margin-left: 1rem; 
 
@@ -248,7 +246,11 @@ td input{
   color: #ffffff;     
  
   font-size: 2.5rem;   
-  font-weight: 600;  
+  font-weight: 600;
+}
+
+td:hover { 
+  transform: scale(1.10); 
 }
 
 .number{
@@ -259,6 +261,16 @@ td input{
 .btn-extra{
   background-color: #FD5B03;
   border-color: #8F3402;   
+}
+
+#backspace{
+  width: 5rem;
+  height: 4rem;
+}
+
+.iconify{
+  font-size: 2.5rem;
+  color: #ffffff;
 }
 
 /* Footer */
@@ -341,15 +353,10 @@ footer {
     font-size: 7vw;   
   }
 
-  #opTipo1{    
-    width: 45vw;
-    height: 10vw;      
-  }
-
-  #opTipo2{    
-    width: 45vw;
-    height: 10vw;
-    margin-top: 0;
+  select{
+    width: 52vw;
+    height: 10vw; 
+    font-size: 7vw;
   }
 
   table{
@@ -364,6 +371,16 @@ footer {
    
     font-size: 10vw; 
   }
+
+  #backspace{
+    width: 20vw;
+    height: 15vw;
+  }
+  
+  .iconify{
+    font-size: 10vw;
+  }
+  
   
   select { 
     font-size: 7vw;         
@@ -401,6 +418,9 @@ footer {
   #menu-mobile ul {
     margin-top: 30vw;
   }
+  select{
+    font-size: 6vw;
+  }
 }
 
 @media (max-width:480px) { 
@@ -416,6 +436,9 @@ footer {
   
 .icone {
     position: absolute;    
+}
+.close-button {
+  font-size: 2rem;
 }
 
  .icone a{

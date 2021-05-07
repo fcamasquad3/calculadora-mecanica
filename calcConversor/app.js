@@ -1,6 +1,8 @@
 let valorTela = document.getElementById("telaEntrada");
 let valorSaida = document.getElementById("telaSaida");
 let calculo = 0;
+let resultado;
+let aux;
 
 // Funções do menu mobile
 
@@ -16,7 +18,8 @@ function fecharMenu() {
 let pacoteMedidas = {
   'Comprimento': ['Quilômetro','Milha','Metro','Pé','Centímetro','Polegada'],
   'Temperatura': ['Fahrenheit' , 'Celsius', 'Kelvin'],
-  'Dado': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte']
+  'Dado': ['Byte', 'Megabyte', 'Gigabyte', 'Terabyte'],
+  'Moeda': ['Dólar americano', 'Euro', 'Real', 'Iene', 'Libra esterlina']
 }
 
 //chamada da função e desenvolvimento da mesma, populando os selects op-tipo
@@ -37,7 +40,7 @@ $('#opConversores').on('change', function() {
 
 //adiciona na tela da calculadora o caractere (número/operação) selecionado
 function adicionarNaTela (telaEntrada,caractere) {
-  if (telaEntrada.value == null || telaEntrada.value == 0) {
+  if (telaEntrada.value == null) {
     telaEntrada.value = caractere
   } else {
     telaEntrada.value += caractere
@@ -57,8 +60,8 @@ function deletar() {
 }
 
 function deletarConteudo() {
-  valorTela.value = 0;
-  valorSaida.value = 0;
+  valorTela.value = null;
+  valorSaida.value = null;
 }
 
 //// objeto que mantém os dados necessários para as funções de conversão
@@ -66,7 +69,7 @@ let unidadesDeMedida = {
 
     Comprimento : {
       "Quilômetro": [
-        {"Medida":'Milha', "primeiroInput":false, 'valorBase':1.609},
+        {"Medida": 'Milha', "primeiroInput":false, 'valorBase':1.609},
         {"Medida": 'Metro', "primeiroInput":true, "valorBase":1000},
         {"Medida": 'Pé', "primeiroInput":true, "valorBase":3281},
         {"Medida": 'Centímetro', "primeiroInput":true, "valorBase":100000},
@@ -137,6 +140,34 @@ let unidadesDeMedida = {
         {"Medida": 'Byte', "primeiroInput":true, "valorBase":12},
         {"Medida": 'Megabyte', "primeiroInput":true, "valorBase":6},
         {"Medida": 'Gigabyte', "primeiroInput":true, "valorBase":3}]
+      },
+
+      Moeda: {
+        "Dólar americano":[
+          {"Medida": 'Real', "valorBase":5.24},
+          {"Medida": 'Euro', "valorBase":0.82},
+          {"Medida": 'Iene', "valorBase":108.65},
+          {"Medida": 'Libra esterlina', "valorBase":0.71}],
+        "Real":[
+          {"Medida": 'Dólar americano', "valorBase":0.19},
+          {"Medida": 'Euro', "valorBase":0.16},
+          {"Medida": 'Iene', "valorBase":20.77},
+          {"Medida": 'Libra esterlina', "valorBase":0.14}],
+        "Euro":[
+          {"Medida": 'Real', "valorBase":6.37},
+          {"Medida": 'Dólar americano', "valorBase":1.22},
+          {"Medida": 'Iene', "valorBase":132.13},
+          {"Medida": 'Libra esterlina', "valorBase":0.87}],
+        "Iene":[
+          {"Medida": 'Real', "valorBase":0.048},
+          {"Medida": 'Dólar americano', "valorBase":0.0092},
+          {"Medida": 'Euro', "valorBase":0.0076},
+          {"Medida": 'Libra esterlina', "valorBase":0.0066}],
+        "Libra esterlina":[ 
+          {"Medida": 'Real', "valorBase":7.32},
+          {"Medida": 'Dólar americano', "valorBase":1.40},
+          {"Medida": 'Euro', "valorBase":1.15},
+          {"Medida": 'Iene', "valorBase":152.04}]
       }
   }
 
@@ -163,6 +194,9 @@ function terminalDeFunction(){
         else if (element.Medida == segundoSelect && selectMedidas == "Temperatura"){
           controleConversorTemperatura(primeiroSelect,segundoSelect)
         }
+        else if (element.Medida == segundoSelect && selectMedidas == "Moeda"){
+          conversorMoedasGenerico({valorBase:element.valorBase})
+        }
       });
     }
   }
@@ -184,12 +218,14 @@ function controleConversorTemperatura(primeiroSelect,segundoSelect){
 ////função relacionada a conversão unidades de comprimento
 function conversorGenerico({primeiroInput,valorBase}){
   if(primeiroInput){
-    calculo = valorTela.value * valorBase;
-    valorSaida.value = calculo;
+    calculo = valorTela.value * valorBase;     
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
   else{
     calculo = valorTela.value / valorBase;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
 }
 
@@ -197,30 +233,36 @@ function conversorGenerico({primeiroInput,valorBase}){
 function converteFahrenheit({primeiroInput}){
   if(primeiroInput){
     calculo = (valorTela.value - 32) * 5/9 + 273.15
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }else{
     calculo = (valorTela.value - 32) * 5/9;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
 }
 
 function converteCelsius({primeiroInput}){
   if(primeiroInput){
-  calculo = +valorTela.value + 273.15;
-  valorSaida.value = calculo;
+    calculo = +valorTela.value + 273.15;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }else {
     calculo = (valorTela.value * 9/5) + 32;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
 }
 
 function converteKelvin({primeiroInput}){
   if(primeiroInput) {
-  calculo = +valorTela.value - 273.15;
-  valorSaida.value = calculo;
+    calculo = +valorTela.value - 273.15;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }else{
     calculo = (valorTela.value - 273.15) * 9/5 + 32;
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
 }
 
@@ -228,12 +270,32 @@ function converteKelvin({primeiroInput}){
 function conversorDadosGenerico ({primeiroInput,valorBase}){
   if(primeiroInput){
     calculo = valorTela.value * (1 * (Math.pow(10,valorBase)));
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
   else {
     calculo = valorTela.value / (1 * (Math.pow(10,valorBase)));
-    valorSaida.value = calculo;
+    resultado = calculo.toString();
+    valorSaida.value = formataResultado(resultado);
   }
+}
+
+////função de conversão de moedas
+function conversorMoedasGenerico({valorBase}){
+  calculo = valorTela.value * valorBase;
+  resultado = calculo.toLocaleString('pt-BR', { minimumFractionDigits: 2});	
+  valorSaida.value = resultado;
+}
+ 
+////função para cortar 0 desnecessarios 
+function formataResultado(resultado) {  
+  if(resultado.includes('.'))
+  {
+    resultado = (parseFloat(resultado)).toFixed(6);
+    resultado = resultado.replace(/(^0+(?=\d))|(,?0+$)/g, ''); 
+  }
+  
+  return resultado;
 }
 
 // Carregamento da load-page
