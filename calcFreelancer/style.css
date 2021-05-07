@@ -278,7 +278,7 @@ footer {
   position: absolute;
   bottom: 0;
   height: 65px;
-  width: 100%;
+  width: 104vw;
   background-color: #000;
 }
 
@@ -347,10 +347,11 @@ footer {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 2rem;
+    margin-left: -1.5rem;
   }
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .p-form {
