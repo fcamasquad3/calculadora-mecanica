@@ -46,6 +46,7 @@
 body {
   font-family: 'Advent Pro';
   min-height: 100vh;
+  max-width: 100vw;
   background-color: #F25602;
   text-align: center;
 }
@@ -178,20 +179,6 @@ fieldset {
   border: none;
 }
 
-h1 p {
-  font-size: 6rem;
-  font-weight: bold;
-  font-family: 'Advent Pro', sans-serif;
-  letter-spacing: 8%; 
-  text-transform: uppercase;
-  margin-bottom: 3rem;
-  margin-right: 60px;
-}
-
-h1 p:last-child{
-  margin-top: 0;
-}
-
 h2 {
   font-family: 'Cabin';
   font-size: 1.6rem;
@@ -278,7 +265,7 @@ footer {
   position: absolute;
   bottom: 0;
   height: 65px;
-  width: 104vw;
+  width: 100%;
   background-color: #000;
 }
 
@@ -391,6 +378,8 @@ footer {
   }
 }
 
+/* Tabela */
+
 div .selectTable {
   text-align: center;
   margin: 3.5rem auto;
@@ -488,10 +477,11 @@ table.table thead {
   background: linear-gradient(to bottom, #f58041 0%, #f3671b 66%, #F25602 100%);
   border-bottom: 2px solid #fff;
 }
+
 table.table thead th {
   font-size: 1.25rem;
   font-weight: bold;
-  color: #000000;
+  color: #fff;
   text-align: center;
   border-left: 2px solid #fff;
 }
