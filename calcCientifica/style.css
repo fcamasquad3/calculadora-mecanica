@@ -81,8 +81,8 @@ body {
     right: -100vw;
     top: 2px;
     z-index: 1;
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 100%;
     background-color: black;
   }
 
@@ -99,6 +99,7 @@ body {
     font-family: 'Cabin', sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
+    font-weight: bold;  
   }
 
   .close-button {
@@ -319,7 +320,7 @@ body {
     }
   }
 
-  @media (max-width: 414px) {
+  @media (max-width: 480px) {
     #menu-mobile a {
       margin: 1rem 0 2rem;
       display: flex;
