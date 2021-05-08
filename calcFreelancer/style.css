@@ -393,8 +393,7 @@ footer {
 
 div .selectTable {
   text-align: center;
-  margin: auto;
-  font-weight: bold;
+  margin: 3.5rem auto;
 }
 
 table.selectTable {
@@ -404,13 +403,14 @@ table.selectTable {
   text-align: left;
   border-collapse: collapse;
 }
+
 table.selectTable td, table.selectTable th {
-  border: 1px solid #AAAAAA;
+  border: 1px solid #fff;
   padding: 3px 4px;
 }
 table.selectTable tbody td {
   font-size: 1.25rem;
-  color: #000000;
+  color: #fff;
   padding-left: 1rem;
 }
 table.selectTable thead {
@@ -418,14 +418,15 @@ table.selectTable thead {
   background: -moz-linear-gradient(top, #f58041 0%, #f3671b 66%, #F25602 100%);
   background: -webkit-linear-gradient(top, #f58041 0%, #f3671b 66%, #F25602 100%);
   background: linear-gradient(to bottom, #f58041 0%, #f3671b 66%, #F25602 100%);
-  border-bottom: 2px solid #D0E4F5;
+  border-bottom: 2px solid #ffffff;
 }
 table.selectTable thead th {
-  font-size: 1.25rem;
+  font-size: 1.4rem;
   font-weight: bold;
-  color: #000000;
+  color: #fff;
   text-align: center;
-  border-left: 2px solid #D0E4F5;
+  text-transform: uppercase;
+  border-left: 2px solid #ffffff;
 }
 table.selectTable thead th:first-child {
   border-left: none;
@@ -440,15 +441,19 @@ table.selectTable thead th:first-child {
 }
 
 .buttonExcluir {
-  background:tomato;
+  background:#c21e01;
+  color: #6e1100;
   text-align: center;
   height: 2rem;
-  width: 80%;
-  
+  width: 90%;
+  left: 50%;
+  cursor: pointer;
+  transition: background 200ms ease-in-out;
 }
 
 .buttonExcluir:hover {
-  background: rgb(240, 198, 135);
+  background: #6e1100;
+  color: #c21e01;
 }
 
 div .table {
@@ -465,12 +470,12 @@ table.table {
   border-collapse: collapse;
 }
 table.table td, table.table th {
-  border: 1px solid #AAAAAA;
+  border: 1px solid #fff;
   padding: 3px 4px;
 }
 table.table tbody td {
   font-size: 1.25rem;
-  color: #000000;
+  color: #ffffff;
   padding-left: 1rem;
 }
 table.table thead {
@@ -478,35 +483,23 @@ table.table thead {
   background: -moz-linear-gradient(top, #f58041 0%, #f3671b 66%, #F25602 100%);
   background: -webkit-linear-gradient(top, #f58041 0%, #f3671b 66%, #F25602 100%);
   background: linear-gradient(to bottom, #f58041 0%, #f3671b 66%, #F25602 100%);
-  border-bottom: 2px solid #D0E4F5;
+  border-bottom: 2px solid #fff;
 }
 table.table thead th {
   font-size: 1.25rem;
   font-weight: bold;
   color: #000000;
   text-align: center;
-  border-left: 2px solid #D0E4F5;
+  border-left: 2px solid #fff;
 }
 table.table thead th:first-child {
   border-left: none;
 }
 
+th:nth-child(4) {
+  width: 8rem;
+}
+
 .idNumber {
   width: 2rem;
-}
-
-.exclui {
-  text-align: center;
-}
-
-.buttonExcluir {
-  background:tomato;
-  text-align: center;
-  height: 2rem;
-  width: 80%;
-  
-}
-
-.buttonExcluir:hover {
-  background: rgb(240, 198, 135);
 }

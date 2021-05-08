@@ -56,19 +56,19 @@ var tabela = table.innerHTML = `
       <td>1</td>
       <td>Calculadora Freelance</td>
       <td>R$ 3000</td>
-      <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+      <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)">  </td>
     </tr>
   <tr>
     <td>2</td>
     <td>daHora Bank</td>
     <td>R$ 8000</td>
-    <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+    <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)">  </td>
   </tr>
   <tr>
     <td>3</td>
     <td>Super Trunfão</td>
     <td>R$ 2500</td>
-    <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+    <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)"> </td>
   </tr>
  `
 
