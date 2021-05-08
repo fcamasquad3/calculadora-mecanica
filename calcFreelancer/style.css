@@ -399,7 +399,7 @@ div .selectTable {
 table.selectTable {
   background-color: #F25602;
   width: 80%;
-  height: 12rem;
+  height: auto;
   text-align: left;
   border-collapse: collapse;
 }
