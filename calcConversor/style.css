@@ -307,6 +307,7 @@ footer {
 
 @media only screen and (max-width: 1024px) {
   .logo {
+    margin-left: 5vw;
     width: 15vw;    
   } 
 
