@@ -211,8 +211,8 @@ select {
   
   height: 3rem;
   width: 12rem;
-  margin-top: 1rem;
-  margin-left: 1rem; 
+  margin-top: 5%;
+  margin-left: 5%; 
 
   font-size: 20px;  
   font-family: 'Cabin',monospace;
@@ -319,14 +319,12 @@ footer {
     display: none;
   }
 
-  .container {
-    flex-direction: column;
+  #page-title{
+    margin-right: 5rem;
   }
 
-  #titulo {
-    text-align: center;
-    margin: 0 auto;
-    max-width: fit-content;
+  .container {
+    flex-direction: column;
   }
 
   h1 {
@@ -347,7 +345,6 @@ footer {
   }
 
   .telas{
-    margin-top: 2 vw;
     width: 80vw;
     height: 10vw;
     font-size: 7vw;   
@@ -380,12 +377,7 @@ footer {
   .iconify{
     font-size: 10vw;
   }
-  
-  
-  select { 
-    font-size: 7vw;         
-  }
-  
+    
   option{
     border-radius: 5vw;
     margin: 2vw;    
@@ -420,6 +412,10 @@ footer {
   }
   select{
     font-size: 6vw;
+  }
+
+  #page-title{
+    margin-right: 0rem;
   }
 }
 
