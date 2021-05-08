@@ -244,6 +244,20 @@ button:hover {
   }
 }
 
+@media (max-width: 784px) {
+  img {
+    top: 0;
+  } 
+
+  h1.page-title {
+    margin-top: -4rem;
+    font-size: 5rem;
+  }
+  button {
+    margin: 1.2rem auto;
+  }
+}
+
 @media (max-width: 768px) {
  
   h1.page-title {
@@ -265,13 +279,13 @@ button:hover {
 
 @media (max-width: 320px) {
   img {
-    top: -10px;
+    top: -1rem;
     left: 50%;
     transform: translateX(-50%);
   }
 
   h1.page-title {
-    top: 180px;
+    top: 26rem;
     font-size: 4.5rem;
   }
 

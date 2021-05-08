@@ -37,7 +37,7 @@ function mostrarResultado() {
     result.innerText = `Valor do projeto ${nomeJob.value.toUpperCase()} é de:`;
     // Pergunta para adição de Freelance na tabela
     selectTable.innerHTML = `Deseja incluir ${nomeJob.value.toUpperCase()} na tabela?`
-     + '<div><button id ="addDep" value=" " onclick = "add()" >Sim</button>' + ' ou ' + '<button onclick="window.location.reload()">Não</button></div>';
+     + '<div><button id ="addDep" value=" " onclick = "add()" >SIM</button>' + '<button id="notDep" onclick="window.location.reload()">NÃO</button></div>';
   }
 }
 
@@ -56,19 +56,19 @@ var tabela = table.innerHTML = `
       <td>1</td>
       <td>Calculadora Freelance</td>
       <td>R$ 3000</td>
-      <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+      <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)">  </td>
     </tr>
   <tr>
     <td>2</td>
     <td>daHora Bank</td>
     <td>R$ 8000</td>
-    <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+    <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)">  </td>
   </tr>
   <tr>
     <td>3</td>
     <td>Super Trunfão</td>
     <td>R$ 2500</td>
-    <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+    <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)"> </td>
   </tr>
  `
 
@@ -80,7 +80,7 @@ function add() {
         <td>4</td>
         <td>${nomeJob.value}</td>
         <td>R$ ${valorJob.value}</td>
-        <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+        <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)"  </td>
       </tr>
       </tbody>
       </table>
