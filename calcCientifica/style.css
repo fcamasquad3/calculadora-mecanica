@@ -223,6 +223,18 @@ body {
     cursor: auto;
   }
 
+  .btn-extra{
+    background-color: #FD5B03;
+    border-color: #8F3402;   
+    width: 4.75rem;
+    height: 4rem;
+  }
+
+  .iconify{
+    font-size: 2.5rem;
+    color: #ffffff;
+  }
+
 /* Footer */
 
   footer {
@@ -304,6 +316,15 @@ body {
       height: calc(107vw * 0.119);
       font-size: 5vw;
       display: inline;
+    }
+
+    #backspace{
+      width: -webkit-fill-available;
+      height: calc(107vw * 0.119);
+    }
+    
+    .iconify{
+      font-size: 5vw;
     }
 
     footer {
