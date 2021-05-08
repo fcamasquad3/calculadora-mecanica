@@ -80,7 +80,7 @@ function add() {
         <td>4</td>
         <td>${nomeJob.value}</td>
         <td>R$ ${valorJob.value}</td>
-        <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+        <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)"  </td>
       </tr>
       </tbody>
       </table>
