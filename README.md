@@ -7,6 +7,8 @@ Calculadora Mecânica é uma aplicação  web e mobile construída durante a edi
 
 O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecânica** na qual os usuário poderão utilizar as funções de Calculadora Científica, Conversor e Calculadora Freelance. 
 
+O layout foi inspirado no livro Laranja Mecânica do Anthony Burgess, lançado em 1962.
+
 ## Funcionalidades
    - **Calculadora Científica:**  
         Realizar cálculos comuns somar, dividir, etc.. bem como calcular o Fatorial de um número  
@@ -20,6 +22,10 @@ O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecâ
 ## Website
 
 [Site Calculadora Mecânica](https://fcamasquad3.github.io/calculadora-mecanica/index.html)
+
+## Protótipo Básico
+
+[Protótipo no Figma](https://www.figma.com/file/SPKfKkoHpnZqitP4Wq8gDO/Calc_Mec?node-id=0%3A1)
 
 ## Layout Web
 
