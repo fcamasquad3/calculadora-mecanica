@@ -27,17 +27,28 @@ function calcularValorDoProjeto(valorHora, horasJob){
 // Mostra resultado nos inputs valorHoraTrabalho e ValorJob ao 
 // pressiona o botao CALCULAR 
 function mostrarResultado() {
-  if (valorMes.value == '' || valorHorasDia.value == '' || valorSemana.value == '' || horasJob.value == '') {
+  if (
+    valorMes.value == '' ||
+    valorHorasDia.value == '' ||
+    valorSemana.value == '' ||
+    horasJob.value == ''
+  ) {
     swal("🤭OPS!", "Por favor, preencha todos os campos antes de clicar em CALCULAR.");
   } else {
-    valorHoraTrabalho.value = calcularValorHorasTrabalhadas(valorMes,valorHorasDia,valorSemana).replace(".", ",")
+    valorHoraTrabalho.value = calcularValorHorasTrabalhadas(
+    valorMes,
+    valorHorasDia,
+    valorSemana
+    ).replace(".", ",");
 
     valorJob.value = calcularValorDoProjeto(
     calcularValorHorasTrabalhadas(valorMes,valorHorasDia,valorSemana),horasJob)
     result.innerText = `Valor do projeto ${nomeJob.value.toUpperCase()} é de:`;
     // Pergunta para adição de Freelance na tabela
-    selectTable.innerHTML = `Deseja incluir ${nomeJob.value.toUpperCase()} na tabela?`
-     + '<div><button id ="addDep" value=" " onclick = "add()" >SIM</button>' + '<button id="notDep" onclick="window.location.reload()">NÃO</button></div>';
+    selectTable.innerHTML = 
+      `Deseja incluir ${nomeJob.value.toUpperCase()} na tabela?`
+      + '<div><button id ="addDep" value=" " onclick = "add()" >SIM</button>' 
+      + '<button id="notDep" onclick="window.location.reload()">NÃO</button></div>';
   }
 }
 
@@ -58,18 +69,6 @@ var tabela = table.innerHTML = `
       <td>R$ 3000</td>
       <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)">  </td>
     </tr>
-  <tr>
-    <td>2</td>
-    <td>daHora Bank</td>
-    <td>R$ 8000</td>
-    <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)">  </td>
-  </tr>
-  <tr>
-    <td>3</td>
-    <td>Super Trunfão</td>
-    <td>R$ 2500</td>
-    <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)"> </td>
-  </tr>
  `
 
 function add() {
