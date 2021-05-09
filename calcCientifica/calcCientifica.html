@@ -13,6 +13,10 @@
 
         <!--Importando Icon Github-->
         <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+
+        <!-- Importando icone do backspace -->
+        <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
+   
     </head>
     
     <body>
@@ -46,7 +50,7 @@
             </div>
         </nav>
         <header>
-            <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">          
+            <img src="../public/logo-princ.svg" class="logo" alt="logo do Squad, contendo três engrenagens nas cores branca,laranja e preto, sendo contornadas por fórmulas matemáticas">         
             <nav class="menu-desktop">
                 <ul class="full-menu">            
                     <li> <a href="../index.html"> Home </a> </li>
@@ -87,7 +91,7 @@
                                 <input type="button" value="C" onclick="document.getElementById('tela').value='0'">
                             </td>
                             <td>
-                                <input type="button" value="&#8678;" onclick="deletar()">
+                                <button class="btn-extra" id="backspace" type="button" value="" onclick="deletar()"><span class="iconify" data-inline="false" data-icon="akar-icons:backspace"></span></button> 
                             </td>
                         </tr>
                         <tr>
