@@ -54,10 +54,10 @@ O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecâ
 
 # Autores
 
-Nome        | GitHub                                         | Likedin                                                 | E-mail                |
-| ------------------------------------------ | ----------- | ---------------------------------------------- | ------------------------------------------------------- | --------------------- |
-| Andrew Magalhães | [Andrew Magalhães](https://github.com/TheKalil) | Linkedin | kalilmagal@gmail.com |
-| Drielison Lopes | [Drielison Lopes](https://github.com/DrielisonLopes) | [Linkedin](https://www.linkedin.com/in/drielison-lopes/) | drielisonl@gmail.com |
-| Gisele Paiva | [Gisele Paiva](https://github.com/plgisele) | [Linkedin](https://www.linkedin.com/in/giselepaiva90/) | giselepaiva.arq@gmail.com |
-| Paulo Alécio | [Paulo Alécio](https://github.com/PauloAlecio) | [Linkedin](https://www.linkedin.com/in/paulo-al%C3%A9cioti/) | pauloalecioreuel@gmail.com |
-| Samanta Barros | [Samanta Barros](https://github.com/barrosiam) | [Linkedin](https://www.linkedin.com/in/samanta-barros-293063209/) | samanta464.barros@gmail.com |
+Nome   | GitHub | Linkedin | Email
+--------- | ------ | -------- | -----------
+Andrew Magalhães | [Andrew Magalhães](https://github.com/TheKalil) | Linkedin | kalilmagal@gmail.com | 
+Drielison Lopes | [Drielison Lopes](https://github.com/DrielisonLopes) | [Linkedin](https://www.linkedin.com/in/drielison-lopes/) | drielisonl@gmail.com
+Gisele Paiva | [Gisele Paiva](https://github.com/plgisele) | [Linkedin](https://www.linkedin.com/in/giselepaiva90/) | giselepaiva.arq@gmail.com
+Paulo Alécio | [Paulo Alécio](https://github.com/PauloAlecio) | [Linkedin](https://www.linkedin.com/in/paulo-al%C3%A9cioti/) | pauloalecioreuel@gmail.com
+Samanta Barros | [Samanta Barros](https://github.com/barrosiam) | [Linkedin](https://www.linkedin.com/in/samanta-barros-293063209/) | samanta464.barros@gmail.com
