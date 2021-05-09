@@ -19,6 +19,8 @@ O layout foi inspirado no livro Laranja Mecânica do Anthony Burgess, lançado e
    - **Caculadora Freelance:** 
         Realizará o cálculo dos custos de um projeto baseados nas entradas do usuário.     
 
+## Apresentação
+[Pitch](https://www.youtube.com/watch?v=IzOcK4MayiE) | [Tutorial](https://www.youtube.com/watch?v=8Mdb1-2xB8E)
 ## Website
 
 [Site Calculadora Mecânica](https://fcamasquad3.github.io/calculadora-mecanica/index.html)
@@ -47,7 +49,6 @@ O layout foi inspirado no livro Laranja Mecânica do Anthony Burgess, lançado e
 
 ## Layout Mobile
 ![Mobile](public/assets/mobile-screen.gif)
-
 
 # Tecnologias utilizadas 
 ## Front-end
