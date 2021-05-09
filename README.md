@@ -5,19 +5,21 @@
 
 Calculadora Mecânica é uma aplicação  web e mobile construída durante a edição do Hackathon **FCamara & Imersão Dev**, evento organizado pelo [Grupo FCamara](https://www.fcamara.com.br/ "Site da FCamara").
 
-O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecânica** na qual os usuário poderão utilizar as funções de Calculadora Científica, Conversor de Medidas e Calculadora Freelance. 
+O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecânica** na qual os usuário poderão utilizar as funções de Calculadora Científica, Conversor e Calculadora Freelance. 
 
 ## Funcionalidades
-   - Calculadora Científica  
-        Realizar cáLculos comuns somar, dividir, etc.. bem como calcular o Fatorial de um número  
+   - **Calculadora Científica:**  
+        Realizar cálculos comuns somar, dividir, etc.. bem como calcular o Fatorial de um número  
         
-   - Conversor  
-        Realizar a conversão de dados como MegaBytes para bytes, KiloBytes etc..  
+   - **Conversor:**
+        Realizar a conversão de dados, comprimento, moeda e temperatura.
         
-   - Caculadora Freelance  
+   - **Caculadora Freelance:** 
         Realizará o cálculo dos custos de um projeto baseados nas entradas do usuário.     
 
+## Website
 
+[Site Calculadora Mecânica](https://fcamasquad3.github.io/calculadora-mecanica/index.html)
 
 ## Layout Web
 
@@ -32,6 +34,10 @@ O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecâ
 
 ![Conversor](public/assets/conversor.gif)
 
+### Calculadora Freelance
+
+![Calculadora Freelance](public/assets/freelance.gif)
+
 
 ## Layout Mobile
 ![Mobile](public/assets/mobile-screen.gif)
@@ -41,10 +47,17 @@ O projeto consiste em uma aplicação web responsiva chamada **Calculadora Mecâ
 ## Front end
 - HTML 
 - CSS
+- Javascript
 
 ## Back end
-- JS
+- Javascript
 
 # Autores
 
-
+Nome        | GitHub                                         | Likedin                                                 | E-mail                |
+| ------------------------------------------ | ----------- | ---------------------------------------------- | ------------------------------------------------------- | --------------------- |
+| Andrew Magalhães | [Andrew Magalhães](https://github.com/TheKalil) | Linkedin | --- |
+| Drielison Lopes | [Drielison Lopes](https://github.com/DrielisonLopes) | [Linkedin](https://www.linkedin.com/in/drielison-lopes/) | drielisonl@gmail.com |
+| Gisele Paiva | [Gisele Paiva](https://github.com/plgisele) | [Linkedin](https://www.linkedin.com/in/giselepaiva90/) | giselepaiva.arq@gmail.com |
+| Paulo Alécio | [Paulo Alécio](https://github.com/PauloAlecio) | [Linkedin](https://www.linkedin.com/in/paulo-al%C3%A9cioti/) | pauloalecioreuel@gmail.com |
+| Samanta Barros | [Samanta Barros](https://github.com/barrosiam) | [Linkedin](https://www.linkedin.com/in/samanta-barros-293063209/) | samanta464.barros@gmail.com |
