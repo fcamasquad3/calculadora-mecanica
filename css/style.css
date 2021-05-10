@@ -153,6 +153,10 @@ button:hover {
     font-size: 65%;
   }
 
+  .load-page img{
+    display: none;
+  }
+  
   div.home {
     max-width: 80%;
   }
