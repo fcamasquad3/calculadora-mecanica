@@ -225,7 +225,9 @@ body {
 
   .btn-extra{
     background-color: #FD5B03;
-    border-color: #8F3402;   
+    border-color: #111111;
+    border: 1px;
+    border-style: solid; 
     width: 4.75rem;
     height: 4rem;
   }
