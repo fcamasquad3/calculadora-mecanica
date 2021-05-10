@@ -310,6 +310,10 @@ footer {
     width: 15vw;    
   } 
 
+  .load-page img{
+    display: none;
+  }
+
   #menu-icon{
     width: 10vw;
   }
