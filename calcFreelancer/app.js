@@ -66,7 +66,7 @@ var tabela = table.innerHTML = `
     <tr>
       <td>1</td>
       <td>Calculadora Freelance</td>
-      <td>R$ 3000</td>
+      <td>R$ 3000,00</td>
       <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)">  </td>
     </tr>
  `
@@ -76,7 +76,7 @@ function add() {
   var linha = table.innerHTML = `
       
       <tr>
-        <td>4</td>
+        <td>2</td>
         <td>${nomeJob.value}</td>
         <td>R$ ${valorJob.value}</td>
         <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)"  </td>
