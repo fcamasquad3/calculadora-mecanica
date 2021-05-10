@@ -52,7 +52,16 @@ function mostrarResultado() {
   }
 }
 
-var tabela = table.innerHTML = `
+//Esta atualização salva a tabela no localStorage, então mesmo se o usuário atualizar a
+//página, vai ter o histórico da tabela salva. Também pode excluir se quiser, porém está
+//excluindo o corpo da tabela e ao adicionar depois de uma exclusão a linha não entra na tabela
+const tabela = (function () {
+  const tab = localStorage.getItem("table");
+  if (tab) {
+    return (table.innerHTML = JSON.parse(tab));
+  }
+
+  return (table.innerHTML = `
 <table id = "dsTable" class="selectTable">
   <thead>
     <tr>
@@ -67,30 +76,31 @@ var tabela = table.innerHTML = `
       <td>1</td>
       <td>Calculadora Freelance</td>
       <td>R$ 3000,00</td>
-      <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)">  </td>
+      <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
     </tr>
- `
+ `);
+})();
 
 function add() {
-  
-  var linha = table.innerHTML = `
-      
+  const linha = (table.innerHTML = `
       <tr>
         <td>2</td>
         <td>${nomeJob.value}</td>
         <td>R$ ${valorJob.value}</td>
-        <td> <input type="button" id ="deleteDep" value="excluir" class="buttonExcluir" onclick = "deleteRow(this)"  </td>
+        <td> <input type="button" id ="deleteDep" value=" " class="buttonExcluir" onclick = "deleteRow(this)"  </td>
       </tr>
-      </tbody>
-      </table>
-  `
-  document.getElementById("table").innerHTML = tabela + linha
+  `);
+  const newTable = tabela + linha;
+  document.getElementById("table").innerHTML = newTable;
+  localStorage.setItem("table", JSON.stringify(newTable));
 }
 
-function deleteRow(row){
-  var d = row.parentNode.parentNode.rowIndex;
-  document.getElementById("dsTable").deleteRow(d);
-  }
+function deleteRow(row) {
+  const d = row.parentNode.parentNode.rowIndex;
+  const tab = document.getElementById("dsTable");
+  tab.deleteRow(d);
+  localStorage.setItem("table", JSON.stringify(table.innerHTML));
+}
 
 // Funções do menu mobile
 
